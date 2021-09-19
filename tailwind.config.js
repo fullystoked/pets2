@@ -116,7 +116,15 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
-    plugin(function({addComponents, theme}){
+    
+    plugin(function({addComponents, addUtilities, theme}){
+      const newUtilities = {
+        h95Vh: {
+          height: '95vh'
+        }
+      };
+
+      addUtilities(newUtilities, ['responsive', 'hover']);
       const ads = {
         '.ad-container': {
             padding: '0',

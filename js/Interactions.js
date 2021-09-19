@@ -8,6 +8,9 @@ export default class Interactions{
     const menuBtn = document.getElementById('nav-toggle');
     const mainMenu = document.getElementById('main-menu');
     const mainLoginBtn = document.getElementById('mainLoginBtn');
+
+    const breedGalleryBtn = document.getElementById('breedImages');
+
     menuBtn.addEventListener('click', (evt)=>{
       if(mainMenu.classList.contains('hidden')){
         // show drop down menu
@@ -24,6 +27,10 @@ export default class Interactions{
       } 
       
     });
+
+   /*  breedGalleryBtn.addEventListener('click', (evt) => {
+        openDialog('breedGallery', evt.target);
+    }); */
   }
 
 
