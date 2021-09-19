@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pets 2 Mockups</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../dist/pets2.css">
+</head>
+  <body class="flex flex-col min-h-screen font-ppPoppins">
+    <!-- header navigation area -->
+    <header class="bg-pp-blue">
+      <nav class="max-w-7xl mx-auto flex items-center gap-2 xl:gap-6 flex-wrap p-2 w-full z-10 top-0">
+        <div class="block lg:hidden">
+          <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+          </button>
+        </div>
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <a href="../index.html" class="text-white">
+            <img src="../images/perfect_pets_WTE.png" class="block h-10 lg:h-16 w-auto mx-auto">
+          </a>
+        </div>
+    
+        
+    
+        <div class="hidden w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block pt-6 lg:pt-0" id="main-menu">
+          <ul class="list-reset lg:flex justify-end flex-1 items-center  font-medium text-sm">
+            <li class="my-6 mx-2">
+              <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4 ">Listings</a>
+            </li>
+            <li class="my-6 mx-2">
+              <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Services</a>
+            </li>
+            <li class="my-6 mx-2">
+              <a href="./" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent px-2 py-4 link-active">Learning</a>
+            </li>
+            <li class="my-6 mx-2">
+              <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Blog</a>
+            </li>
+            <li class="my-6 mx-2">
+              <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">About</a>
+            </li>
+            <li class="my-6 mx-2">
+              <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Premium</a>
+            </li>
+          </ul>
+          <div class="flex flex-grow-0 p-4 md:hidden">
+            <a href="./" class="duration-150 text-sm font-medium transition-all ease-linear py-2 px-8 rounded-full bg-pp-green outline-none focus:outline-none  hover:bg-pp-green-dark text-white">Login</a>
+          </div>
+        </div>
+        <div id="mainLoginBtn" class=" flex-grow-0 md:flex-grow lg:flex-grow-1 justify-end p-4 hidden md:flex">
+          <a href="./" class="duration-150 text-sm font-medium transition-all ease-linear py-2 px-8 rounded-full bg-pp-green outline-none focus:outline-none  hover:bg-pp-green-dark text-white">Login</a>
+        </div>
+      </nav>
+    </header>
+
+    
+    
+    <!-- breadcrums area -->
+    <div id="breadcrumbs" class="bg-pp-navy hidden md:block">
+      <nav class="max-w-7xl mx-auto text-white p-2">
+        <ul class="list-reset flex text-xs font-semibold">
+          <li class="inline-flex items-center">
+            <a class="hover:underline" href="../index.html">Home</a>
+            <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+          </li>
+          <li class="inline-flex items-center">
+            <a class="hover:underline" href="#">Cat breed list A-Z</a>
+            <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+          </li>
+          <li class="inline-flex items-center">Burmese cat breed information</li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- start main content area -->
+    <main id="main" class="">
+      <div class="max-w-7xl mx-auto px-2">
+        <div class="ad-container ad-top-page">
+          <p class="ad-text">Sponsored...</p>  
+          <img src="../images/bannerad.jpg" alt="Advertisement from google">
+        </div>
+      </div>
+      <section id="information" class="prose max-w-none py-10">
+        <div class="max-w-7xl mx-auto px-2">
+          
+          <div class="flex flex-col lg:flex-row items-center justify-between">
+            <div class="flex flex-col lg:flex-none items-center">
+              <h1 class="flex flex-col lg:flex-row items-center font-ppMontserrat">
+                <span class="lg:mr-6">Burmese Cat</span> <span class="badge badge-green uppercase text-sm mt-2 lg:mt-0">Breed Information</span></h1>
+            </div>
+            
+            <div class="flex flex-none">
+              <button class="badge flex items-center mt-4 lg:mt-0 text-xs font-semibold">
+                <svg data-v-4c86243b="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="mr-2 w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg> 
+                <span>Favourite</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- cat breed characteristics -->
+          <div class="flex flex-col gap-4 mt-4 lg:flex-row items-center">
+            <div class="char-card flex flex-col w-full md:w-1/2 lg:w-1/4">
+              <p class="text-sm font-light">Personality</p>
+              <p class="text-lg font-semibold">
+                Engaging & devoted
+              </p>
+            </div>
+            <div class="char-card flex flex-col w-full md:w-1/2 lg:w-1/4">
+              <p class="text-sm font-light">Social needs</p>
+              <p class="text-lg font-semibold">
+                Needs company
+              </p>
+            </div>
+            <div class="char-card flex flex-col w-full md:w-1/2 lg:w-1/4">
+              <p class="text-sm font-light">Affection / smoochiness</p>
+              <p class="text-lg font-semibold">
+                Very affectionate
+              </p>
+            </div>
+            <div class="char-card flex flex-col w-full md:w-1/2 lg:w-1/4">
+              <p class="text-sm font-light">Athleticism</p>
+              <p class="text-lg font-semibold">
+                Extremely athletic
+              </p>
+            </div>
+          </div>
+          <!-- description more characteristics & images -->
+          <div class="flex flex-col lg:flex-row mt-6">
+            <!-- description and characteristics -->
+            <div class="order-2 lg:order-1 flex flex-col lg:w-1/2 mr-0 lg:mr-4 lg:mt-2">
+              <p>The European Burmese is an elegant, unique cat breed of far eastern origin. They are an intelligent, loyal, and very affectionate cat that will want to be with you, participating in everything you do - the Burmese truly thrives on human companionship. While they will sometimes take a shine to a particular family member, they will usually warm to, and interact with everyone, including guests. They also enjoy the company of other cats and dogs.</p>
+              <p>Burmese are playful, lively and inquisitive, even as adults. They have a number of dog-like characteristics, and can be taught to play fetch and tag. They also love to snuggle, and will want to be on your lap as soon as you sit down and look settled. They will follow you to bed to get cosy there as well.</p>
+              <!-- more characteristics -->
+              <div class="py-4 pr-0 lg:pr-4">
+                <div class="char-bar-container">
+                  <p class="font-light">Docility</p>
+                  <div class="char-bar">
+                    <div class="char-bar-indicator" style="width:50%;"></div>
+                  </div>
+                  <p class="char-bar-attribute" style="left:50%; transform: translateX(-50%);">
+                    Average
+                  </p>
+                </div>
+                <div class="char-bar-container pb-8 relative">
+                  <p class="font-light">Playfulness</p>
+                  <div class="char-bar">
+                    <div class="char-bar-indicator" style="width:80%;"></div>
+                  </div>
+                  <p class="char-bar-attribute" style="left:80%; transform: translateX(-80%);">
+                    High spirited & entertaining
+                  </p>
+                </div>
+                <div class="char-bar-container relative">
+                  <p class="font-light">Activity level</p>
+                  <div class="char-bar">
+                    <div class="char-bar-indicator" style="width:85%;"></div>
+                  </div>
+                  <p class="char-bar-attribute" style="left:85%; transform: translateX(-85%);">
+                    Busy
+                  </p>
+                </div>
+              </div>
+              <div class="">
+                <div class="border-2 border-pp-orange rounded-md px-4 py-2 bg-white">
+                  <div class="flex flex-row items-center justify-start">
+                    <svg data-v-08d3cb9c="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-pp-orange h-10 w-10"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                    <p class="font-bold text-lg no-prose">Please note</p>
+                  </div>
+                  <div class="w-full text-sm">
+                    <p>Perfect Pets does not provide ratings for breed suitability with strangers, children, other [pet type], or other pets or animals...</p>
+                    <p>content to be drawn from contenful...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- images -->
+            <div class="order-1 lg:order-2 flex flex-col gap-8 lg:w-1/2 ml-0 lg:ml-4">
+              <div class="w-full relative flex justify-content items-center overflow-hidden max-h-mh-pp1">
+                <!-- 810 x 700 -->
+                <img class="no-prose self-center object-cover" src="../images/burmeseCM.jpg" alt="burmese 2">
+                <button id="breedImages" class="rounded-lg absolute bottom-2 right-2 text-white bg-pp-green px-4 hover:bg-pp-green-dark">view photos (n) </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>  
+      
+      <!-- mid page nav sticks to top when scolling -->
+      <aside class="w-full bg-gray-400">
+        <nav id="pagenav" class="max-w-7xl mx-auto px-2">
+          <div class="lg:flex lg:flex-row hidden">
+            <ul class="list-reset lg:flex justify-between flex-1 items-center">
+              <li class="mr-6 py-4">On this page...</li>
+              <li class="mr-6 py-4">
+                <a class="inline-flex items-center hover:underline text-pp-blue" href="#temperament">
+                  <span>Temperament</span>
+                  <!-- <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+              <li class="mr-6 py-4">
+                <a class="inline-flex items-center hover:underline text-pp-blue" href="#appearnace">
+                  <span>Appearance</span>
+                  <!-- <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+              <li class="mr-6 py-4">
+                <a class="inline-flex items-center hover:underline text-pp-blue" href="#health">
+                  <span>Health</span>
+                  <!-- <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+              <li class="mr-6 py-4">
+                <a class="inline-flex items-center hover:underline text-pp-blue" href="#faqs">
+                  <span>FAQ</span>
+                 <!--  <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+              <li class="mr-6 py-4">
+                <a class="inline-flex items-center hover:underline text-pp-blue" href="#history">
+                  <span>History</span>
+                  <!-- <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+              <li class="mr-6 py-4">
+                <a class="inline-flex items-center hover:underline text-pp-blue" href="#breeders">
+                  <span>Find a breeder</span>
+                 <!--  <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside> 
+
+      <section id="temperament" class="py-4 bg-pp-gray-100">
+        <div class="max-w-7xl mx-auto px-2 py-4 prose"> 
+          <h2>Burmese Cat Temperament</h2>
+          <div class="flex flex-col gap-1 lg:gap-4 lg:flex-row">
+            <div class="lg:w-3/4 lg:pr-8">
+              <div class="flex flex-col gap-2 mt-4 mb-8 lg:flex-row items-center">
+                <div class="char-card char-card-white flex flex-col w-full md:w-1/2 lg:w-1/3">
+                  <p class="text-sm font-light">Breed pros</p>
+                  <p class="text-lg font-semibold">
+                    Gives unconditional love
+                  </p>
+                </div>
+                <div class="char-card char-card-white flex flex-col w-full md:w-1/2 lg:w-1/3">
+                  <p class="text-sm font-light">Independence</p>
+                  <p class="text-lg font-semibold">
+                    Not very independent
+                  </p>
+                </div>
+                <div class="char-card char-card-white flex flex-col w-full md:w-1/2 lg:w-1/3">
+                  <p class="text-sm font-light">Training, tricks & games</p>
+                  <p class="text-lg font-semibold">
+                    Can be taught to fetch
+                  </p>
+                </div>
+              </div>
+              <p>
+                The European Burmese is people-oriented cat that forms strong bonds with the humans who love them. They thrive on human attention, and want lots of it. They are full of high spirits and friskiness, they love to entertain and catch your attention, executing daring leaps and pausing to make sure their audience is watching the performance. If their antics aren't being admired, they will find a warm lap and continue to demand undivided attention. Intelligent and inquisitive, they will follow you around the house, wanting to be part of all aspects of your daily life. The upshot is, if you want a cat that isn’t the centre of attention, don’t get a European Burmese.
+              </p>  
+              <p >
+                Because of this strong craving for attention, it's important that your European Burmese isn't left alone for extended periods - they can become unhappy, bored, even depressed or destructive if left alone all day. You must be sure you can provide enough companionship for a European Burmese before deciding to bring one into your family. Another cat, or a friendly, companionable dog can be a great mate for your Burmese.
+              </p>
+              <div class="py-10">
+                <div class="char-bar-container w-full lg:w-2/3">
+                  <p class="font-light">Attachment</p>
+                  <div class="char-bar">
+                    <div class="char-bar-indicator" style="width:50%;"></div>
+                  </div>
+                  <p class="char-bar-attribute" style="left:50%; transform: translateX(-50%);">
+                    Strong attachment
+                  </p>
+                </div>
+                <div class="char-bar-container w-full lg:w-2/3">
+                  <p class="font-light">Vocality</p>
+                  <div class="char-bar">
+                    <div class="char-bar-indicator" style="width:80%;"></div>
+                  </div>
+                  <p class="char-bar-attribute" style="left:80%; transform: translateX(-80%);">
+                    Vocal
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- ad container -->
+            <div class="w-full lg:w-1/4">
+              <div class="ad-container">
+                <div class="ad-right-side">
+                  <p class="ad-text no-prose">Sponsored...</p>
+                  <div class="px-2">
+                    <img class="no-prose h-auto w-auto object-right ml-auto" src="../images/ad-vertical.png" alt="long ad image">
+                    <p class="flex justify-end">
+                      <a class="text-sm" href="#">Advertise here >></a>
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="appearance" class="py-4">
+        <div class="max-w-7xl mx-auto px-2 py-4 prose"> 
+          <div class="w-full">
+            <h2>Burmese Cat Appeance</h2>
+            <div>
+              <div class="flex flex-col gap-4 mt-4 mb-8 lg:flex-row items-center">
+                <div class="char-card flex flex-col w-full md:w-1/2 lg:w-1/3">
+                  <p class="text-sm font-light">Coat type</p>
+                  <p class="text-lg font-semibold">
+                    Short fur
+                  </p>
+                </div>
+                <div class="char-card flex flex-col w-full md:w-1/2 lg:w-1/3">
+                  <p class="text-sm font-light">Shedding level</p>
+                  <p class="text-lg font-semibold">
+                    Low shedding, seasonal
+                  </p>
+                </div>
+                <div class="char-card flex flex-col w-full md:w-1/2 lg:w-1/3">
+                  <p class="text-sm font-light">Minimum grooming requirement</p>
+                  <p class="text-lg font-semibold">
+                    Self groomer
+                  </p>
+                </div>
+                <div class="char-card flex flex-col w-full md:w-1/2 lg:w-1/3">
+                  <p class="text-sm font-light">Pattern type</p>
+                  <p class="text-lg font-semibold">
+                    Solid
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- split appearance -->
+          <div class="flex flex-col lg:flex-row gap-1 lg:gap-4">
+            <div class="w-full lg:w-3/4 lg:pr-8">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque sapien at leo sagittis eleifend. Vestibulum elementum lacus quis vulputate malesuada. Mauris mollis augue libero, vitae dapibus quam mattis at. Integer sit amet tincidunt mi. Vivamus dui sem, tempor nec vulputate ut, malesuada cursus nulla. Donec augue sem, maximus porta bibendum et, consectetur fringilla nisi. Integer id turpis eu leo dignissim ultricies. Suspendisse potenti. Proin lobortis quis nisi at posuere. Vestibulum et eros neque. Sed porta ex egestas lectus facilisis eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur in rutrum tellus, eget sagittis lorem. Aenean risus lorem, pellentesque eget pretium ut, vulputate eget justo.</p>
+              <h3>Size</h3>
+              <p>Males: 5.4kg to 6.8kg; 12lbs - 15lbs<br>
+                Females: 3.1kg to 4kg; 6.8lbs - 8.8lbs
+              </p>
+              <h3>Coat</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3>Coat colour</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3>Eyes</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="w-11/12 m-auto mt-8 mb-10">
+                <img class="object-cover no-prose w-full" src="../images/burmese2.jpg" alt="Burmese cat">
+              </div>
+            </div>
+            <div class="w-full lg:w-1/4">
+              
+              <div class="w-full mb-14">
+                <img class="object-cover no-prose w-full" src="../images/burmese1.gif" alt="Burmese cat">
+              </div>
+              <div class="ad-container">
+                <div class="ad-right-side">
+                  <p class="ad-text no-prose">Sponsored...</p>
+                  <div class="p-2">
+                    <img class="no-prose object-right ml-auto" src="../images/shopify.png" alt="shopify">
+                  </div>
+                  <p class="flex justify-end">
+                    <a class="text-sm" href="#">Advertise here >></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="health" class="bg-pp-gray-100 py-4">
+        <div class="max-w-7xl mx-auto px-2 py-4 prose"> 
+          <div class="w-full">
+            <h2>Burmese Cat Health</h2>
+          </div>
+          <div class="flex flex-col lg:flex-row">
+            <div class="lg:w-3/4 w-full lg:pr-8">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="w-full mt-10">
+                <h3>The conditions that affect the Burmese Cat most commonly include:</h3>
+                <div class="">
+                  <div class="mt-4 flex flex-wrap">
+                    <span class="chip">Von Willebrand's disease (type 1)</span>
+                    <span class="chip">Degenerative myelopathy (DM)</span>
+                    <span class="chip">Hip dysplasia</span>
+                    <span class="chip">Intervertebral Disc disease</span>
+                    <span class="chip">Cancer</span>
+                    <span class="chip">Monorchidism</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/4 w-full">
+              <div class="border-2 border-pp-orange rounded-md px-4 py-2 bg-white">
+                <div class="flex flex-row items-center">
+                  <svg data-v-08d3cb9c="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-pp-orange h-10 w-10"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                  <p class="font-bold text-2xl no-prose">Please note</p>
+                </div>
+                <div class="w-full text-sm">
+                  <p>Perfect Pets strongly recommends you ask your breeder about their health and genetic testing regimes. Perfect Pets supports and encourages testing of all pedigree cats.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="faqs" class="py-4">
+        <div class="max-w-7xl mx-auto px-2 py-4 prose"> 
+          
+          <!-- actual FAQs -->
+          <div class="flex flex-col lg:flex-row">
+            <div class="w-full lg:w-3/4 lg:pr-8 gap-1 lg:gap-4">
+              <h2>Burmese Cat FAQ's</h2>
+              <div class="faq-items"> 
+                <div class="mt-4">
+                  <h3 class="">What if?</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                  <h3 class="">What if?</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                  <h3 class="">What if?</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                  <h3 class="">What if?</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                  <h3 class="">What if?</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                  <h3 class="">What if?</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                  <h3 class="">What if?</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                  <h3 class="">Aknowledgement:</h3>
+                  <p>Special thanks to John Random - <a href="#">Burmese Banter</a> for writing our Burmese FAQ's</p>
+                  <p class="text-lg no-prose">We welcome helpful comments and contributions to information about this breed</p>
+                  <p class="text-lg">If you are a small scale, registered breeder & would like to be included, just contact us or join here now</p>
+                </div> 
+              </div>
+            </div>
+            
+            <!-- faq right side swiper sliders etc -->
+            <div class="w-full lg:w-1/4 px-2 mt-6">
+              <div class="swiper swiper3 relative w-full h-auto mb-8">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide p-2  max-w-xs">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../images/big_corgy.jpg" alt="breeder corgi">
+                        <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                          <div class="chip chip-breeder">Breeder</div>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <p class="uppercase font-bold pt-2">NSW Welsh Corgi Breeder r'us</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden"><span class="font-bold">FAQ Contibutor.</span> With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide p-2  max-w-xs">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../images/big_corgy.jpg" alt="breeder corgi">
+                        <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                          <div class="chip chip-breeder">Breeder</div>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <p class="uppercase font-bold pt-2">NSW Welsh Corgi Breeder r'us</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden"><span class="font-bold">Boosted.</span> With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide p-2  max-w-xs">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../images/big_corgy.jpg" alt="breeder corgi">
+                        <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                          <div class="chip chip-breeder">Breeder</div>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <p class="uppercase font-bold pt-2">NSW Welsh Corgi Breeder r'us</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden"><span class="font-bold">Boosted.</span> With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-center items-center flex-wrap sm:flex-nowrap">
+                  <div class="flex justify-center items-center py-2">
+                    <button type="button" class="relative inline-flex items-center button-prev p-3 shadow rounded-full hover:text-pp-blue" role="button">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button> 
+                    <div class="swiper-pagination pagination3 relative mx-1 sm:mx-4"></div> 
+                    <button type="button" class="relative inline-flex items-center button-next p-3 shadow rounded-full hover:text-pp-blue" role="button">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                  </div>
+                </div>
+               </div> 
+              
+              <!-- breed clubs -->
+              <div class="swiper swiper1 relative w-full h-auto mb-8">
+                <div class="swiper-wrapper">
+                  <!-- slide 1 -->
+                  <div class="swiper-slide p-2  max-w-xs">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../images/big_corgy.jpg" alt="breeder corgi">
+                        <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                          <div class="chip chip-club">Breed Club</div>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <p class="uppercase font-bold pt-2">Welsh Corgi Club of NSW</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- slide 2 -->
+                  <div class="swiper-slide p-2  max-w-xs">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../images/users/groomer.png" alt="groomer">
+                        <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                          <div class="chip chip-club">Breed Club</div>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <p class="uppercase font-bold pt-2">Welsh Corgi Club of NSW</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 3 -->
+                  <div class="swiper-slide p-2  max-w-xs">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../images/users/shelter.png" alt="shelter">
+                        <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                          <div class="chip chip-club">Breed Club</div>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <p class="uppercase font-bold pt-2">Welsh Corgi Club of NSW</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-center items-center flex-wrap sm:flex-nowrap">
+                  <div class="flex justify-center items-center py-2">
+                    <button type="button" class="relative inline-flex items-center button-prev p-3 shadow rounded-full hover:text-pp-blue" role="button">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button> 
+                    <div class="swiper-pagination pagination1 relative mx-1 sm:mx-4"></div> 
+                    <button type="button" class="relative inline-flex items-center button-next p-3 shadow rounded-full hover:text-pp-blue" role="button">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- shelters -->
+              <div class="swiper swiper2 relative w-full h-auto mb-8">
+                <div class="swiper-wrapper">
+                  <!-- slide 1 -->
+                  <div class="swiper-slide p-2  max-w-xs">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../images/big_corgy.jpg" alt="breeder corgi">
+                        <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                          <div class="chip chip-shelter">Breed Rescue</div>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <p class="uppercase font-bold pt-2">Welsh Corgi Shelter of NSW</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 2 -->
+                  <div class="swiper-slide p-2  max-w-xs">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../images/users/groomer.png" alt="groomer">
+                        <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                          <div class="chip chip-shelter">Breed Rescue</div>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <p class="uppercase font-bold pt-2">Welsh Corgi Shelter of NSW</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 3 -->
+                  <div class="swiper-slide p-2  max-w-xs">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../images/users/shelter.png" alt="shelter">
+                        <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                          <div class="chip chip-shelter">Breed Rescue</div>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <p class="uppercase font-bold pt-2">Welsh Corgi Shelter of NSW</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-center items-center flex-wrap sm:flex-nowrap">
+                  <div class="flex justify-center items-center py-2">
+                    <button type="button" class="relative inline-flex items-center button-prev p-3 shadow rounded-full hover:text-pp-blue" role="button">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button> 
+                    <div class="swiper-pagination pagination2 relative mx-1 sm:mx-4"></div> 
+                    <button type="button" class="relative inline-flex items-center button-next p-3 shadow rounded-full hover:text-pp-blue" role="button">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      
+      <section id="history" class="py-4 bg-pp-gray-100">
+        <div class="max-w-7xl mx-auto px-2 py-4 prose"> 
+          <div class="flex flex-col lg:flex-row">
+            <div class="w-full lg:w-3/4 lg:pr-8">
+              <h2>Burmese Cat History</h2>
+              <p>The European Burmese shares much of its history with the Burmese, with both coming from the same foundation stock. Dr. Joseph Thompson, a U.S. Navy doctor brought a female cat named Wong Mau to the United States from Rangoon, Burma (now Yangon, Myanmar). Some sources say Wong Mau was given to Dr. Thompson by wild animal collector Buck Wilson. Others believe he found Wong Mau himself when he was serving as a ship's doctor in Southeast Asia.</p>
+              <p>Thompson bred Wong Mau to a sealpoint Siamese and after several generations developed a dark chocolate brown variation that was particularly striking and beautiful. He crossed these sable cats with each other or back to Wong Mau.</p>
+              <p>The histories of the Burmese and the European Burmese diverge in 1949, when a pair of Wong Mau’s descendants was imported to England by Siamese breeder Lilian France. The breed quickly gained popularity, and other fanciers began breeding programs. The European Burmese breeding program began by accident in 1964 when a Burmese female in heat escaped and mated with a shorthaired red tabby. Additional colours were added accidentally and intentionally and many breeders contributed to developing additional colours for the breed.</p>
+              <p>The European Burmese come in ten colours outside the four original hues of the Burmese, it is also an elegant cat of moderate type with a slightly rounded head. The Burmese, by contrast, is stocky and compact with a rounded head, and foreshortened face.</p>
+              <p>Despite the long European history, the European Burmese is a fairly recent addition to the North American cat fancy. The associations that don’t accept the European type accept the contemporary Burmese, although today most associations accept both types.</p>
+            </div>
+            <!-- Ad -->
+            <div class="w-full lg:w-1/4 mt-7">
+              <div class="ad-container">
+                <div class="ad-right-side">
+                  <p class="ad-text no-prose">Sponsored...</p>
+                  <div class="px-2">
+                    <img class="no-prose h-auto w-auto object-right ml-auto" src="../images/ad-vertical.png" alt="long ad image">
+                    <p class="flex justify-end">
+                      <a class="text-sm" href="#">Advertise here >></a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>    
+      </section>
+      
+      <!-- in page ads -->
+      <article id="inpageads" class="bg-pp-gray-dark">
+        <div class="max-w-7xl mx-auto px-2 py-6"> 
+          <div class="flex flex-col lg:flex-row justify-between">
+            <div class="w-full lg:w-1/2 p-4">
+              <img class="border-2 h-full w-full object-cover border-white rounded-lg max-h-60" src="../images/big_corgy.jpg" alt="in page ad 1">
+            </div>
+            <div class="w-full lg:w-1/2 p-4">
+              <div class="flex flex-row justify-between border-2 border-white rounded-lg p-2 max-h-60 overflow-hidden">
+                <div class="w-2/3 text-white">
+                  <p class="font-bold">Advertising stuff goes here, to entice you to look more into this.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                </div>
+                <div class="w-1/3 flex justify-center flex-start">
+                  <img class="h-full w-full object-cover" src="../images/big_corgy.jpg" alt="in page ad 2">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row justify-end">
+            <a href="#" class="text-white hover:text-white hover:underline">Advertise here >></a>
+          </div>
+        </div>
+      </article>
+      
+      <section id="breeders" class="py-4 bg-pp-gray-100">
+        <div class="max-w-7xl mx-auto px-2 py-4 prose">
+          <div class="w-full py-2">
+            <h2 class="no-prose">Find a breeder</h2>
+            <p>If you're looking for verified, trustworthy and vetted breeders to get yourself one of these breeds, why not consider one of the following:</p>
+          </div>
+          <!-- Breeder Carousel with swiperjs --> 
+          <div class="swiper swiper5 relative w-full h-full">
+            <div class="swiper-wrapper">
+              <!-- slide 1 -->
+              <div class="swiper-slide p-2  max-w-xs">
+                <div class="rounded-lg shadow cursor-pointer" role="link">
+                  <div class="relative">
+                    <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../images/big_corgy.jpg" alt="breeder corgi">
+                    <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                      <div class="chip chip-breeder">Breeder</div>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <p class="uppercase font-bold pt-2">NSW Welsh Corgi Breeder r'us</p>
+                    <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                    <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                      <p class="no-prose">Sydney, NSW </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- slide 2 -->
+              <div class="swiper-slide p-2  max-w-xs">
+                <div class="rounded-lg shadow cursor-pointer" role="link">
+                  <div class="relative">
+                    <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../images/users/groomer.png" alt="groomer">
+                    <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                      <div class="chip chip-breeder">Breeder</div>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <p class="uppercase font-bold pt-2">NSW Welsh Corgi Breeder r'us</p>
+                    <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                    <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                      <p class="no-prose">Sydney, NSW </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- slide 3 -->
+              <div class="swiper-slide p-2  max-w-xs">
+                <div class="rounded-lg shadow cursor-pointer" role="link">
+                  <div class="relative">
+                    <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../images/users/shelter.png" alt="shelter">
+                    <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                      <div class="chip chip-breeder">Breeder</div>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <p class="uppercase font-bold pt-2">NSW Welsh Corgi Breeder r'us</p>
+                    <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                    <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                      <p class="no-prose">Sydney, NSW </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- slide 4 -->
+              <div class="swiper-slide p-2  max-w-xs">
+                <div class="rounded-lg shadow cursor-pointer" role="link">
+                  <div class="relative">
+                    <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../images/big_corgy.jpg" alt="breeder corgi">
+                    <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                      <div class="chip chip-breeder">Breeder</div>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <p class="uppercase font-bold pt-2">NSW Welsh Corgi Breeder r'us</p>
+                    <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                    <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                      <p class="no-prose">Sydney, NSW </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- slide 5 -->
+              <div class="swiper-slide p-2  max-w-xs">
+                <div class="rounded-lg shadow cursor-pointer" role="link">
+                  <div class="relative">
+                    <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../images/users/groomer.png" alt="groomer">
+                    <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                      <div class="chip chip-breeder">Breeder</div>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <p class="uppercase font-bold pt-2">NSW Welsh Corgi Breeder r'us</p>
+                    <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                    <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                      <p class="no-prose">Sydney, NSW </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- slide 6 -->
+              <div class="swiper-slide p-2  max-w-xs">
+                <div class="rounded-lg shadow cursor-pointer" role="link">
+                  <div class="relative">
+                    <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../images/users/shelter.png" alt="shelter">
+                    <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2">
+                      <div class="chip chip-breeder">Breeder</div>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <p class="uppercase font-bold pt-2">NSW Welsh Corgi Breeder r'us</p>
+                    <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
+                    <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                      <p class="no-prose">Sydney, NSW</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex justify-center items-center flex-wrap sm:flex-nowrap">
+              <div class="flex justify-center items-center py-2">
+                <button type="button" class="relative inline-flex items-center button-prev p-3 shadow rounded-full hover:text-pp-blue" role="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button> 
+                <div class="swiper-pagination pagination5 relative mx-1 sm:mx-4"></div> 
+                <button type="button" class="relative inline-flex items-center button-next p-3 shadow rounded-full hover:text-pp-blue" role="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+              </div>
+            </div>
+            
+            
+                 
+
+            
+          </div>
+          
+        </div>
+      </section>
+      
+      <article id="bottomads" class="bg-pp-gray-dark">
+        <div class="max-w-7xl mx-auto px-2 py-12"> 
+          <p class="text-white py-2 font-light">Sponsored...</p>
+          <div class="flex flex-col lg:flex-row justify-between">
+            <div class="w-full lg:w-1/2 p-4">
+              <img class="border-2 h-full w-full object-cover border-white rounded-lg max-h-60" src="../images/big_corgy.jpg" alt="in page ad 1">
+            </div>
+            <div class="w-full lg:w-1/2 p-4">
+              <div class="flex flex-row justify-between border-2 border-white rounded-lg p-2 max-h-60 overflow-hidden">
+                <div class="w-2/3 text-white">
+                  <p class="font-bold">Advertising stuff goes here, to entice you to look more into this.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                </div>
+                <div class="w-1/3 flex justify-center flex-start">
+                  <img class="h-full w-full object-cover" src="../images/users/plane.png" alt="in page ad 2">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full mt-2 lg:mt-4 p-4">
+            <div class="flex flex-row border rounded-lg">
+              <div class="w-full lg:w-1/2 p-2 text-white">
+                <!-- text if needed other wise just an image -->
+                <p class="font-bold px">Advertising stuff goes here, to entice you to look more into this.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+              </div>
+              <div class="w-full lg:w-1/2 md:border lg:border-none ">
+                <a href="#">
+                  <img class="object-cover max-h-60" src="../images/big_corgy.jpg" alt="bottom ad image"> 
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      
+    </main>
+    <!-- footer area -->
+    <footer id="pp-footer" class="bg-pp-gray">
+      <div class="max-w-7xl mx-auto px-2 py-12 lg:py-16">
+        <div class="flex flex-wrap w-full"> 
+          <div class="w-full md:w-1/5 py-4 md:py-0">
+            <img src="../images/perfect_pets_WTE.png" class="h-10">
+            <p class="text-gray-400">Making adoption easy and ethical</p>
+          </div>
+          <div class="w-full md:w-4/5">
+            <div class="flex flex-wrap w-full">
+              <nav class="text-white overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base font-bold tracking-wider">Pets &amp; adoptions</h3>
+                <ul class="space-y-4 mt-4">
+                  <li><a href="./">Search listings</a></li>
+                  <li><a href="./">Browse listings</a></li>
+                  <li><a href="./">Find a breeder</a></li>
+                  <li><a href="./">Find services</a></li>
+                  <li><a href="./">News, learning and articles</a></li>
+                </ul>
+              </nav>
+              <nav class="text-white overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base font-bold tracking-wider">Account &amp; Privacy</h3>
+                <ul class="space-y-4 mt-4">
+                  <li><a href="./">Account</a></li>
+                  <li><a href="./">Settings</a></li>
+                  <li><a href="./">Privacy</a></li>
+                  <li><a href="./">Legal</a></li>
+                </ul>
+              </nav>
+              <nav class="text-white overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base font-bold tracking-wider">Support &amp; help</h3>
+                <ul class="space-y-4 mt-4">
+                  <li><a href="./">Search listings</a></li>
+                  <li><a href="./">Browse listings</a></li>
+                  <li><a href="./">Find a breeder</a></li>
+                  <li><a href="./">Find services</a></li>
+                  <li><a href="./">News, learning and articles</a></li>
+                </ul>
+              </nav>
+              <nav class=" overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base text-white font-bold tracking-wider">get social</h3>
+                <ul class="mt-4 space-y-4">
+                  <li>
+                    <a href="https://www.facebook.com/perfectpetsau" target="_blank" class="text-base text-gray-400 hover:text-white flex flex-row">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white w-6 h-6 mr-2"><title>Perfect Pets Facebook</title> <path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg> 
+                      <span> Facebook </span>
+                    </a>
+                  </li> 
+                  <li>
+                    <a href="https://www.instagram.com/perfectpetsau" target="_blank" class="text-base text-gray-400 hover:text-white flex flex-row">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white w-6 h-6 mr-2"><title>Perfect Pets Instagram</title> <path fill="currentColor" d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"></path></svg> 
+                      <span> Instagram </span>
+                    </a>
+                  </li> 
+                  <li>
+                    <a href="https://www.pinterest.com.au/yourperfectpet" target="_blank" class="text-base text-gray-400 hover:text-white flex flex-row">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="pinterest-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white w-6 h-6 mr-2"><title>Perfect Pets Pinterest</title> <path fill="currentColor" d="M448 80v352c0 26.5-21.5 48-48 48H154.4c9.8-16.4 22.4-40 27.4-59.3 3-11.5 15.3-58.4 15.3-58.4 8 15.3 31.4 28.2 56.3 28.2 74.1 0 127.4-68.1 127.4-152.7 0-81.1-66.2-141.8-151.4-141.8-106 0-162.2 71.1-162.2 148.6 0 36 19.2 80.8 49.8 95.1 4.7 2.2 7.1 1.2 8.2-3.3.8-3.4 5-20.1 6.8-27.8.6-2.5.3-4.6-1.7-7-10.1-12.3-18.3-34.9-18.3-56 0-54.2 41-106.6 110.9-106.6 60.3 0 102.6 41.1 102.6 99.9 0 66.4-33.5 112.4-77.2 112.4-24.1 0-42.1-19.9-36.4-44.4 6.9-29.2 20.3-60.7 20.3-81.8 0-53-75.5-45.7-75.5 25 0 21.7 7.3 36.5 7.3 36.5-31.4 132.8-36.1 134.5-29.6 192.6l2.2.8H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"></path></svg> 
+                      <span> Pinterest </span>
+                    </a>
+                  </li>
+                </ul>
+                      
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="pt-16 text-white font-bold text-center">
+          &copy; 2021 Perfect Pets. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script type="module" src="../js/pets2.js"></script>
+  </body>
+</html>
