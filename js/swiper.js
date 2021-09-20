@@ -142,6 +142,41 @@ const swiper5 = new Swiper('.swiper5', {
   }
 });
 
+// gallery swiper
+
+const swiper5G = new Swiper('.swiperg', {
+  loop: false,
+  slidesPerView: 'auto',
+  loopedSlides: 5,
+  
+
+  // pagination
+  /* pagination: {
+    clickable: true,
+    horizontalClass: '',
+    type: 'bullets',
+    el: '.paginationg'
+  }, */
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+
+  // And if we need scrollbar
+  /* scrollbar: {
+    el: '.swiper-scrollbar',
+  }, */
+
+  /* on: {
+    'paginationRender': function(sw, el){
+      // horizontalClass param not working ????
+      // interferes with alignment - wth
+      el.classList.remove('swiper-pagination-horizontal');
+    }
+  } */
+});
 
 
             

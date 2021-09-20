@@ -9,7 +9,11 @@ export default class Interactions{
     const mainMenu = document.getElementById('main-menu');
     const mainLoginBtn = document.getElementById('mainLoginBtn');
 
-    const breedGalleryBtn = document.getElementById('breedImages');
+    const breedGalleryBtn = document.querySelector('.breedImages');
+    const bodyEl = document.getElementsByTagName('body')[0];
+    const galleryOverlay = document.getElementById('breedGalleryOverlay');
+    const closeGallery = document.getElementById('closeBreedGallery');
+    const breedGallery = document.getElementById('breedGallery');
 
     menuBtn.addEventListener('click', (evt)=>{
       if(mainMenu.classList.contains('hidden')){
@@ -28,8 +32,13 @@ export default class Interactions{
       
     });
 
-   /*  breedGalleryBtn.addEventListener('click', (evt) => {
-        openDialog('breedGallery', evt.target);
+    /* breedGalleryBtn.addEventListener('click', (evt) => {
+      galleryOverlay.classList.remove('hidden');
+    });
+
+    closeGallery.addEventListener('click', (evt)=>{
+      galleryOverlay.classList.add('hidden');
+      
     }); */
   }
 
