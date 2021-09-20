@@ -10,58 +10,59 @@
   <link rel="stylesheet" href="../dist/pets2.css">
 </head>
   <body class="flex flex-col min-h-screen font-ppPoppins">
-    <!-- header navigation area -->
-    <header class="bg-pp-blue">
-      <nav class="max-w-7xl mx-auto flex items-center gap-2 xl:gap-6 flex-wrap p-2 w-full z-10 top-0">
-        <div class="block lg:hidden">
-          <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
-            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
-          </button>
-        </div>
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
-          <a href="../index.html" class="text-white">
-            <img src="../images/perfect_pets_WTE.png" class="block h-10 lg:h-16 w-auto mx-auto">
-          </a>
-        </div>
-    
-        
-    
-        <div class="hidden w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block pt-6 lg:pt-0" id="main-menu">
-          <ul class="list-reset lg:flex justify-end flex-1 items-center  font-medium text-sm">
-            <li class="my-6 mx-2">
-              <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4 ">Listings</a>
-            </li>
-            <li class="my-6 mx-2">
-              <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Services</a>
-            </li>
-            <li class="my-6 mx-2">
-              <a href="./" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent px-2 py-4 link-active">Learning</a>
-            </li>
-            <li class="my-6 mx-2">
-              <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Blog</a>
-            </li>
-            <li class="my-6 mx-2">
-              <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">About</a>
-            </li>
-            <li class="my-6 mx-2">
-              <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Premium</a>
-            </li>
-          </ul>
-          <div class="flex flex-grow-0 p-4 md:hidden">
+    <div class="fixed top-0 w-full z-10">
+      <!-- header navigation area -->
+      <header class="bg-pp-blue">
+        <nav class="max-w-7xl mx-auto flex items-center gap-2 xl:gap-6 flex-wrap p-2 w-full z-10 top-0">
+          <div class="block lg:hidden">
+            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
+              <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+            </button>
+          </div>
+          <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <a href="../index.html" class="text-white">
+              <img src="../images/perfect_pets_WTE.png" class="block h-10 lg:h-16 w-auto mx-auto">
+            </a>
+          </div>
+      
+          
+      
+          <div class="hidden w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block pt-6 lg:pt-0" id="main-menu">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center  font-medium text-sm">
+              <li class="my-6 mx-2">
+                <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4 ">Listings</a>
+              </li>
+              <li class="my-6 mx-2">
+                <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Services</a>
+              </li>
+              <li class="my-6 mx-2">
+                <a href="./" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent px-2 py-4 link-active">Learning</a>
+              </li>
+              <li class="my-6 mx-2">
+                <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Blog</a>
+              </li>
+              <li class="my-6 mx-2">
+                <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">About</a>
+              </li>
+              <li class="my-6 mx-2">
+                <a href="./" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Premium</a>
+              </li>
+            </ul>
+            <div class="flex flex-grow-0 p-4 md:hidden">
+              <a href="./" class="duration-150 text-sm font-medium transition-all ease-linear py-2 px-8 rounded-full bg-pp-green outline-none focus:outline-none  hover:bg-pp-green-dark text-white">Login</a>
+            </div>
+          </div>
+          <div id="mainLoginBtn" class=" flex-grow-0 md:flex-grow lg:flex-grow-1 justify-end p-4 hidden md:flex">
             <a href="./" class="duration-150 text-sm font-medium transition-all ease-linear py-2 px-8 rounded-full bg-pp-green outline-none focus:outline-none  hover:bg-pp-green-dark text-white">Login</a>
           </div>
-        </div>
-        <div id="mainLoginBtn" class=" flex-grow-0 md:flex-grow lg:flex-grow-1 justify-end p-4 hidden md:flex">
-          <a href="./" class="duration-150 text-sm font-medium transition-all ease-linear py-2 px-8 rounded-full bg-pp-green outline-none focus:outline-none  hover:bg-pp-green-dark text-white">Login</a>
-        </div>
-      </nav>
-    </header>
-
-    
-    
+        </nav>
+      </header>
+    </div>
+      
+      
     <!-- breadcrums area -->
-    <div id="breadcrumbs" class="bg-pp-navy hidden md:block">
-      <nav class="max-w-7xl mx-auto text-white p-2">
+    <div id="breadcrumbs" class="bg-pp-navy hidden md:block mt-20">
+      <nav class="max-w-7xl mx-auto text-white px-2 pt-3 pb-2">
         <ul class="list-reset flex text-xs font-semibold">
           <li class="inline-flex items-center">
             <a class="hover:underline" href="../index.html">Home</a>
@@ -75,9 +76,10 @@
         </ul>
       </nav>
     </div>
+    
 
     <!-- start main content area -->
-    <main id="main" class="">
+    <main id="main" class="mt-20 md:mt-0">
       <div class="max-w-7xl mx-auto px-2">
         <div class="ad-container ad-top-page">
           <p class="ad-text">Sponsored...</p>  
@@ -190,43 +192,43 @@
       </section>  
       
       <!-- mid page nav sticks to top when scolling -->
-      <aside class="w-full bg-gray-400">
+      <aside class="w-full bg-pp-navy sticky top-20 z-10">
         <nav id="pagenav" class="max-w-7xl mx-auto px-2">
           <div class="lg:flex lg:flex-row hidden">
             <ul class="list-reset lg:flex justify-between flex-1 items-center">
-              <li class="mr-6 py-4">On this page...</li>
+              <li class="mr-6 py-4 text-white">On this page...</li>
               <li class="mr-6 py-4">
-                <a class="inline-flex items-center hover:underline text-pp-blue" href="#temperament">
+                <a class="inline-flex items-center hover:underline text-white" href="#temperament">
                   <span>Temperament</span>
                   <!-- <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
                 </a>
               </li>
               <li class="mr-6 py-4">
-                <a class="inline-flex items-center hover:underline text-pp-blue" href="#appearnace">
+                <a class="inline-flex items-center hover:underline text-white" href="#appearance">
                   <span>Appearance</span>
                   <!-- <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
                 </a>
               </li>
               <li class="mr-6 py-4">
-                <a class="inline-flex items-center hover:underline text-pp-blue" href="#health">
+                <a class="inline-flex items-center hover:underline text-white" href="#health">
                   <span>Health</span>
                   <!-- <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
                 </a>
               </li>
               <li class="mr-6 py-4">
-                <a class="inline-flex items-center hover:underline text-pp-blue" href="#faqs">
+                <a class="inline-flex items-center hover:underline text-white" href="#faqs">
                   <span>FAQ</span>
                  <!--  <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
                 </a>
               </li>
               <li class="mr-6 py-4">
-                <a class="inline-flex items-center hover:underline text-pp-blue" href="#history">
+                <a class="inline-flex items-center hover:underline text-white" href="#history">
                   <span>History</span>
                   <!-- <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
                 </a>
               </li>
               <li class="mr-6 py-4">
-                <a class="inline-flex items-center hover:underline text-pp-blue" href="#breeders">
+                <a class="inline-flex items-center hover:underline text-white" href="#breeders">
                   <span>Find a breeder</span>
                  <!--  <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
                 </a>
@@ -236,7 +238,8 @@
         </nav>
       </aside> 
 
-      <section id="temperament" class="py-4 bg-pp-gray-100">
+      <section id="temperamentSection" class="py-4 bg-pp-gray-100 relative">
+        <a id="temperament" class="absolute -top-32">&nbsp;</a>
         <div class="max-w-7xl mx-auto px-2 py-4 prose"> 
           <h2>Burmese Cat Temperament</h2>
           <div class="flex flex-col gap-1 lg:gap-4 lg:flex-row">
@@ -306,7 +309,9 @@
           </div>
         </div>
       </section>
-      <section id="appearance" class="py-4">
+
+      <section id="appearanceSection" class="py-4 relative">
+        <a id="appearance" class="absolute -top-32">&nbsp;</a>
         <div class="max-w-7xl mx-auto px-2 py-4 prose"> 
           <div class="w-full">
             <h2>Burmese Cat Appeance</h2>
@@ -378,7 +383,9 @@
           </div>
         </div>
       </section>
-      <section id="health" class="bg-pp-gray-100 py-4">
+
+      <section id="healthSection" class="bg-pp-gray-100 py-4 relative">
+        <a id="health" class="absolute -top-32">&nbsp;</a>
         <div class="max-w-7xl mx-auto px-2 py-4 prose"> 
           <div class="w-full">
             <h2>Burmese Cat Health</h2>
@@ -417,7 +424,8 @@
         </div>
       </section>
       
-      <section id="faqs" class="py-4">
+      <section id="faqSection" class="py-4 relative">
+        <a id="faqs" class="absolute -top-32">&nbsp;</a>
         <div class="max-w-7xl mx-auto px-2 py-4 prose"> 
           
           <!-- actual FAQs -->
@@ -676,7 +684,8 @@
         </div>
       </section>
       
-      <section id="history" class="py-4 bg-pp-gray-100">
+      <section id="historySection" class="py-4 bg-pp-gray-100 relative">
+        <a id="history" class="absolute -top-32">&nbsp;</a>
         <div class="max-w-7xl mx-auto px-2 py-4 prose"> 
           <div class="flex flex-col lg:flex-row">
             <div class="w-full lg:w-3/4 lg:pr-8">
@@ -731,7 +740,8 @@
         </div>
       </article>
       
-      <section id="breeders" class="py-4 bg-pp-gray-100">
+      <section id="breedersSection" class="py-4 bg-pp-gray-100 relative">
+        <a id="breeders" class="absolute -top-32">&nbsp;</a>
         <div class="max-w-7xl mx-auto px-2 py-4 prose">
           <div class="w-full py-2">
             <h2 class="no-prose">Find a breeder</h2>
