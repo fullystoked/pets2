@@ -25,3 +25,12 @@ div.swiper-pagination-bullets>span.swiper-pagination-bullet{
 .swiper-pagination-bullet-active {
   background-color: #03ae9c;
 }
+
+/* basic modal styles */
+body.modal-open {
+  overflow: hidden;
+}
+
+body.modal-open #breedGallery{
+  display: flex;
+}

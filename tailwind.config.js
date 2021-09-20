@@ -119,9 +119,15 @@ module.exports = {
     
     plugin(function({addComponents, addUtilities, theme}){
       const newUtilities = {
-        h95Vh: {
+        '.h-75-vh': {
+          height: '75vh'
+        },
+        '.h-85-vh': {
+          height: '85vh'
+        },
+        '.h-95-vh': {
           height: '95vh'
-        }
+        },
       };
 
       addUtilities(newUtilities, ['responsive', 'hover']);
