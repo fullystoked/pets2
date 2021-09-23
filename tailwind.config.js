@@ -83,7 +83,7 @@ module.exports = {
               margin: '1rem 0 0 0'
             },
             p: {
-              margin: '0.25rem 0.25rem 1rem 0.25rem',
+              margin: '0.25rem 0.25rem 1rem 0rem',
               lineHeight: '1.5rem',
               '&.no-prose': {
                 marginBottom: '0.25rem'
