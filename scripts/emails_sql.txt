@@ -1,0 +1,14 @@
+// from messaging
+
+select distinct email from tbl_pm_reply where email is not null;
+
+// from collected
+
+select distinct email from tbl_user_email
+
+// Get total emails (unique)
+
+drop temporary table if exists tableEmail;
+CREATE TEMPORARY TABLE IF NOT EXISTS tableEmail AS select email from tbl_user_email;
+insert into tableEmail select email from tbl_pm_reply where email is not null;
+select distinct email from tableEmail;
