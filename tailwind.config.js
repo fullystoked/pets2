@@ -83,7 +83,7 @@ module.exports = {
               margin: '1rem 0 0 0'
             },
             p: {
-              margin: '0.25rem 0.25rem 1rem 0.25rem',
+              margin: '0.25rem 0.25rem 1rem 0rem',
               lineHeight: '1.5rem',
               '&.no-prose': {
                 marginBottom: '0.25rem'
@@ -199,6 +199,10 @@ module.exports = {
           position: 'relative',
           paddingBottom: '2rem',
           marginBottom: '1rem',
+          p: {
+            fontSize: theme('fontSize.sm'),
+            fontWeight: theme('fontWeight.semibold'),
+          },
           'p:nth-of-type(1)': {
             marginBottom:0
           },
@@ -225,7 +229,6 @@ module.exports = {
         '.char-bar-attribute': {
           // font-light text-gray-800 absolute bottom-0 truncate
           color: 'rgb(31, 41, 55)',
-          fontWeight: theme('fontWeight.300'),
           position: 'absolute',
           bottom: '-1rem',
           overflow: 'hidden',
