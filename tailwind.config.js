@@ -74,6 +74,12 @@ module.exports = {
             h3:{
               fontSize: theme('fontSize.lg'),
               fontWeight: theme('fontWeight.bold'),
+              margin: '1rem 0 0 0',
+              '&.pp-orange': {
+                color: 'rgb(255, 164, 6)'
+              }
+            },
+            h4:{
               margin: '1rem 0 0 0'
             },
             p: {
@@ -103,7 +109,7 @@ module.exports = {
                 marginTop: '0rem',
                 marginBottom: '0rem'
               }
-            },
+            }
           }
         }
         
