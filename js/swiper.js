@@ -110,8 +110,9 @@ const swiper3 = new Swiper('.swiper3', {
 // bottom swiper
 const swiper5 = new Swiper('.swiper5', {
   loop: false,
-  slidesPerView: 'auto',
-  loopedSlides: 6,
+  slidesPerView: 4,
+  slidesPerGroup: 4,
+  // loopedSlides: 6,
   
 
   // pagination
