@@ -4,6 +4,28 @@
 export default class Interactions{
 
 
+  
+
+
+  onNavTabClick = (tabs, panels)=>{
+    return (evt) => {
+      tabs.forEach(el => {
+        el.classList.remove('active');
+      });
+      panels.forEach(el => {
+        el.classList.remove('active');
+      });
+
+      // turn on the right tab
+      evt.target.classList.add('active');
+      // display correct panel
+      const panel = evt.target.dataset.panel;
+      console.log(document.getElementsByClassName(panel)[0].classList);
+      document.getElementsByClassName(panel)[0].classList.add('active'); 
+    }
+  };
+
+
   runMenu = ()=>{
     const menuBtn = document.getElementById('nav-toggle');
     const mainMenu = document.getElementById('main-menu');
@@ -14,6 +36,10 @@ export default class Interactions{
     const galleryOverlay = document.getElementById('breedGalleryOverlay');
     const closeGallery = document.getElementById('closeBreedGallery');
     const breedGallery = document.getElementById('breedGallery');
+
+    const tabs = document.querySelectorAll('.navtab');
+    const panels = document.querySelectorAll('.tab-content');
+
 
     menuBtn.addEventListener('click', (evt)=>{
       if(mainMenu.classList.contains('hidden')){
@@ -40,7 +66,15 @@ export default class Interactions{
       galleryOverlay.classList.add('hidden');
       
     }); */
+    
+    
+  
+    tabs.forEach(el => {
+      el.addEventListener('click', this.onNavTabClick(tabs, panels));
+    });
   }
+
+  
 
 
 }
