@@ -110,11 +110,22 @@ const swiper3 = new Swiper('.swiper3', {
 // bottom swiper
 const swiper5 = new Swiper('.swiper5', {
   loop: false,
-  slidesPerView: 4,
-  slidesPerGroup: 4,
-  // loopedSlides: 6,
+  slidesPerView: 'auto',
+  slidesPerGroup: 1,
+  //loopedSlides: 2,
   
+  breakpoints: {
+    640: {
+      slidesPerGroup: 2
+    },
+    1024: {
+      slidesPerGroup: 3
+    },
+    1200: {
+      slidesPerGroup: 4
+    }
 
+  },
   // pagination
   pagination: {
     clickable: true,
@@ -179,6 +190,87 @@ const swiper5G = new Swiper('.swiperg', {
   } */
 });
 
+// bottom dogs/cats swiper
+const swiper6 = new Swiper('.swiper6', {
+  loop: false,
+  slidesPerView: 'auto',
+  slidesPerGroup: 1,
+  // loopedSlides: 6,
+  
+  breakpoints: {
+    1200: {
+      slidesPerGroup: 2
+    }
 
-            
+  },
+
+  // pagination
+  pagination: {
+    clickable: true,
+    horizontalClass: '',
+    type: 'bullets',
+    el: '.pagination6'
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+
+  // And if we need scrollbar
+  /* scrollbar: {
+    el: '.swiper-scrollbar',
+  }, */
+
+  on: {
+    'paginationRender': function(sw, el){
+      // horizontalClass param not working ????
+      // interferes with alignment - wth
+      el.classList.remove('swiper-pagination-horizontal');
+    }
+  }
+});
+
+const swiper7 = new Swiper('.swiper7', {
+  loop: false,
+  slidesPerView: 'auto',
+  slidesPerGroup: 1,
+  // loopedSlides: 6,
+  
+  breakpoints: {
+    1200: {
+      slidesPerGroup: 2
+    }
+
+  },
+  
+  // pagination
+  pagination: {
+    clickable: true,
+    horizontalClass: '',
+    type: 'bullets',
+    el: '.pagination7'
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+
+  // And if we need scrollbar
+  /* scrollbar: {
+    el: '.swiper-scrollbar',
+  }, */
+
+  on: {
+    'paginationRender': function(sw, el){
+      // horizontalClass param not working ????
+      // interferes with alignment - wth
+      el.classList.remove('swiper-pagination-horizontal');
+    }
+  }
+});
+
             

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="19.996" viewBox="0 0 21 19.996">
+  <g id="ic_pets_48px" transform="translate(-4 -6)">
+    <circle id="Ellipse_99" data-name="Ellipse 99" cx="2.5" cy="2.5" r="2.5" transform="translate(4 10)" fill="#ffffff"/>
+    <circle id="Ellipse_100" data-name="Ellipse 100" cx="2.5" cy="2.5" r="2.5" transform="translate(9 6)" fill="#ffffff"/>
+    <circle id="Ellipse_101" data-name="Ellipse 101" cx="2.5" cy="2.5" r="2.5" transform="translate(15 6)" fill="#ffffff"/>
+    <circle id="Ellipse_102" data-name="Ellipse 102" cx="2.5" cy="2.5" r="2.5" transform="translate(20 10)" fill="#ffffff"/>
+    <path id="Path_140" data-name="Path 140" d="M22.038,25.588c-.921-1.068-1.689-1.989-2.61-3.057a4.471,4.471,0,0,0-1.836-1.389,2.4,2.4,0,0,0-.347-.089A4.332,4.332,0,0,0,16.419,21a4.331,4.331,0,0,0-.826.053,2.807,2.807,0,0,0-.347.089,4.471,4.471,0,0,0-1.836,1.389c-.921,1.068-1.689,1.989-2.61,3.057-1.378,1.373-3.067,2.9-2.762,5.046a3.317,3.317,0,0,0,2.457,2.446c.768.153,3.22-.458,5.829-.458.032,0,.063.005.095.005s.063-.005.095-.005c2.61,0,5.061.61,5.829.458A3.325,3.325,0,0,0,24.8,30.633C25.1,28.492,23.421,26.961,22.038,25.588Z" transform="translate(-1.896 -7.108)" fill="#ffffff"/>
+  </g>
+</svg>

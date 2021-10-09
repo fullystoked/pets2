@@ -34,7 +34,8 @@ module.exports = {
           DEFAULT: 'rgb(45, 50, 58)',
           dark: 'rgb(64, 75, 89)',
           '100': 'rgb(244, 244, 244)',
-          '200': 'rgb(229, 231, 235)'
+          '200': 'rgb(229, 231, 235)',
+          '300': 'rgb(200,201,204)'
         },
         'pp-navy': {
           DEFAULT: 'rgb(35, 47, 68)'
@@ -53,11 +54,12 @@ module.exports = {
               fontWeight: theme('fontWeight.bold'),
               fontSize: theme('fontSize.2xl'),
               marginBottom: '0rem',
+              textTransform: 'uppercase',
               '@screen sm': {
-                fontSize: theme('fontSize.4xl'),
+                fontSize: theme('fontSize.3xl'),
               },
               '@screen lg': {
-                fontSize: theme('fontSize.5xl'),
+                fontSize: theme('fontSize.4xl'),
               },
               '&.no-prose': {
                 marginBottom: '0.5rem'
@@ -73,7 +75,7 @@ module.exports = {
             },
             h3:{
               fontSize: theme('fontSize.lg'),
-              fontWeight: theme('fontWeight.bold'),
+              fontWeight: theme('fontWeight.medium'),
               margin: '1rem 0 0 0',
               '&.pp-orange': {
                 color: 'rgb(255, 164, 6)'
@@ -87,7 +89,7 @@ module.exports = {
               lineHeight: '1.5rem',
               '&.no-prose': {
                 marginBottom: '0.25rem'
-              }
+              },
             },
             a: {
               color: 'rgb(5, 117, 181)',
@@ -109,7 +111,23 @@ module.exports = {
                 marginTop: '0rem',
                 marginBottom: '0rem'
               }
-            }
+            },
+            'ul, ol': {
+              '&.no-prose': {
+                'li::before':{
+                  display: 'none'
+                },
+                
+              },
+              '&.no-top':{
+                marginTop: '0.25rem'
+              },
+              '&.no-padding': {
+                li: {
+                  padding: '0rem'
+                }
+              }
+            },
           }
         }
         
@@ -161,16 +179,55 @@ module.exports = {
       };
       const badges = {
         '.badge': {
-          fontWeight: theme('fontWeight.bold'),
+          // fontWeight: theme('fontWeight.bold'),
           border: '1px solid rgb(64, 75, 89)',
           borderRadius: '9999px',
           padding: '0.25rem 1rem',
           margin: '0rem 1rem'
         },
+        '.badge-icon':{
+          padding:'0.25rem 2rem 0.25rem 1rem'
+        },
         '.badge-green': {
           backgroundColor: 'rgb(3, 174, 156)',
           borderColor: 'rgb(3, 174, 156)',
           color: theme('colors.white')
+        },
+        '.badge-gray': {
+          backgroundColor: 'rgb(64, 75, 89)',
+          borderColor: 'rgb(64, 75, 89)',
+          color: theme('colors.white')
+        }
+
+      };
+
+      // tag card
+      const tagCard = {
+        '.tag-card': {
+          backgroundColor: 'rgb(244, 244, 244)',
+          padding: '0.35rem 0.6rem',
+          borderLeft: '4px solid transparent',
+          marginTop: '0.5rem',
+          marginBottom: '0.5rem',
+          '@screen lg': {
+            marginRight: '1rem',
+            marginTop: '0rem'
+          }
+        },
+        '.tag-card-breeder': {
+          borderColor: 'rgb(3, 174, 156)',
+          'min-width' : '12rem',
+          
+        },
+        '.tag-card-white':{
+          backgroundColor: 'rgb(255, 255, 255)'
+        },
+        '.tag-card-logo':{
+          padding: '0rem',
+          '& img': {
+            height: '3.5rem',
+            width: 'auto'
+          }
         }
 
       };
@@ -251,7 +308,7 @@ module.exports = {
           whiteSpace: 'nowrap',
           fontWeight: theme('fontWeight.medium'),
         },
-        '.chip-breeder': {
+        '.chip-green': {
           borderColor: 'rgb(3, 174, 156)',
           background: 'rgb(3, 174, 156)',
           color: 'white',
@@ -259,7 +316,7 @@ module.exports = {
           padding: '0rem 2rem',
           margin : '0'
         },
-        '.chip-club': {
+        '.chip-gray': {
           borderColor: 'rgb(64, 75, 89)',
           background: 'rgb(64, 75, 89)',
           color: 'white',
@@ -267,16 +324,36 @@ module.exports = {
           padding: '0rem 2rem',
           margin : '0'
         },
-        '.chip-shelter': {
+        '.chip-orange': {
           borderColor: 'rgb(255, 164, 6)',
           background: 'rgb(255, 164, 6)',
           color: 'white',
           borderRadius: theme('borderRadius.full'),
           padding: '0rem 2rem',
           margin : '0'
+        },
+        
+      };
+
+      const navTab = {
+        '.navtab': {
+          backgroundColor: 'rgb(255, 255, 255)',
+          fontWeight: 'bold'
+        },
+        '.navtab-green': {
+          color: 'rgb(3, 174, 156)',
+          '&:hover':{
+            textDecoration: 'underline'
+          },
+          '&.active': {
+            color: 'rgb(255, 255, 255)',
+            backgroundColor: 'rgb(3, 174, 156)',
+            fontWeight: 'normal'
+          }
         }
-      }
-      addComponents([ads, badges, charCard, charBar, chips]);
+      };
+
+      addComponents([ads, badges, tagCard, charCard, charBar, chips, navTab]);
     })
   ],
 }
