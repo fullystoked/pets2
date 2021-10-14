@@ -338,7 +338,10 @@ module.exports = {
       const navTab = {
         '.navtab': {
           backgroundColor: 'rgb(255, 255, 255)',
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          '&.navtab-alt': {
+            backgroundColor: 'rgb(244, 244, 244)'
+          }
         },
         '.navtab-green': {
           color: 'rgb(3, 174, 156)',
