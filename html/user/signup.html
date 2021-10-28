@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets 2 Mockups - user sign up</title>
+
+    <!-- Mapbox maps styles -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../css/fall.css">
+    <!-- PP styles -->
+    <link rel="stylesheet" href="../../dist/pets2.css">
+
+  </head>
+  <body class="flex flex-col min-h-screen font-ppPoppins">
+    <div class="fixed top-0 w-full z-20">
+      <!-- header navigation area -->
+      <header class="bg-pp-blue">
+        <nav class="max-w-7xl mx-auto flex items-center gap-2 xl:gap-6 flex-wrap p-2 w-full z-20 top-0">
+          <div class="block lg:hidden">
+            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
+              <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+            </button>
+          </div>
+          <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <a href="../../index.html" class="text-white">
+              <img src="../../images/perfect_pets_WTE.png" class="block h-10 lg:h-16 w-auto mx-auto">
+            </a>
+          </div>
+      
+          
+      
+          <div class="hidden w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block pt-6 lg:pt-0" id="main-menu">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center  font-medium text-sm">
+              <li class="my-4 lg:my-6 mx-2">
+                <a href="#" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4 ">Listings</a>
+              </li>
+              <li class="my-4 lg:my-6 mx-2">
+                <a href="#" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Services</a>
+              </li>
+              <li class="my-4 lg:my-6 mx-2">
+                <a href="#" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4 ">Learning</a>
+              </li>
+              <li class="my-4 lg:my-6 mx-2">
+                <a href="#" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Blog</a>
+              </li>
+              <li class="my-4 lg:my-6 mx-2">
+                <a href="#" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">About</a>
+              </li>
+              <li class="my-4 lg:my-6 mx-2">
+                <a href="#" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Premium</a>
+              </li>
+            </ul>
+            <div class="flex flex-grow-0 p-2 md:hidden">
+              <a href="#" class="duration-150 text-sm font-medium transition-all ease-linear py-2 px-8 rounded-full bg-pp-green outline-none focus:outline-none  hover:bg-pp-green-dark text-white">Login</a>
+            </div>
+          </div>
+          <div id="mainLoginBtn" class=" flex-grow-0 md:flex-grow lg:flex-grow-1 justify-end p-4 hidden md:flex">
+            <a href="#" class="duration-150 text-sm font-medium transition-all ease-linear py-2 px-8 rounded-full bg-pp-green outline-none focus:outline-none  hover:bg-pp-green-dark text-white">Login</a>
+          </div>
+        </nav>
+      </header>
+    </div>
+    
+    <!-- breadcrums area -->
+    <div id="breadcrumbs" class="bg-pp-navy hidden md:block mt-20">
+      <nav class="max-w-7xl mx-auto text-white px-2 pt-5 pb-4">
+        <ul class="list-reset flex text-xs font-semibold">
+          <li class="inline-flex items-center">
+            <a class="hover:underline" href="../index.html">Home</a>
+            <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+          </li>
+          <li class="inline-flex items-center">Sign up</li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- start main content area -->
+    <main id="main" class="mt-20 md:mt-0">
+      <section id="loginArea" class="max-w-none">
+        <div class="max-w-7xl mx-auto px-2 pt-10">
+          <h1 class="sr-only">Sign up to Perfect Pets</h1>
+          <div class="max-w-none sm:max-w-sm m-auto mb-12">
+            <div class="text-center">
+              <div class="">
+                <img src="../../images/perfect_pets_BLK.png" alt="Login to Perfect Pets" class="block h-10 lg:h-16 w-auto mx-auto">
+              </div>
+              <div class="mt-4">
+                <p class="text-xl font-bold">Sign up for free and join Perfect Pets</p>
+              </div>
+              <div class="flex justify-center mt-8">
+                <button class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 active:bg-blue-600 text-white px-8 py-2 rounded-full flex flex-row items-center ease-liner transition-all duration-150">
+                  <span class="fab fa-facebook fa-2x mr-2"></span>
+                  <span>Sign up with Facebook</span>
+                </button>
+              </div>
+              <div class="flex justify-center mt-6">
+                <button class="w-full sm:w-3/4 px-8 py-2 rounded-full border border-solid border-gray-500 hover:bg-gray-600 hover:text-white active:bg-gray-600 active:text-white ease-linear transition-all duration-150 flex flex-row items-center">
+                  <span class="fab fa-google fa-2x mr-2"></span>
+                  <span>Sign up with Google</span>
+                </button>
+              </div>
+            </div>
+            <div class="relative mt-8">
+              <div class="absolute inset-0 flex items-center">
+                <div class="w-full border-t border-gray-300"></div>
+              </div> 
+              <div class="relative flex justify-center text-sm">
+                <span class="px-5 bg-white text-gray-500"> Or </span>
+              </div>
+            </div>
+            <div class="mt-4">
+              <form action="./success.html" method="post">
+                <div class="">
+                  <label for="email" class="block font-medium">Email</label>
+                  <input type="email" name="email" id="email" placeholder="Please enter your email"
+                     class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div class="mt-4">
+                  <label for="email" class="block font-medium">Confirm Email</label>
+                  <input type="email" name="confirmEmail" id="confirmEmail" placeholder="Please enter your email"
+                     class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div class="mt-4 relative">
+                  <label for="password">Set Password</label>
+                  <input type="password" name="password" id="password" placeholder="Please enter your password"
+                    class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                  <span id="pwdEye" class="fas fa-eye absolute right-2 bottom-3"></span>
+                </div>
+                <div class="my-2 bg-gray-100 p-2 flex flex-row">
+                  <span class="mt-2 mr-2 fas fa-info-circle"></span>
+                  <p>Your password must be at least 6 characters long, contain both uppercase and lowercase letters, as well as at least one number</p>
+                </div>
+                <div class="mt-4">
+                  <label for="fname" class="block font-medium">First Name</label>
+                  <input type="text" name="fname" id="fname" placeholder="Please enter your first name"
+                     class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div class="mt-4">
+                  <label for="lname" class="block font-medium">Last Name</label>
+                  <input type="text" name="lname" id="lname" placeholder="Please enter your last name"
+                     class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div class="mt-4">
+                  <label for="mobile" class="block font-medium">Mobile Number</label>
+                  <input type="text" name="mobile" id="mobile" placeholder="Enter your mobile number" aria-label="Enter mobile phone number"
+                    class="h-10 w-full block rounded border border-solid border-gray-500 px-3 py-2 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <!-- country drop down example only - implementation handled by 2DM-->
+                <div class="mt-4 relative">
+                  <label for="country" class="block font-medium">Country</label>
+                  <div id="countrySelect" class="relative closed flex flex-row justify-between items-center h-10 block rounded border border-solid border-gray-500 px-3 py-2 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                      <span id="countrySelectText">Please select a country</span>
+                      <span id="countryAngle" class="fas fa-angle-down"></span>
+                  </div>
+                  <div id="countrySelectOptions" class="z-10 absolute top-18  left-0 w-full hidden">
+                    <ul class=" bg-white border border-gray-500 border-t-0 rounded-b">
+                      <li class="countrySelectItem p-2 selected bg-gray-100" data-country="Australia">Australia</li>
+                      <li class="countrySelectItem p-2 hover:bg-gray-100" data-country="New Zealand">New Zealand</li>
+                      <li class="countrySelectItem  p-2 hover:bg-gray-100" data-country="China">China</li>
+                      <li class="countrySelectItem p-2 hover:bg-gray-100" data-country="United States">United States</li>
+                      <li class="countrySelectItem p-2 hover:bg-gray-100" data-country="United Kingdom">United Kingdom</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <div class="flex flex-row">
+                    <span>
+                      <input type="checkbox" name="sendNews" id="sendNews" class="mt-2 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-600 rounded mr-2">
+                    </span>
+                    <span>
+                      <label for="sendNews">Please send me news and offers from Perfect Pets</label>
+                    </span>
+                  </div>
+                  <div class="flex flex-row">
+                    <span>
+                      <input type="checkbox" name="shareData" id="shareData" class="mt-2 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-600 rounded mr-2">
+                    </span>
+                    <span>
+                      <label for="shareData">Share my data with Perfect Pets content providers for marketing purposes</label>
+                    </span>
+                  </div>
+                  
+                </div>
+
+
+                <div class="my-4">
+                  <!-- snip image only needs actual implementation -->
+                  <img class="" src="../../images/capture.png" alt="capture">
+                </div>
+                <div class="mt-4">
+                  <p>By clicking on become a member you agree to Perfect Pets <a class="hover:underline text-pp-blue" href="#">Terms and Conditions of Use</a></p>
+                </div>
+                <div class="mt-4">
+                  <p>To learn more about how Perfect Pets collects, uses, shares and protects your personal data, please see Perfect Pets <a class="hover:underline text-pp-blue" href="#">Privacy Policy</a> </p>
+                </div>
+                <div class="mt-6 text-center">
+                  <button class="px-12 py-2 rounded-full bg-pp-orange hover:underline">
+                    <span>Become a member</span>
+                  </button>
+                </div>
+                <div class="mt-6 text-center">
+                  <p>Have an account? <a class="hover:underline text-pp-blue" href="./login.html">Login</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <!-- footer area -->
+    <footer id="pp-footer" class="bg-pp-gray">
+      <div class="max-w-7xl mx-auto px-2 py-12 lg:py-16">
+        <div class="flex flex-wrap w-full"> 
+          <div class="w-full md:w-1/5 py-4 md:py-0">
+            <img src="../../images/perfect_pets_WTE.png" class="h-10">
+            <p class="text-gray-400">Making adoption easy and ethical</p>
+          </div>
+          <div class="w-full md:w-4/5">
+            <div class="flex flex-wrap w-full">
+              <nav class="text-white overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base font-bold tracking-wider">Pets &amp; adoptions</h3>
+                <ul class="space-y-4 mt-4">
+                  <li><a href="./">Search listings</a></li>
+                  <li><a href="./">Browse listings</a></li>
+                  <li><a href="./">Find a breeder</a></li>
+                  <li><a href="./">Find services</a></li>
+                  <li><a href="./">News, learning and articles</a></li>
+                </ul>
+              </nav>
+              <nav class="text-white overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base font-bold tracking-wider">Account &amp; Privacy</h3>
+                <ul class="space-y-4 mt-4">
+                  <li><a href="./">Account</a></li>
+                  <li><a href="./">Settings</a></li>
+                  <li><a href="./">Privacy</a></li>
+                  <li><a href="./">Legal</a></li>
+                </ul>
+              </nav>
+              <nav class="text-white overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base font-bold tracking-wider">Support &amp; help</h3>
+                <ul class="space-y-4 mt-4">
+                  <li><a href="./">Search listings</a></li>
+                  <li><a href="./">Browse listings</a></li>
+                  <li><a href="./">Find a breeder</a></li>
+                  <li><a href="./">Find services</a></li>
+                  <li><a href="./">News, learning and articles</a></li>
+                </ul>
+              </nav>
+              <nav class=" overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base text-white font-bold tracking-wider">get social</h3>
+                <ul class="mt-4 space-y-4">
+                  <li>
+                    <a href="https://www.facebook.com/perfectpetsau" target="_blank" class="text-base text-gray-400 hover:text-white flex flex-row">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white w-6 h-6 mr-2"><title>Perfect Pets Facebook</title> <path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg> 
+                      <span> Facebook </span>
+                    </a>
+                  </li> 
+                  <li>
+                    <a href="https://www.instagram.com/perfectpetsau" target="_blank" class="text-base text-gray-400 hover:text-white flex flex-row">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white w-6 h-6 mr-2"><title>Perfect Pets Instagram</title> <path fill="currentColor" d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"></path></svg> 
+                      <span> Instagram </span>
+                    </a>
+                  </li> 
+                  <li>
+                    <a href="https://www.pinterest.com.au/yourperfectpet" target="_blank" class="text-base text-gray-400 hover:text-white flex flex-row">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="pinterest-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white w-6 h-6 mr-2"><title>Perfect Pets Pinterest</title> <path fill="currentColor" d="M448 80v352c0 26.5-21.5 48-48 48H154.4c9.8-16.4 22.4-40 27.4-59.3 3-11.5 15.3-58.4 15.3-58.4 8 15.3 31.4 28.2 56.3 28.2 74.1 0 127.4-68.1 127.4-152.7 0-81.1-66.2-141.8-151.4-141.8-106 0-162.2 71.1-162.2 148.6 0 36 19.2 80.8 49.8 95.1 4.7 2.2 7.1 1.2 8.2-3.3.8-3.4 5-20.1 6.8-27.8.6-2.5.3-4.6-1.7-7-10.1-12.3-18.3-34.9-18.3-56 0-54.2 41-106.6 110.9-106.6 60.3 0 102.6 41.1 102.6 99.9 0 66.4-33.5 112.4-77.2 112.4-24.1 0-42.1-19.9-36.4-44.4 6.9-29.2 20.3-60.7 20.3-81.8 0-53-75.5-45.7-75.5 25 0 21.7 7.3 36.5 7.3 36.5-31.4 132.8-36.1 134.5-29.6 192.6l2.2.8H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"></path></svg> 
+                      <span> Pinterest </span>
+                    </a>
+                  </li>
+                </ul>
+                      
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="pt-16 text-white font-bold text-center">
+          &copy; 2021 Perfect Pets. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script>
+      window.addEventListener('DOMContentLoaded', function(){
+        const pwdeye = document.getElementById('pwdEye');
+        const pwd = document.getElementById('password');
+
+        const ctrySelect = document.getElementById('countrySelect');
+        const ctrySelectOpt = document.getElementById('countrySelectOptions');
+        const ctrySelectText = document.getElementById('countrySelectText');
+        const ctryAngle = document.getElementById('countryAngle');
+
+        // password eye
+        pwdEye.addEventListener('click', function(el){
+          if(this.classList.contains('fa-eye')){
+            this.classList.remove('fa-eye')
+            this.classList.add('fa-eye-slash');
+            pwd.type = 'text';
+          } else {
+            this.classList.remove('fa-eye-slash')
+            this.classList.add('fa-eye');  
+            pwd.type = 'password';
+          }
+        });
+
+        // country select
+        ctrySelect.addEventListener('click', function(el){
+           if(this.classList.contains('closed')){
+            this.classList.remove('closed');
+            ctryAngle.classList.remove('fa-angle-down');
+            ctryAngle.classList.add('fa-angle-up');
+            ctrySelectOpt.classList.remove('hidden');
+          } else {
+            this.classList.add('closed');
+            ctryAngle.classList.remove('fa-angle-up');
+            ctryAngle.classList.add('fa-angle-down');
+            ctrySelectOpt.classList.add('hidden');
+          }
+        });
+        // so hacky
+        ctrySelectOpt.addEventListener('click', (el)=>{
+          const cid = el.target.dataset.country;
+          ctrySelectText.innerText = cid;
+          ctrySelect.click();
+        });
+        
+      });
+    </script> 
+  </body>
+</html>

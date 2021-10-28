@@ -1,14 +1,22 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pets 2 Mockups</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets 2 Mockups - user login</title>
 
-  <link rel="stylesheet" href="../../dist/pets2.css">
-</head>
-  <body class="flex flex-col min-h-screen">
+    <!-- Mapbox maps styles -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../css/fall.css">
+    <!-- PP styles -->
+    <link rel="stylesheet" href="../../dist/pets2.css">
+
+  </head>
+  <body class="flex flex-col min-h-screen font-ppPoppins">
     <div class="fixed top-0 w-full z-20">
       <!-- header navigation area -->
       <header class="bg-pp-blue">
@@ -35,7 +43,7 @@
                 <a href="#" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Services</a>
               </li>
               <li class="my-4 lg:my-6 mx-2">
-                <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent px-2 py-4 link-active">Learning</a>
+                <a href="#" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4 ">Learning</a>
               </li>
               <li class="my-4 lg:my-6 mx-2">
                 <a href="#" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Blog</a>
@@ -57,8 +65,6 @@
         </nav>
       </header>
     </div>
-
-    
     
     <!-- breadcrums area -->
     <div id="breadcrumbs" class="bg-pp-navy hidden md:block mt-20">
@@ -68,23 +74,91 @@
             <a class="hover:underline" href="../index.html">Home</a>
             <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
           </li>
-          <li class="inline-flex items-center">
-            <a class="hover:underline" href="#">Cat breed list A-Z</a>
-            <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-          </li>
-          <li class="inline-flex items-center">Burmese cat breed information</li>
+          <li class="inline-flex items-center">Login</li>
         </ul>
       </nav>
     </div>
 
     <!-- start main content area -->
-    <main id="main" class="">
-      <div class="max-w-7xl mx-auto px-2">
-        <section class="w-full">
-         
-        </section>    
-        
-      </div>
+    <main id="main" class="mt-20 md:mt-0">
+      <section id="loginArea" class="max-w-none">
+        <div class="max-w-7xl mx-auto px-2 pt-10">
+          <h1 class="sr-only">login to Perfect Pets</h1>
+          <div class="max-w-none sm:max-w-sm m-auto mb-12">
+            <div class="text-center">
+              <div class="">
+                <img src="../../images/perfect_pets_BLK.png" alt="Login to Perfect Pets" class="block h-10 lg:h-16 w-auto mx-auto">
+              </div>
+              <div class="mt-4">
+                <p class="text-xl font-bold">To continue, login to Perfect Pets</p>
+              </div>
+              <div class="flex justify-center mt-8">
+                <button class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 active:bg-blue-600 text-white px-10 py-2 rounded-full flex flex-row items-center ease-liner transition-all duration-150">
+                  <span class="fab fa-facebook fa-2x mr-2"></span>
+                  <span>Login with Facebook</span>
+                </button>
+              </div>
+              <div class="flex justify-center mt-6">
+                <button class="w-full sm:w-3/4 px-10 py-2 rounded-full border border-solid border-gray-500 hover:bg-gray-600 hover:text-white active:bg-gray-600 active:text-white ease-linear transition-all duration-150 flex flex-row items-center">
+                  <span class="fab fa-google fa-2x mr-2"></span>
+                  <span>Login with Google</span>
+                </button>
+              </div>
+            </div>
+            <div class="relative mt-8">
+              <div class="absolute inset-0 flex items-center">
+                <div class="w-full border-t border-gray-300"></div>
+              </div> 
+              <div class="relative flex justify-center text-sm">
+                <span class="px-5 bg-white text-gray-500"> Or </span>
+              </div>
+            </div>
+            <div class="mt-4">
+              <form action="./success.html" method="post">
+                <div class="">
+                  <label for="email" class="block font-medium">Email</label>
+                  <input type="email" name="email" id="email" placeholder="Please enter your email"
+                     class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div class="mt-4 relative">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password" placeholder="Please enter your password"
+                    class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                  <span id="pwdEye" class="fas fa-eye absolute right-2 bottom-3"></span>
+                </div>
+                <div class="mt-2">
+                  <a href="#" class="hover:underline text-pp-blue text-sm">Forgot you password?</a>
+                </div>
+                <div class="flex flex-row items-center justify-between mt-6">
+                  <div class="flex flex-row items-center">
+                    <input type="checkbox" name="remember_me" id="remember_me" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-600 rounded mr-2">
+                    <label for="remember_me">Remember me</label>
+                  </div>
+                  <button class="px-12 py-2 rounded-full bg-pp-orange hover:underline">
+                    <span>Login</span>
+                  </button>
+                </div>
+              </form>
+              <div class="relative mt-8">
+                <div class="absolute inset-0 flex items-center">
+                  <div class="w-full border-t border-gray-300"></div>
+                </div> 
+                <!-- <div class="relative flex justify-center text-sm">
+                  <span class="px-5 bg-white text-gray-500"> Or </span>
+                </div> -->
+              </div>
+              <div class="pt-8 text-center">
+                <p>Don't have an account</p>
+                <div class="flex justify-center mt-6">
+                  <a href="./signup.html" class="w-full px-10 py-2 text-white rounded-full bg-pp-blue hover:underline">
+                    Become a member of Perfect Pets
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     
     <!-- footer area -->
@@ -160,65 +234,24 @@
     </footer>
 
 
-    <!-- Basic dialog container for demo only -->
-    <div id="breedGallery" data-modal data-modal-manual-close  class="w-full h-full bg-pp-gray bg-opacity-90 fixed top-0 z-30" role="dialog" aria-modal="true" aria-live="assertive" aria-labelledby="breedGallery"
-		>
-    
-      <div class="modal rounded-lg bg-white max-w-6xl h-95-vh py-2 px-12 m-auto align-middle">
-        <h1 id="breedGalleryLabel" class="sr-only">Burmese Cat Gallery</h1>
-        <div class="w-full flex items-center justify-end">
-          <button data-modal-close-btn id="closeBreedGallery" class="close-modal" aria-label="close Burmese Cat Gallery">
-            <span class="text-2xl">X</span>
-            
-          </button>
-        </div>
-        <!-- the gallery using swiper again -->
-        <div class="flex justify-center items-center m-auto h-full">
-          <div class="swiper swiperg relative w-full h-full relative">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img class="mx-auto h-5/6 object-contain" src="../../images/burmese1.gif" alt="burmese 1">
-                <p class="text-center">image title will go here</p>
-              </div>
-              <div class="swiper-slide">
-                <img class="mx-auto h-5/6 object-contain" src="../../images/burmese2.jpg" alt="burmese 1">
-                <p class="text-center">image title will go here</p>
-              </div>
-              <div class="swiper-slide">
-                <img class="mx-auto h-5/6 object-contain" src="../../images/burmese3.gif" alt="burmese 1">
-                <p class="text-center">image title will go here</p>
-              </div>
-              <div class="swiper-slide">
-                <img class="mx-auto h-5/6 object-contain" src="../../images/burmese4.jpg" alt="burmese 1">
-                <p class="text-center">image title will go here</p>
-              </div>
-              <div class="swiper-slide">
-                <img class="mx-auto h-5/6 object-contain" src="../../images/burmeseCM.jpg" alt="burmese 1">
-                <p class="text-center">image title will go here</p>
-              </div>
-            </div>
-            <div>
-              <p class="absolute top-4" style="writing-mode: tb;">share icons here</p>
-              <button type="button" class="absolute top-1/2 z-10 inline-flex items-center button-prev p-3 shadow rounded-full text-pp-blue hover:text-pp-navy" role="button" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-e5f539231b102a49a" aria-disabled="true" disabled="">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-              </button>
-              <button type="button" class="absolute top-1/2 right-0 z-10 inline-flex items-center button-next p-3 shadow rounded-full text-pp-blue hover:text-pp-navy" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-8fef6d32642c56cb" aria-disabled="false">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-              </button>
-            </div>
-          </div>
-          
-        </div>	
-      </div>
-    </div>
-
-    <!-- end dialog -->
 
 
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="../../js/swiper.js"></script>
-    <script src="../../js/dialog.js"></script>
-    <script type="module" src="../../js/pets2.js"></script>
-
+    <script>
+      window.addEventListener('DOMContentLoaded', function(){
+        const pwdeye = document.getElementById('pwdEye');
+        const pwd = document.getElementById('password');
+        pwdEye.addEventListener('click', function(el){
+          if(this.classList.contains('fa-eye')){
+            this.classList.remove('fa-eye')
+            this.classList.add('fa-eye-slash');
+            pwd.type = 'text';
+          } else {
+            this.classList.remove('fa-eye-slash')
+            this.classList.add('fa-eye');  
+            pwd.type = 'password';
+          }
+        });
+      });
+    </script>  
   </body>
 </html>
