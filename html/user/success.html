@@ -97,8 +97,8 @@
               </div>
             </div>
             <div class="mt-8 mx-4">
-              <div class="w-full sm:grid sm:grid-cols-2 gap-4">
-                <div>
+              <div class="w-full grid sm:grid-cols-2 gap-4">
+                <div class="order-2 sm:order-1">
                   <div class="w-full prose">
                     <h2 class="">Welcome to Perfect Pets</h2>
                     <div>
@@ -113,11 +113,11 @@
                   </div>
                 </div>
                 <!-- successful images -->
-                <div class="relative h-full hidden sm:block">
+                <div class="relative h-96 sm:h-full block order-1 sm:order-2">
                   <div class="absolute top-5 right-0 inline-block rounded-lg bg-white p-1 filter drop-shadow z-10">
                     <img class="h-40 rounded-lg" src="../../images/users/groomer.png" alt="groomer">
                   </div>
-                  <div class="absolute left-5 top-20 inline-block rounded-lg bg-white p-1 filter drop-shadow z-10">
+                  <div class="absolute left-0 sm:left-5 top-20 inline-block rounded-lg bg-white p-1 filter drop-shadow z-10">
                     <img class="h-48 rounded-lg" src="../../images/dogs/kelpie4.jpg" alt="kelpie">
                   </div>
                   <div class="absolute bottom-0 right-1 inline-block rounded-lg bg-white p-1 filter drop-shadow z-10">
@@ -205,22 +205,24 @@
 
 
 
-
+    <script type="module" src="../../js/pets2.js"></script>
     <script>
       window.addEventListener('DOMContentLoaded', function(){
         const pwdeye = document.getElementById('pwdEye');
         const pwd = document.getElementById('password');
-        pwdEye.addEventListener('click', function(el){
-          if(this.classList.contains('fa-eye')){
-            this.classList.remove('fa-eye')
-            this.classList.add('fa-eye-slash');
-            pwd.type = 'text';
-          } else {
-            this.classList.remove('fa-eye-slash')
-            this.classList.add('fa-eye');  
-            pwd.type = 'password';
-          }
-        });
+        if(pwdeye && pwd){
+          pwdEye.addEventListener('click', function(el){
+            if(this.classList.contains('fa-eye')){
+              this.classList.remove('fa-eye')
+              this.classList.add('fa-eye-slash');
+              pwd.type = 'text';
+            } else {
+              this.classList.remove('fa-eye-slash')
+              this.classList.add('fa-eye');  
+              pwd.type = 'password';
+            }
+          });
+        }
       });
     </script>  
   </body>
