@@ -7,4 +7,4 @@ import Interactions from './Interactions.js';
 
 
 let mb = new Interactions();
-mb.runMenu();
+mb.runInit();

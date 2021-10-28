@@ -1,14 +1,22 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pets 2 Mockups</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets 2 Mockups - user login success</title>
 
-  <link rel="stylesheet" href="../../dist/pets2.css">
-</head>
-  <body class="flex flex-col min-h-screen">
+    <!-- Mapbox maps styles -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../css/fall.css">
+    <!-- PP styles -->
+    <link rel="stylesheet" href="../../dist/pets2.css">
+
+  </head>
+  <body class="flex flex-col min-h-screen font-ppPoppins">
     <div class="fixed top-0 w-full z-20">
       <!-- header navigation area -->
       <header class="bg-pp-blue">
@@ -35,7 +43,7 @@
                 <a href="#" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Services</a>
               </li>
               <li class="my-4 lg:my-6 mx-2">
-                <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent px-2 py-4 link-active">Learning</a>
+                <a href="#" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4 ">Learning</a>
               </li>
               <li class="my-4 lg:my-6 mx-2">
                 <a href="#" class="text-white rounded-none border-b-2 border-solid border-transparent px-2 py-4">Blog</a>
@@ -57,8 +65,6 @@
         </nav>
       </header>
     </div>
-
-    
     
     <!-- breadcrums area -->
     <div id="breadcrumbs" class="bg-pp-navy hidden md:block mt-20">
@@ -68,23 +74,61 @@
             <a class="hover:underline" href="../index.html">Home</a>
             <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
           </li>
-          <li class="inline-flex items-center">
-            <a class="hover:underline" href="#">Cat breed list A-Z</a>
-            <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-          </li>
-          <li class="inline-flex items-center">Burmese cat breed information</li>
+          <li class="inline-flex items-center">Sign up successful</li>
         </ul>
       </nav>
     </div>
 
     <!-- start main content area -->
-    <main id="main" class="">
-      <div class="max-w-7xl mx-auto px-2">
-        <section class="w-full">
-         
-        </section>    
-        
-      </div>
+    <main id="main" class="mt-20 md:mt-0">
+      <section id="loginArea" class="max-w-none">
+        <div class="max-w-7xl mx-auto px-2 pt-10">
+          <h1 class="sr-only">Successful sign up to Perfect Pets</h1>
+          <div class="max-w-none sm:max-w-3xl m-auto mb-12">
+            <div class="text-center">
+              <div class="">
+                <img src="../../images/perfect_pets_BLK.png" alt="Login to Perfect Pets" class="block h-10 lg:h-16 w-auto mx-auto">
+              </div>
+              <div class="mt-8">
+                <p class="badge badge-green flex flex-row items-center justify-center">
+                  <span class="fas fa-check-circle fa-2x mr-4"></span>
+                  <span class="text-lg font-bold ">Sign up Successful!</span>
+                </p>
+              </div>
+            </div>
+            <div class="mt-8 mx-4">
+              <div class="w-full sm:grid sm:grid-cols-2 gap-4">
+                <div>
+                  <div class="w-full prose">
+                    <h2 class="">Welcome to Perfect Pets</h2>
+                    <div>
+                      <p class="text-lg font-light mt-2">What next?</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. S</p>
+                    </div>
+                  </div>
+                  <div class="w-full">
+                    <a href="./guide1.html" class="block p-2 bg-pp-orange text-center w-full text-black rounded-full hover:underline">Take a tour of Perfect Pets</a>
+                    <a href="./account.html" class="block mt-4 p-2 border border-pp-gray text-center w-full text-black rounded-full hover:underline">Go to your account</a>
+                    <a href="#" class="block mt-4 p-2 border border-pp-gray text-center w-full text-black rounded-full hover:underline">Go to search</a>
+                  </div>
+                </div>
+                <!-- successful images -->
+                <div class="relative h-full hidden sm:block">
+                  <div class="absolute top-5 right-0 inline-block rounded-lg bg-white p-1 filter drop-shadow z-10">
+                    <img class="h-40 rounded-lg" src="../../images/users/groomer.png" alt="groomer">
+                  </div>
+                  <div class="absolute left-5 top-20 inline-block rounded-lg bg-white p-1 filter drop-shadow z-10">
+                    <img class="h-48 rounded-lg" src="../../images/dogs/kelpie4.jpg" alt="kelpie">
+                  </div>
+                  <div class="absolute bottom-0 right-1 inline-block rounded-lg bg-white p-1 filter drop-shadow z-10">
+                    <img class="h-40 rounded-lg" src="../../images/pets/pet2.jpg" alt="Bibi">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     
     <!-- footer area -->
@@ -160,65 +204,24 @@
     </footer>
 
 
-    <!-- Basic dialog container for demo only -->
-    <div id="breedGallery" data-modal data-modal-manual-close  class="w-full h-full bg-pp-gray bg-opacity-90 fixed top-0 z-30" role="dialog" aria-modal="true" aria-live="assertive" aria-labelledby="breedGallery"
-		>
-    
-      <div class="modal rounded-lg bg-white max-w-6xl h-95-vh py-2 px-12 m-auto align-middle">
-        <h1 id="breedGalleryLabel" class="sr-only">Burmese Cat Gallery</h1>
-        <div class="w-full flex items-center justify-end">
-          <button data-modal-close-btn id="closeBreedGallery" class="close-modal" aria-label="close Burmese Cat Gallery">
-            <span class="text-2xl">X</span>
-            
-          </button>
-        </div>
-        <!-- the gallery using swiper again -->
-        <div class="flex justify-center items-center m-auto h-full">
-          <div class="swiper swiperg relative w-full h-full relative">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img class="mx-auto h-5/6 object-contain" src="../../images/burmese1.gif" alt="burmese 1">
-                <p class="text-center">image title will go here</p>
-              </div>
-              <div class="swiper-slide">
-                <img class="mx-auto h-5/6 object-contain" src="../../images/burmese2.jpg" alt="burmese 1">
-                <p class="text-center">image title will go here</p>
-              </div>
-              <div class="swiper-slide">
-                <img class="mx-auto h-5/6 object-contain" src="../../images/burmese3.gif" alt="burmese 1">
-                <p class="text-center">image title will go here</p>
-              </div>
-              <div class="swiper-slide">
-                <img class="mx-auto h-5/6 object-contain" src="../../images/burmese4.jpg" alt="burmese 1">
-                <p class="text-center">image title will go here</p>
-              </div>
-              <div class="swiper-slide">
-                <img class="mx-auto h-5/6 object-contain" src="../../images/burmeseCM.jpg" alt="burmese 1">
-                <p class="text-center">image title will go here</p>
-              </div>
-            </div>
-            <div>
-              <p class="absolute top-4" style="writing-mode: tb;">share icons here</p>
-              <button type="button" class="absolute top-1/2 z-10 inline-flex items-center button-prev p-3 shadow rounded-full text-pp-blue hover:text-pp-navy" role="button" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-e5f539231b102a49a" aria-disabled="true" disabled="">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-              </button>
-              <button type="button" class="absolute top-1/2 right-0 z-10 inline-flex items-center button-next p-3 shadow rounded-full text-pp-blue hover:text-pp-navy" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-8fef6d32642c56cb" aria-disabled="false">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-              </button>
-            </div>
-          </div>
-          
-        </div>	
-      </div>
-    </div>
-
-    <!-- end dialog -->
 
 
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="../../js/swiper.js"></script>
-    <script src="../../js/dialog.js"></script>
-    <script type="module" src="../../js/pets2.js"></script>
-
+    <script>
+      window.addEventListener('DOMContentLoaded', function(){
+        const pwdeye = document.getElementById('pwdEye');
+        const pwd = document.getElementById('password');
+        pwdEye.addEventListener('click', function(el){
+          if(this.classList.contains('fa-eye')){
+            this.classList.remove('fa-eye')
+            this.classList.add('fa-eye-slash');
+            pwd.type = 'text';
+          } else {
+            this.classList.remove('fa-eye-slash')
+            this.classList.add('fa-eye');  
+            pwd.type = 'password';
+          }
+        });
+      });
+    </script>  
   </body>
 </html>
