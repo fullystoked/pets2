@@ -30,6 +30,7 @@ export default class Interactions{
     const menuBtn = document.getElementById('nav-toggle');
     const mainMenu = document.getElementById('main-menu');
     const mainLoginBtn = document.getElementById('mainLoginBtn');
+    const userAccIcons = document.getElementsByClassName('userAcc');
 
     const breedGalleryBtn = document.querySelector('.breedImages');
     const bodyEl = document.getElementsByTagName('body')[0];
@@ -42,21 +43,30 @@ export default class Interactions{
 
 
     menuBtn.addEventListener('click', (evt)=>{
-      if(mainMenu.classList.contains('hidden')){
-        // show drop down menu
-        mainLoginBtn.classList.remove('md:flex-grow');
-        mainLoginBtn.classList.add('md:flex-grow-1');
-
-        mainMenu.classList.remove('hidden');
+      // main menu
+      if(mainMenu.classList.contains('-translate-x-full')){
+        // display main menu
+        mainMenu.classList.remove('-translate-x-full');
       } else {
         // hide drop down menu
-        mainMenu.classList.add('hidden');
-        mainLoginBtn.classList.remove('md:flex-grow-1');
-        mainLoginBtn.classList.add('md:flex-grow');
-
+        mainMenu.classList.add('-translate-x-full');
+        
       } 
+
+      // change to open / close menu
+      menuBtn.childNodes.forEach(child => {
+        if(child.classList){
+          if(child.classList.contains('hidden')){
+            child.classList.remove('hidden');
+          } else {
+            child.classList.add('hidden');
+          }
+        }
+      });
       
     });
+    
+    
 
     /* breedGalleryBtn.addEventListener('click', (evt) => {
       galleryOverlay.classList.remove('hidden');
