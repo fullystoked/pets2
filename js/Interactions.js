@@ -41,6 +41,7 @@ export default class Interactions{
     const tabs = document.querySelectorAll('.navtab');
     const panels = document.querySelectorAll('.tab-content');
 
+   
 
     menuBtn.addEventListener('click', (evt)=>{
       // main menu
