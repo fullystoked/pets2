@@ -1,10 +1,11 @@
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pets 2 Mockups - user sign up</title>
+    <title>Pets 2 Mockups - user verification</title>
 
     <!-- Mapbox maps styles -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
@@ -82,7 +83,7 @@
             <a class="hover:underline" href="../index.html">Home</a>
             <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
           </li>
-          <li class="inline-flex items-center">Sign up</li>
+          <li class="inline-flex items-center">Sign up verification</li>
         </ul>
       </nav>
     </div>
@@ -91,27 +92,27 @@
     <main id="main" class="mt-20 md:mt-0">
       <section id="loginArea" class="max-w-none">
         <div class="max-w-7xl mx-auto px-2 pt-10">
-          <h1 class="sr-only">Sign up to Perfect Pets</h1>
+          <h1 class="sr-only">Account verification for Perfect Pets</h1>
           <div class="max-w-none sm:max-w-sm m-auto mb-12">
             <div class="text-center">
               <div class="">
                 <img src="../../images/perfect_pets_BLK.png" alt="Login to Perfect Pets" class="block h-10 lg:h-16 w-auto mx-auto">
               </div>
               <div class="mt-4">
-                <p class="text-xl font-bold">Sign up for free and join Perfect Pets</p>
+                <p class="text-xl font-bold">Verify your Perfect Pets account</p>
               </div>
-              <div class="flex justify-center mt-8">
-                <button class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 active:bg-blue-600 text-white px-8 py-2 rounded-full flex flex-row items-center ease-liner transition-all duration-150">
-                  <span class="fab fa-facebook fa-2x mr-2"></span>
-                  <span>Sign up with Facebook</span>
-                </button>
-              </div>
-              <div class="flex justify-center mt-6">
-                <button class="w-full sm:w-3/4 px-8 py-2 rounded-full border border-solid border-gray-500 hover:bg-gray-600 hover:text-white active:bg-gray-600 active:text-white ease-linear transition-all duration-150 flex flex-row items-center">
-                  <span class="fab fa-google fa-2x mr-2"></span>
-                  <span>Sign up with Google</span>
-                </button>
-              </div>
+            </div>
+            <div class="mt-4">
+              <p>We've sent a secure code to your mobile phone.  Please enter the code below to verify your account.</p>
+              <form action="./success.html" method="post">
+                <div class="mt-2">
+                  <label for="token" class="block font-medium">Secure Code</label>
+                  <input type="text" name="token" id="secureToken" placeholder="Please enter your secure code"
+                     class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                  <span id="tokenError" class="hidden block mt-2 text-red-600">Invalid secure code.  Secure code must be all numbers [appropriate error msg here]</span>
+                </div>
+                
+              </form>
             </div>
             <div class="relative mt-8">
               <div class="absolute inset-0 flex items-center">
@@ -122,95 +123,8 @@
               </div>
             </div>
             <div class="mt-4">
-              <form action="./verify.html" method="post">
-                <div class="">
-                  <label for="email" class="block font-medium">Email</label>
-                  <input type="email" name="email" id="email" placeholder="Please enter your email"
-                     class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div class="mt-4">
-                  <label for="email" class="block font-medium">Confirm Email</label>
-                  <input type="email" name="confirmEmail" id="confirmEmail" placeholder="Please enter your email"
-                     class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div class="mt-4 relative">
-                  <label for="password">Set Password</label>
-                  <input type="password" name="password" id="password" placeholder="Please enter your password"
-                    class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                  <span id="pwdEye" class="fas fa-eye absolute right-2 bottom-3"></span>
-                </div>
-                <div class="my-2 bg-gray-100 p-2 flex flex-row">
-                  <span class="mt-2 mr-2 fas fa-info-circle"></span>
-                  <p>Your password must be at least 6 characters long, contain both uppercase and lowercase letters, as well as at least one number</p>
-                </div>
-                <div class="mt-4">
-                  <label for="fname" class="block font-medium">First Name</label>
-                  <input type="text" name="fname" id="fname" placeholder="Please enter your first name"
-                     class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div class="mt-4">
-                  <label for="lname" class="block font-medium">Last Name</label>
-                  <input type="text" name="lname" id="lname" placeholder="Please enter your last name"
-                     class="h-10 block rounded border border-solid border-gray-500 px-3 py-2 w-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div class="mt-4">
-                  <label for="mobile" class="block font-medium">Mobile Number</label>
-                  <input type="text" name="mobile" id="mobile" placeholder="Enter your mobile number" aria-label="Enter mobile phone number"
-                    class="h-10 w-full block rounded border border-solid border-gray-500 px-3 py-2 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <!-- country drop down example only - implementation handled by 2DM-->
-                <div class="mt-4 relative">
-                  <label for="country" class="block font-medium">Country</label>
-                  <div id="countrySelect" class="relative closed flex flex-row justify-between items-center h-10 block rounded border border-solid border-gray-500 px-3 py-2 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                      <span id="countrySelectText">Please select a country</span>
-                      <span id="countryAngle" class="fas fa-angle-down"></span>
-                  </div>
-                  <div id="countrySelectOptions" class="z-10 absolute top-18  left-0 w-full hidden">
-                    <ul class=" bg-white border border-gray-500 border-t-0 rounded-b">
-                      <li class="countrySelectItem p-2 selected bg-gray-100" data-country="Australia">Australia</li>
-                      <li class="countrySelectItem p-2 hover:bg-gray-100" data-country="New Zealand">New Zealand</li>
-                      <li class="countrySelectItem  p-2 hover:bg-gray-100" data-country="China">China</li>
-                      <li class="countrySelectItem p-2 hover:bg-gray-100" data-country="United States">United States</li>
-                      <li class="countrySelectItem p-2 hover:bg-gray-100" data-country="United Kingdom">United Kingdom</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="mt-4">
-                  <div class="flex flex-row">
-                    <span>
-                      <input type="checkbox" name="sendNews" id="sendNews" class="mt-2 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-600 rounded mr-2">
-                    </span>
-                    <span>
-                      <label for="sendNews">Please send me news and offers from Perfect Pets</label>
-                    </span>
-                  </div>
-                  <div class="flex flex-row">
-                    <span>
-                      <input type="checkbox" name="shareData" id="shareData" class="mt-2 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-600 rounded mr-2">
-                    </span>
-                    <span>
-                      <label for="shareData">Share my data with Perfect Pets content providers for marketing purposes</label>
-                    </span>
-                  </div>
-                  
-                </div>
-
-                
-                <div class="mt-4">
-                  <p>By clicking on become a member you agree to Perfect Pets <a class="hover:underline text-pp-blue" href="#">Terms and Conditions of Use</a></p>
-                </div>
-                <div class="mt-4">
-                  <p>To learn more about how Perfect Pets collects, uses, shares and protects your personal data, please see Perfect Pets <a class="hover:underline text-pp-blue" href="#">Privacy Policy</a> </p>
-                </div>
-                <div class="mt-6 text-center">
-                  <button type="submit" class="px-12 py-2 rounded-full bg-pp-orange hover:underline">
-                    <span>Become a member</span>
-                  </button>
-                </div>
-                <div class="mt-6 text-center">
-                  <p>Have an account? <a class="hover:underline text-pp-blue" href="./login.html">Login</a></p>
-                </div>
-              </form>
+              <p>Didn't receive your secure code?</p>
+              <p class="mt-2">Please resend the code to my <a href="#" class="text-pp-blue hover:underline">Mobile</a> or to my <a href="#" class="text-pp-blue hover:underline">Email</a></p>
             </div>
           </div>
         </div>
@@ -290,52 +204,24 @@
     </footer>
 
 
+
     <script type="module" src="../../js/pets2.js"></script>
     <script>
       window.addEventListener('DOMContentLoaded', function(){
-        const pwdeye = document.getElementById('pwdEye');
-        const pwd = document.getElementById('password');
-
-        const ctrySelect = document.getElementById('countrySelect');
-        const ctrySelectOpt = document.getElementById('countrySelectOptions');
-        const ctrySelectText = document.getElementById('countrySelectText');
-        const ctryAngle = document.getElementById('countryAngle');
-
-        // password eye
-        pwdEye.addEventListener('click', function(el){
-          if(this.classList.contains('fa-eye')){
-            this.classList.remove('fa-eye')
-            this.classList.add('fa-eye-slash');
-            pwd.type = 'text';
-          } else {
-            this.classList.remove('fa-eye-slash')
-            this.classList.add('fa-eye');  
-            pwd.type = 'password';
-          }
-        });
-
-        // country select
-        ctrySelect.addEventListener('click', function(el){
-           if(this.classList.contains('closed')){
-            this.classList.remove('closed');
-            ctryAngle.classList.remove('fa-angle-down');
-            ctryAngle.classList.add('fa-angle-up');
-            ctrySelectOpt.classList.remove('hidden');
-          } else {
-            this.classList.add('closed');
-            ctryAngle.classList.remove('fa-angle-up');
-            ctryAngle.classList.add('fa-angle-down');
-            ctrySelectOpt.classList.add('hidden');
-          }
-        });
-        // so hacky
-        ctrySelectOpt.addEventListener('click', (el)=>{
-          const cid = el.target.dataset.country;
-          ctrySelectText.innerText = cid;
-          ctrySelect.click();
-        });
         
+        const verify = document.getElementById('secureToken');
+        const verifyErr = document.getElementById('tokenError');
+
+        verify.addEventListener('keyup', function(e){
+          if(e.target.value.length >= 3){
+            if(/^\d+$/.test(e.target.value)){
+              window.location = './success.html';
+            }else{
+              verifyErr.classList.remove('hidden');
+            }
+          }
+        });
       });
-    </script> 
+    </script>  
   </body>
 </html>
