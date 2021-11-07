@@ -54,7 +54,7 @@ module.exports = {
               fontWeight: theme('fontWeight.bold'),
               fontSize: theme('fontSize.2xl'),
               marginBottom: '0rem',
-              textTransform: 'uppercase',
+              /* textTransform: 'uppercase', */
               '@screen sm': {
                 fontSize: theme('fontSize.3xl'),
               },
@@ -71,6 +71,10 @@ module.exports = {
               margin: '1rem 0 0 0',
               '&.no-prose': {
                 marginBottom: '0.25rem'
+              },
+              '&.dashboard': {
+                margin: '0.25rem 0.25rem 0.25rem 0',
+                fontSize: theme('fontSize.lg'),
               }
             },
             h3:{
@@ -79,6 +83,10 @@ module.exports = {
               margin: '1rem 0 0 0',
               '&.pp-orange': {
                 color: 'rgb(255, 164, 6)'
+              },
+              '&.dashboard': {
+                fontSize: theme('fontSize.base'),
+                margin: '1rem 0'
               }
             },
             h4:{
@@ -99,6 +107,9 @@ module.exports = {
               },
               '&:hover': {
                 textDecoration: 'underline'
+              },
+              '&.dashboard': {
+                color: 'inherit',
               },
               '&.no-prose': {
                 '&:hover': {
@@ -197,6 +208,11 @@ module.exports = {
           backgroundColor: 'rgb(64, 75, 89)',
           borderColor: 'rgb(64, 75, 89)',
           color: theme('colors.white')
+        },
+        '.badge-orange': {
+          backgroundColor: 'rgb(255, 164, 6)',
+          borderColor: 'rgb(255, 164, 6)',
+          color: theme('colors.black')
         }
 
       };

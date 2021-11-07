@@ -28,6 +28,10 @@ export default class Interactions{
 
   runInit = ()=>{
     const menuBtn = document.getElementById('nav-toggle');
+
+    const menuBtnOpen = document.getElementById('nav-toggle-open');
+    const menuBtnClose = document.getElementById('nav-toggle-close');
+
     const mainMenu = document.getElementById('main-menu');
     const mainLoginBtn = document.getElementById('mainLoginBtn');
     const userAccIcons = document.getElementsByClassName('userAcc');
@@ -42,31 +46,45 @@ export default class Interactions{
     const panels = document.querySelectorAll('.tab-content');
 
    
+    if(menuBtn){
+      menuBtn.addEventListener('click', (evt)=>{
+        // main menu
+        if(mainMenu.classList.contains('-translate-x-full')){
+          // display main menu
+          mainMenu.classList.remove('-translate-x-full');
+        } else {
+          // hide drop down menu
+          mainMenu.classList.add('-translate-x-full');
+        } 
 
-    menuBtn.addEventListener('click', (evt)=>{
-      // main menu
-      if(mainMenu.classList.contains('-translate-x-full')){
+        // change to open / close menu
+        menuBtn.childNodes.forEach(child => {
+          if(child.classList){
+            if(child.classList.contains('hidden')){
+              child.classList.remove('hidden');
+            } else {
+              child.classList.add('hidden');
+            }
+          }
+        });
+      });
+    }
+
+    if(menuBtnOpen){
+      // new open close
+      menuBtnOpen.addEventListener('click', (evt)=>{
         // display main menu
         mainMenu.classList.remove('-translate-x-full');
-      } else {
-        // hide drop down menu
-        mainMenu.classList.add('-translate-x-full');
-        
-      } 
-
-      // change to open / close menu
-      menuBtn.childNodes.forEach(child => {
-        if(child.classList){
-          if(child.classList.contains('hidden')){
-            child.classList.remove('hidden');
-          } else {
-            child.classList.add('hidden');
-          }
-        }
       });
-      
-    });
+    }
     
+    if(menuBtnClose){
+      // new open close
+      menuBtnClose.addEventListener('click', (evt)=>{
+        // hide main menu
+        mainMenu.classList.add('-translate-x-full');
+      });
+    }
     
 
     /* breedGalleryBtn.addEventListener('click', (evt) => {
