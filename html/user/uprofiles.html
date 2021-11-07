@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets 2 Mockups - user login success</title>
+
+    <!-- Mapbox maps styles -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../css/fall.css">
+    <!-- PP styles -->
+    <link rel="stylesheet" href="../../dist/pets2.css">
+
+  </head>
+  <body class="flex flex-col min-h-screen font-ppPoppins">
+    <div class="fixed top-0 w-full z-20">
+      <!-- header navigation area -->
+      <header class="bg-pp-blue">
+        <nav class="px-2 md:px-6 lg:px-12 xl:px-16 flex items-center gap-2 xl:gap-6 flex-wrap p-2 w-full top-0">
+          <div class="block lg:hidden">
+            <button id="nav-toggle-open" class="nav-toggle flex items-center px-3 py-2 text-white hover:text-white ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <title>Open Menu</title>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div> 
+          <div class="flex items-center flex-grow justify-center lg:justify-start lg:flex-shrink-0 text-white mr-6">
+            <a href="../../index.html" class="text-white">
+              <img src="../../images/perfect_pets_WTE.png" class="block h-8 lg:h-10 w-auto mx-auto">
+            </a>
+          </div>
+          
+          
+      
+          <div class="fixed bottom-0 top-0 transition transform -translate-x-full ease-in-out duration-700 inset-x-0 bg-pp-blue
+            lg:top-0 lg:translate-x-0 lg:relative lg:flex lg:flex-grow lg:items-center lg:w-auto lg:bg-transparent" id="main-menu">
+            <div class="block text-right lg:hidden">
+              <button id="nav-toggle-close" class="nav-toggle flex items-center px-3 pt-4 pb-2 text-white hover:text-white ">
+                <span>close</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <title>Close Menu</title>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="grid grid-cols-2 h-5/6 lg:h-auto lg:flex lg:flex-grow lg:items-center">
+
+            
+              <ul class="list-reset lg:flex-grow lg:flex lg:justify-center items-center font-medium text-sm">
+                <li class="my-4 lg:my-6 mx-2">
+                  <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent hover:border-white px-2 py-4 ">Listings</a>
+                </li>
+                <li class="my-4 lg:my-6 mx-2">
+                  <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent hover:border-white px-2 py-4">Services</a>
+                </li>
+                <li class="my-4 lg:my-6 mx-2">
+                  <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent hover:border-white px-2 py-4">Learning</a>
+                </li>
+                <li class="my-4 lg:my-6 mx-2">
+                  <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent hover:border-white px-2 py-4">Blog</a>
+                </li>
+                <li class="my-4 lg:my-6 mx-2">
+                  <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent hover:border-white px-2 py-4">About</a>
+                </li>
+                <li class="my-4 lg:my-6 mx-2">
+                  <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent hover:border-white px-2 py-4">Premium</a>
+                </li>
+              </ul>
+              <div class="ml-2 p-2 text-sm block overflow-hidden overflow-y-auto lg:ml-0 lg:justify-end lg:flex userAcc">
+                <a href="./uaccount.html" class="hover:underline text-white flex flex-row items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span class="ml-2">My account</span>
+                </a>
+                <ul id="mobile-user-navigation" class="lg:hidden list-reset pt-2">
+                  <li class="">
+                    <a href="./uaccount.html" class="flex items-center p-2 gap-4 rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 p-2 text-white rounded" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <title>Home</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                      </svg>
+                      <span class="text-white">Home</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="./upets.html" class="flex items-center p-2 gap-4 rounded">
+                      <img src="../../images/svg/dogpaw-white.svg" class="w-10 h-10 text-white rounded p-2" alt="My Pets">
+                      <span class="text-white">My Pets</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="./uprofiles.html" class="link-active flex items-center p-2 gap-4 hover:bg-gray-400 rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 p-2 rounded text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <title>Profiles</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      <span class="text-white">Profiles</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="./ulistings.html" class="flex items-center p-2 gap-4 hover:bg-gray-400 rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 p-2 rounded text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <title>Listings</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                      <span class="text-white">Listings</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="./ulists.html" class="flex items-center p-2 gap-4 hover:bg-gray-400 rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 p-2 rounded text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <title>List</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                      </svg>
+                      <span class="text-white">Lists</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="./umessages.html" class="flex items-center p-2 gap-4 hover:bg-gray-400 rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 p-2 rounded text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <title>Messages</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                      </svg>
+                      <span class="text-white">Messages</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="./usettings.html" class="flex items-center p-2 gap-4 hover:bg-gray-400 rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 p-2 rounded text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <title>Settings</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <span class="text-white">Settings</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+        </nav>
+      </header>
+    </div>
+    
+   
+
+    <!-- start main content area -->
+    <main id="main" class="mt-14 md:mt-0">
+      <div class="max-w-none">
+        <div class="pt-2 pb-10 mt=0 lg:mt-20 px-2 md:px-6 lg:px-12 xl:px-16  ">
+          <div class="lg:flex lg:flex-row lg:gap-2">
+            <aside id="userMenu" class="flex-none h-full pt-10 pr-4 w-full lg:w-60">
+              <div class="">
+                
+                <!-- <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-24 w-24">
+                  <img src="../../images/welsh1.gif" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
+                </div>
+                 --><p>
+                  <span class="block text-lg">Welcome</span>
+                  <span class="block font-bold text-xl">Jane</span>
+                </p>
+                
+              </div>
+              <nav id="user-navigation"> 
+                <ul class="hidden lg:block list-reset pt-6">
+                  <li class="">
+                    <a href="./uaccount.html" class="flex items-center p-2 gap-4 hover:bg-gray-300 rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 p-2 bg-gray-200 rounded" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <title>Home</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                      </svg>
+                      <span>Home</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="./upets.html" class="flex items-center p-2 gap-4 hover:bg-gray-300 rounded">
+                      <img src="../../images/svg/dogpaw-black.svg" class="w-10 h-10 rounded p-2" alt="My Pets">
+                      <span>My Pets</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="./uprofiles.html" class="link-active flex items-center p-2 gap-4 hover:bg-gray-300 rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 p-2 rounded bg-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <title>Profiles</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      <span>Profiles</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="./ulistings.html" class="flex items-center p-2 gap-4 hover:bg-gray-300 rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 p-2 rounded bg-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <title>Listings</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                      <span>Listings</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="./ulists.html" class="flex items-center p-2 gap-4 hover:bg-gray-300 rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 p-2 rounded bg-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <title>List</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                      </svg>
+                      <span>Lists</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="./umessages.html" class="flex items-center p-2 gap-4 hover:bg-gray-300 rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 p-2 rounded bg-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <title>Messages</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                      </svg>
+                      <span>Messages</span>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="./usettings.html" class="flex items-center p-2 gap-4 hover:bg-gray-300 rounded">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 p-2 rounded bg-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <title>Settings</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <span>Settings</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+            <section id="userArea" class="flex-auto pt-10 prose  max-w-none">
+              
+              <h1 class="sr-only">User account - Your Profiles</h1>
+              <div>
+                <div id="account-header" class=" w-full md:w-11/12">
+                  <div class="mb-2 flex flex-row gap-4">
+                    <div class="flex-grow">
+                      <h2 class="dashboard">Your Profiles</h2>
+                      <p class="text-sm no-prose">A place to add or edit your profiles. </p>
+                    </div>
+                    <div class="flex-initial">
+                      <a href="#" class="inline-block text-sm flex flex-row gap-2 items-center border border-pp-blue p-2 ">
+                        <span class="inline-block">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                          </svg>
+                        </span>
+                        <span class="inline-block"> Add new profile</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div id="account-items" class="mt-2  w-full md:w-11/12">
+                  <div class="mt-6">
+                    <h3 class="dashboard flex-grow">Personal Profiles</h3>
+                  </div>
+                  
+                  <div class="personal-items my-4">
+                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none md:block">
+                        <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
+                          <img src="../../images/welsh1.gif" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
+                        </div>
+                      </div>
+                      <div class="flex-grow">
+                        <p class="no-prose flex flex-row items-center">
+                          <span class="inline-block font-bold">Jane Citizen</span>
+                          <!-- <span class="inline-block flex-none text-pp-orange ml-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                              <title>Jacks yearly check is due</title>
+                              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                          </span> -->
+                        </p>
+                        <p class="no-prose text-sm font-extralight">Created 01 Nov 2021</p>
+                        
+                      </div>
+                      <div class="flex-none lg:flex-initial">
+                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
+                      </div>
+                    </div>
+
+                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none md:block">
+                        <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
+                          <img src="../../images/welsh1.gif" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
+                        </div>
+                      </div>
+                      <div class="flex-grow">
+                        <p class="no-prose flex flex-row items-center">
+                          <span class="inline-block font-bold">Jack Citizen</span>
+                          <!-- <span class="inline-block flex-none text-pp-orange ml-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                              <title>Jacks yearly check is due</title>
+                              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                          </span> -->
+                        </p>
+                        <p class="no-prose text-sm font-extralight">Created 01 Sep 2021</p>
+                        
+                      </div>
+                      <div class="flex-none lg:flex-initial">
+                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-6">
+                    <h3 class="dashboard flex-grow">Breeder Profiles</h3>
+                  </div>
+                  <div class="breeder-items my-4">
+                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none md:block">
+                        <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
+                          <img src="../../images/Welsh-corgi-pembroke-elfinfox.jpg" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
+                        </div>
+                      </div>
+                      <div class="flex-grow">
+                        <p class="no-prose flex flex-row items-center">
+                          <span class="inline-block font-bold">Corgi Breeders Association of NSW</span>
+                        </p>
+                        <p class="no-prose text-sm font-extralight">Created 01 Sep 2021</p>
+                      </div>
+                      <div class="flex-none lg:flex-initial">
+                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-6">
+                    <h3 class="dashboard flex-grow">Shelter Profiles</h3>
+                  </div>
+                  <div class="shelter-items my-4">
+                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none md:block">
+                        <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
+                          <img src="../../images/Welsh-corgi-pembroke-elfinfox.jpg" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
+                        </div>
+                      </div>
+                      <div class="flex-grow">
+                        <p class="no-prose flex flex-row items-center">
+                          <span class="inline-block font-bold">Corgi Breeders Association of NSW</span>
+                        </p>
+                        <p class="no-prose text-sm font-extralight">Created 01 Sep 2021</p>
+                      </div>
+                      <div class="flex-none lg:flex-initial">
+                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
+                      </div>
+                    </div>
+
+                    
+                  </div>
+                </div>
+              </div>        
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- footer area -->
+    <footer id="pp-footer" class="bg-pp-gray">
+      <div class="px-2 md:px-6 lg:px-12 xl:px-16 py-12 lg:py-16">
+        <div class="flex flex-wrap w-full"> 
+          <div class="w-full md:w-1/5 py-4 md:py-0">
+            <img src="../../images/perfect_pets_WTE.png" class="h-10">
+            <p class="text-gray-400">Making adoption easy and ethical</p>
+          </div>
+          <div class="w-full md:w-4/5">
+            <div class="flex flex-wrap w-full">
+              <nav class="text-white overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base font-bold tracking-wider">Pets and adoptions</h3>
+                <ul class="space-y-4 my-4">
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Search listings</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Browse listings</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Find a breeder</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Find services</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">News, learning and articles</a></li>
+                </ul>
+              </nav>
+              <nav class="text-white overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base font-bold tracking-wider">Account and Privacy</h3>
+                <ul class="space-y-4 my-4">
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Account</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Settings</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Privacy</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Legal</a></li>
+                </ul>
+              </nav>
+              <nav class="text-white overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base font-bold tracking-wider">Support and help</h3>
+                <ul class="space-y-4 my-4">
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Search listings</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Browse listings</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Find a breeder</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Find services</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">News, learning and articles</a></li>
+                </ul>
+              </nav>
+              <nav class=" overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base text-white font-bold tracking-wider">get social</h3>
+                <ul class="mt-4 space-y-4">
+                  <li>
+                    <a href="https://www.facebook.com/perfectpetsau" target="_blank" class="text-base text-gray-400 hover:text-white flex flex-row">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white w-6 h-6 mr-2"><title>Perfect Pets Facebook</title> <path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg> 
+                      <span> Facebook </span>
+                    </a>
+                  </li> 
+                  <li>
+                    <a href="https://www.instagram.com/perfectpetsau" target="_blank" class="text-base text-gray-400 hover:text-white flex flex-row">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white w-6 h-6 mr-2"><title>Perfect Pets Instagram</title> <path fill="currentColor" d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"></path></svg> 
+                      <span> Instagram </span>
+                    </a>
+                  </li> 
+                  <li>
+                    <a href="https://www.pinterest.com.au/yourperfectpet" target="_blank" class="text-base text-gray-400 hover:text-white flex flex-row">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="pinterest-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white w-6 h-6 mr-2"><title>Perfect Pets Pinterest</title> <path fill="currentColor" d="M448 80v352c0 26.5-21.5 48-48 48H154.4c9.8-16.4 22.4-40 27.4-59.3 3-11.5 15.3-58.4 15.3-58.4 8 15.3 31.4 28.2 56.3 28.2 74.1 0 127.4-68.1 127.4-152.7 0-81.1-66.2-141.8-151.4-141.8-106 0-162.2 71.1-162.2 148.6 0 36 19.2 80.8 49.8 95.1 4.7 2.2 7.1 1.2 8.2-3.3.8-3.4 5-20.1 6.8-27.8.6-2.5.3-4.6-1.7-7-10.1-12.3-18.3-34.9-18.3-56 0-54.2 41-106.6 110.9-106.6 60.3 0 102.6 41.1 102.6 99.9 0 66.4-33.5 112.4-77.2 112.4-24.1 0-42.1-19.9-36.4-44.4 6.9-29.2 20.3-60.7 20.3-81.8 0-53-75.5-45.7-75.5 25 0 21.7 7.3 36.5 7.3 36.5-31.4 132.8-36.1 134.5-29.6 192.6l2.2.8H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"></path></svg> 
+                      <span> Pinterest </span>
+                    </a>
+                  </li>
+                </ul>
+                      
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="pt-16 text-white font-bold text-center">
+          &copy; 2021 Perfect Pets. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script type="module" src="../../js/pets2.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function(){
+        const pwdeye = document.getElementById('pwdEye');
+        const pwd = document.getElementById('password');
+        if(pwdeye && pwd){
+          pwdEye.addEventListener('click', function(el){
+            if(this.classList.contains('fa-eye')){
+              this.classList.remove('fa-eye')
+              this.classList.add('fa-eye-slash');
+              pwd.type = 'text';
+            } else {
+              this.classList.remove('fa-eye-slash')
+              this.classList.add('fa-eye');  
+              pwd.type = 'password';
+            }
+          });
+        }
+      });
+    </script>  
+  </body>
+</html>

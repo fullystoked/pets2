@@ -13,6 +13,13 @@
     border-color: white;
   }
 
+  #user-navigation .link-active svg,
+  #mobile-user-navigation .link-active svg {
+    background-color: rgb(3, 174, 156);
+    color: white;
+  }
+
+  
   
 }
 
