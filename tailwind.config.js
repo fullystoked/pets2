@@ -59,15 +59,19 @@ module.exports = {
                 fontSize: theme('fontSize.3xl'),
               },
               '@screen lg': {
-                fontSize: theme('fontSize.4xl'),
+                fontSize: theme('fontSize.5xl'),
               },
               '&.no-prose': {
                 marginBottom: '0.5rem'
+              },
+              '& .sub-text':{
+                fontWeight: theme('fontWeight.normal'),
+                fontSize: theme('fontSize.lg')
               }
             },
             h2: {
               fontSize: theme('fontSize.2xl'),
-              fontWeight: theme('fontWeight.bold'),
+              fontWeight: theme('fontWeight.semibold'),
               margin: '1rem 0 0 0',
               '&.no-prose': {
                 marginBottom: '0.25rem'
@@ -221,18 +225,18 @@ module.exports = {
       const tagCard = {
         '.tag-card': {
           backgroundColor: 'rgb(244, 244, 244)',
-          padding: '0.35rem 0.6rem',
-          borderLeft: '4px solid transparent',
+          padding: '1rem 1rem',
+         /*  borderLeft: '4px solid transparent', */
           marginTop: '0.5rem',
           marginBottom: '0.5rem',
           '@screen lg': {
-            marginRight: '1rem',
+            marginRight: '0.5rem',
             marginTop: '0rem'
           }
         },
         '.tag-card-breeder': {
-          borderColor: 'rgb(3, 174, 156)',
-          'min-width' : '12rem',
+          /* borderColor: 'rgb(3, 174, 156)',
+          'min-width' : '12rem', */
           
         },
         '.tag-card-white':{
@@ -259,6 +263,9 @@ module.exports = {
             padding: "0px",
             margin: '0 0.25rem'
           }
+        },
+        '.char-card-lg':{
+          padding: '0.5rem 1rem'
         },
         '.char-card-white':{
           backgroundColor: 'rgb(255, 255, 255)'
