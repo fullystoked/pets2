@@ -72,9 +72,10 @@ button.modal-photos::after{
   content: '';
   width:18px;
   height:17px;
-  background: url('../images/svg/right-arrow.svg') no-repeat;
+  color: white;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJoLTYgdy02IiBmaWxsPSJub25lIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0cm9rZT0id2hpdGUiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNOSA1bDcgNy03IDciIC8+Cjwvc3ZnPg==") no-repeat;
   vertical-align: middle;
-  margin: 0 0 0 0.5rem;
+  margin: 0 0 0 0.25rem;
 }
 
 button.favourite-btn{
@@ -100,8 +101,8 @@ button.report-btn{
 button.report-btn::before{
   display:inline-block;
   content: '';
-  width:2.5rem;
-  height:2.5rem;
+  width:1.5rem;
+  height:1.5rem;
   background: url('../images/svg/report.svg') no-repeat;
   vertical-align: middle;
 }
@@ -114,9 +115,9 @@ button.question-btn{
 button.question-btn::after{
   display: inline-block;
   content: '';
-  background: url('../images/svg/right-arrow.svg') no-repeat;
-  height:18px;
-  width:17px;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJoLTYgdy02IiBmaWxsPSJub25lIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0cm9rZT0id2hpdGUiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTQgNWw3IDdtMCAwbC03IDdtNy03SDMiIC8+Cjwvc3ZnPg==") no-repeat;
+  height:22px;
+  width:21px;
   vertical-align: middle;
   position:absolute;
   right: 1rem;
