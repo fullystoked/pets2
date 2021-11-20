@@ -238,7 +238,7 @@
               
               <h1 class="sr-only">User account - Your Profiles</h1>
               <div>
-                <div id="account-header" class=" w-full md:w-11/12">
+                <div id="account-header" class=" w-full lg:w-3/4">
                   <div class="mb-2 flex flex-row gap-4">
                     <div class="flex-grow">
                       <h2 class="dashboard">Your Profiles</h2>
@@ -256,14 +256,15 @@
                     </div>
                   </div>
                 </div>
-                <div id="account-items" class="mt-2  w-full md:w-11/12">
-                  <div class="mt-6">
-                    <h3 class="dashboard flex-grow">Personal Profiles</h3>
+                <div id="account-items" class="mt-2  w-full lg:w-3/4">
+                  <div class="mt-6 flex flex-row w-full gap-6 items-center">
+                    <h3 class="dashboard flex-initial">Personal profiles</h3>
+                    <button class="showItems text-sm" data-items="personal-item">See all <span class="sr-only">for Sale Listings</span></button>
                   </div>
                   
                   <div class="personal-items my-4">
-                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none md:block">
+                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none sm:block">
                         <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
                           <img src="../../images/welsh1.gif" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
                         </div>
@@ -281,13 +282,13 @@
                         <p class="no-prose text-sm font-extralight">Created 01 Nov 2021</p>
                         
                       </div>
-                      <div class="flex-none lg:flex-initial">
+                      <div class="flex-none lg:flex-initial sm:min-w-40">
                         <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
                       </div>
                     </div>
 
-                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none md:block">
+                    <div class="account-item mb-4 personal-item sr-only shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none sm:block">
                         <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
                           <img src="../../images/welsh1.gif" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
                         </div>
@@ -305,18 +306,19 @@
                         <p class="no-prose text-sm font-extralight">Created 01 Sep 2021</p>
                         
                       </div>
-                      <div class="flex-none lg:flex-initial">
+                      <div class="flex-none lg:flex-initial sm:min-w-40">
                         <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
                       </div>
                     </div>
                   </div>
 
-                  <div class="mt-6">
-                    <h3 class="dashboard flex-grow">Breeder Profiles</h3>
+                  <div class="mt-6 flex flex-row w-full gap-6 items-center">
+                    <h3 class="dashboard flex-initial">Breeder profiles</h3>
+                    <button class="showItems text-sm" data-items="breeder-item">See all <span class="sr-only">Breeder profiles</span></button>
                   </div>
                   <div class="breeder-items my-4">
-                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none md:block">
+                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none sm:block">
                         <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
                           <img src="../../images/Welsh-corgi-pembroke-elfinfox.jpg" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
                         </div>
@@ -327,7 +329,23 @@
                         </p>
                         <p class="no-prose text-sm font-extralight">Created 01 Sep 2021</p>
                       </div>
-                      <div class="flex-none lg:flex-initial">
+                      <div class="flex-none lg:flex-initial sm:min-w-40">
+                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
+                      </div>
+                    </div>
+                    <div class="account-item breeder-item sr-only mb-4 shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none sm:block">
+                        <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
+                          <img src="../../images/Welsh-corgi-pembroke-elfinfox.jpg" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
+                        </div>
+                      </div>
+                      <div class="flex-grow">
+                        <p class="no-prose flex flex-row items-center">
+                          <span class="inline-block font-bold">Corgi Breeders Association of NSW</span>
+                        </p>
+                        <p class="no-prose text-sm font-extralight">Created 01 Sep 2021</p>
+                      </div>
+                      <div class="flex-none lg:flex-initial sm:min-w-40">
                         <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
                       </div>
                     </div>
@@ -337,8 +355,8 @@
                     <h3 class="dashboard flex-grow">Shelter Profiles</h3>
                   </div>
                   <div class="shelter-items my-4">
-                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none md:block">
+                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none sm:block">
                         <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
                           <img src="../../images/Welsh-corgi-pembroke-elfinfox.jpg" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
                         </div>
@@ -349,7 +367,7 @@
                         </p>
                         <p class="no-prose text-sm font-extralight">Created 01 Sep 2021</p>
                       </div>
-                      <div class="flex-none lg:flex-initial">
+                      <div class="flex-none lg:flex-initial sm:min-w-40">
                         <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
                       </div>
                     </div>

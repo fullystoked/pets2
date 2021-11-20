@@ -13,6 +13,9 @@ module.exports = {
       maxHeight: {
         'mh-pp1': '44rem',
       },
+      minWidth: {
+        '40': '10rem'
+      },
       fontFamily: {
         'ppPoppins': ['Poppins', ...defaultTheme.fontFamily.sans],
         'ppMontserrat': ['Montserrat', ...defaultTheme.fontFamily.sans],
