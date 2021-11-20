@@ -238,7 +238,7 @@
               
               <h1 class="sr-only">User account - My Pets</h1>
               <div>
-                <div id="account-header" class=" w-full md:w-11/12">
+                <div id="account-header" class=" w-full xl:w-3/4">
                   <div class="mb-2 flex flex-row gap-4">
                     <div class="flex-grow">
                       <h2 class="dashboard">Your Pets</h2>
@@ -279,14 +279,15 @@
                     </div>
                   </div>
                 </div>
-                <div id="account-items" class="mt-2  w-full md:w-11/12">
-                  <div class="mt-6">
-                    <h3 class="dashboard flex-grow">Pet Profiles</h3>
+                <div id="account-items" class="mt-2  w-full xl:w-3/4">
+                  <div class="mt-6 flex flex-row w-full gap-6 items-center">
+                    <h3 class="dashboard flex-initial">Pet profiles</h3>
+                    <button class="showItems text-sm" data-items="pet-item">See all <span class="sr-only">for Sale Listings</span></button>
                   </div>
                   
                   <div class="pet-profile-items my-4">
-                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none md:block">
+                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none sm:block">
                         <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
                           <img src="../../images/welsh1.gif" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
                         </div>
@@ -312,14 +313,14 @@
                           <span class="inline-block ml-2">19 April 2019  [birthdate if known here]</span>
                         </p>
                       </div>
-                      <div class="flex-none lg:flex-initial">
-                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
+                      <div class="flex-none lg:flex-initial sm:min-w-40">
+                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit</a>
                         <a href="#" class="block mb-2 dashboard badge text-center">Set reminder</a>
                       </div>
                     </div>
 
-                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none md:block">
+                    <div class="account-item pet-item sr-only mb-4 shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none sm:block">
                         <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
                           <img src="../../images/welsh1.gif" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
                         </div>
@@ -339,18 +340,19 @@
                           <span class="inline-block ml-2">19 April 2019  [birthdate if known here]</span>
                         </p>
                       </div>
-                      <div class="flex-none lg:flex-initial">
-                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
+                      <div class="flex-none lg:flex-initial sm:min-w-40">
+                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit</a>
                         <a href="#" class="block mb-2 dashboard badge text-center">Set reminder</a>
                       </div>
                     </div>
                   </div>
-                  <div class="mt-6">
-                    <h3 class="dashboard flex-grow">Pet Memorials</h3>
+                  <div class="mt-6 flex flex-row w-full gap-6 items-center">
+                    <h3 class="dashboard flex-initial">Pet memorials</h3>
+                    <button class="showItems text-sm" data-items="memorial-item">See all <span class="sr-only">for Sale Listings</span></button>
                   </div>
                   <div class="pet-memorial-items my-4">
-                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none md:block">
+                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none sm:block">
                         <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
                           <img src="../../images/dogs/black-and-tan-coonhound.jpg" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
                         </div>
@@ -370,13 +372,13 @@
                           <span class="inline-block ml-2">19 April 2019  [birthdate if known here]</span>
                         </p>
                       </div>
-                      <div class="flex-none lg:flex-initial">
-                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
+                      <div class="flex-none lg:flex-initial sm:min-w-40">
+                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit</a>
                       </div>
                     </div>
 
-                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none md:block">
+                    <div class="account-item memorial-item sr-only mb-4 shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
+                      <div class="hidden flex-none sm:block">
                         <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
                           <img src="../../images/dogs/german-shepherd-puppy.jpg" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
                         </div>
@@ -396,8 +398,8 @@
                           <span class="inline-block ml-2">19 April 2019  [birthdate if known here]</span>
                         </p>
                       </div>
-                      <div class="flex-none lg:flex-initial">
-                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
+                      <div class="flex-none lg:flex-initial sm:min-w-40">
+                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit</a>
                       </div>
                     </div>
                   </div>

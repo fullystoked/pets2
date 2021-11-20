@@ -101,6 +101,25 @@ export default class Interactions{
     tabs.forEach(el => {
       el.addEventListener('click', this.onNavTabClick(tabs, panels));
     });
+
+
+    const showItems = document.querySelectorAll('.showItems');
+    showItems.forEach(el => {
+      el.addEventListener('click', (e)=>{
+        const items = document.querySelectorAll('.'+e.target.dataset.items);
+        if(e.target.innerText.indexOf('See') >= 0){
+          e.target.innerText = 'Hide';
+          items.forEach(el =>{
+            el.classList.remove('sr-only');
+          });
+        } else {
+          e.target.innerText = 'See all';
+          items.forEach(el =>{
+            el.classList.add('sr-only');
+          });
+        }
+      });
+    });
   }
 
   
