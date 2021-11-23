@@ -273,4 +273,9 @@ const swiper7 = new Swiper('.swiper7', {
   }
 });
 
+const profileSwiper = new Swiper('.profileSwiper', {
+  allowTouchMove: false,
+  /* autoHeight: true */
+});
+
             

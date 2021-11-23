@@ -234,148 +234,244 @@
                 </ul>
               </nav>
             </aside>
-            <section id="userArea" class="flex-auto pt-10 prose  max-w-none">
+            <section id="userArea" class="flex-grow pt-10 min-w-0">
               
-              <h1 class="sr-only">User account - Your Profiles</h1>
-              <div>
-                <div id="account-header" class=" w-full lg:w-3/4">
-                  <div class="mb-2 flex flex-row gap-4">
-                    <div class="flex-grow">
-                      <h2 class="dashboard">Your Profiles</h2>
-                      <p class="text-sm no-prose">A place to add or edit your profiles. </p>
-                    </div>
-                    <div class="flex-initial">
-                      <a href="./uprofilebasic.html" class="inline-block text-sm flex flex-row gap-2 items-center border border-pp-blue p-2 ">
-                        <span class="inline-block">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                          </svg>
-                        </span>
-                        <span class="inline-block"> Add new profile</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div id="account-items" class="mt-2  w-full lg:w-3/4">
-                  <div class="mt-6 flex flex-row w-full gap-6 items-center">
-                    <h3 class="dashboard flex-initial">Personal profiles</h3>
-                    <button class="showItems text-sm" data-items="personal-item">See all <span class="sr-only">for Sale Listings</span></button>
+              <h1 class="sr-only">User account - Create new profile</h1>
+              <!-- <div id="account-header" class=" w-full lg:w-3/4">
+                <div class="mb-2 flex flex-row gap-4 prose">
+                  <div class="flex-grow">
+                    <h2 class="dashboard">Create Profile</h2>
+                    <p class="text-sm no-prose">Start creating your new profile with the basics</p>
                   </div>
                   
-                  <div class="personal-items my-4">
-                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none sm:block">
-                        <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
-                          <img src="../../images/welsh1.gif" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
-                        </div>
-                      </div>
-                      <div class="flex-grow">
-                        <p class="no-prose flex flex-row items-center">
-                          <span class="inline-block font-bold">Jane Citizen</span>
-                          <!-- <span class="inline-block flex-none text-pp-orange ml-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                              <title>Jacks yearly check is due</title>
-                              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
-                            </svg>
-                          </span> -->
-                        </p>
-                        <p class="no-prose text-sm font-extralight">Created 01 Nov 2021</p>
-                        
-                      </div>
-                      <div class="flex-none lg:flex-initial sm:min-w-40">
-                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
-                      </div>
-                    </div>
-
-                    <div class="account-item mb-4 personal-item sr-only shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none sm:block">
-                        <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
-                          <img src="../../images/welsh1.gif" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
-                        </div>
-                      </div>
-                      <div class="flex-grow">
-                        <p class="no-prose flex flex-row items-center">
-                          <span class="inline-block font-bold">Jack Citizen</span>
-                          <!-- <span class="inline-block flex-none text-pp-orange ml-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                              <title>Jacks yearly check is due</title>
-                              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
-                            </svg>
-                          </span> -->
-                        </p>
-                        <p class="no-prose text-sm font-extralight">Created 01 Sep 2021</p>
-                        
-                      </div>
-                      <div class="flex-none lg:flex-initial sm:min-w-40">
-                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="mt-6 flex flex-row w-full gap-6 items-center">
-                    <h3 class="dashboard flex-initial">Breeder profiles</h3>
-                    <button class="showItems text-sm" data-items="breeder-item">See all <span class="sr-only">Breeder profiles</span></button>
-                  </div>
-                  <div class="breeder-items my-4">
-                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none sm:block">
-                        <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
-                          <img src="../../images/Welsh-corgi-pembroke-elfinfox.jpg" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
-                        </div>
-                      </div>
-                      <div class="flex-grow">
-                        <p class="no-prose flex flex-row items-center">
-                          <span class="inline-block font-bold">Corgi Breeders Association of NSW</span>
-                        </p>
-                        <p class="no-prose text-sm font-extralight">Created 01 Sep 2021</p>
-                      </div>
-                      <div class="flex-none lg:flex-initial sm:min-w-40">
-                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
-                      </div>
-                    </div>
-                    <div class="account-item breeder-item sr-only mb-4 shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none sm:block">
-                        <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
-                          <img src="../../images/Welsh-corgi-pembroke-elfinfox.jpg" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
-                        </div>
-                      </div>
-                      <div class="flex-grow">
-                        <p class="no-prose flex flex-row items-center">
-                          <span class="inline-block font-bold">Corgi Breeders Association of NSW</span>
-                        </p>
-                        <p class="no-prose text-sm font-extralight">Created 01 Sep 2021</p>
-                      </div>
-                      <div class="flex-none lg:flex-initial sm:min-w-40">
-                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="mt-6">
-                    <h3 class="dashboard flex-grow">Shelter Profiles</h3>
-                  </div>
-                  <div class="shelter-items my-4">
-                    <div class="account-item mb-4 shadow-md rounded p-2 border border-pp-gray-100 sm:flex flex-row gap-2 items-center lg:gap-4">
-                      <div class="hidden flex-none sm:block">
-                        <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
-                          <img src="../../images/Welsh-corgi-pembroke-elfinfox.jpg" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose">
-                        </div>
-                      </div>
-                      <div class="flex-grow">
-                        <p class="no-prose flex flex-row items-center">
-                          <span class="inline-block font-bold">Corgi Breeders Association of NSW</span>
-                        </p>
-                        <p class="no-prose text-sm font-extralight">Created 01 Sep 2021</p>
-                      </div>
-                      <div class="flex-none lg:flex-initial sm:min-w-40">
-                        <a href="#" class="block mb-2 dashboard badge badge-orange text-center">Edit details</a>
-                      </div>
-                    </div>
-
-                    
-                  </div>
                 </div>
-              </div>        
+              </div> -->
+
+              <div id="profile-basics" class="mt-2 w-full lg:w-3/4">
+               
+                  <form id="profileForm" action="./uprofilesetup.html" method="post" class="h-full">
+                    <div class="h-full">
+                    <div class="swiper profileSwiper w-full relative">
+                      <div class="swiper-wrapper pb-4">
+                        <!-- profile type -->
+                        <div class="swiper-slide">
+                          <div class="profile-slider">
+                            <div id="account-header" class="">
+                              <div class="mb-2 flex flex-row gap-4 prose">
+                                <div class="flex-grow">
+                                  <h2 class="dashboard">Create Profile</h2>
+                                  <p class="text-sm no-prose">Start creating your new profile with the basics</p>
+                                </div>
+                                
+                              </div>
+                            </div>
+                            <div class="mt-2">
+                              <p id="">Profile Type</p>
+                              <p class="text-sm">Please select the profile type you want to create today</p>
+                              <div class="mt-2 ml-6">
+                                <label class="flex flex-row items-center block">
+                                  <input type="radio" name="ptype" id="personal" value="personal">
+                                  <span class="ml-2">Personal</span>
+                                </label>
+                                <label class="flex flex-row items-center block">
+                                  <input type="radio" name="ptype" id="personal" value="breeder">
+                                  <span class="ml-2">Breeder</span>
+                                </label>
+                                <label class="flex flex-row items-center block">
+                                  <input type="radio" name="ptype" id="personal" value="business">
+                                  <span class="ml-2">Business or service</span>
+                                </label>
+                                <label class="flex flex-row items-center block">
+                                  <input type="radio" name="ptype" id="personal" value="rescue">
+                                  <span class="ml-2">Rescue / Welfare</span>
+                                </label>
+                                <label class="flex flex-row items-center block">
+                                  <input type="radio" name="ptype" id="personal" value="groups">
+                                  <span class="ml-2">Groups / Clubs / Organisations</span>
+                                </label>
+                                <label class="flex flex-row items-center block">
+                                  <input type="radio" name="ptype" id="personal" value="breedclub">
+                                  <span class="ml-2">Breed club</span>
+                                </label>
+                                <label class="flex flex-row items-center block">
+                                  <input type="radio" name="ptype" id="personal" value="pet">
+                                  <span class="ml-2">Pet</span>
+                                </label>
+                                <label class="flex flex-row items-center block">
+                                  <input type="radio" name="ptype" id="personal" value="memorial">
+                                  <span class="ml-2">Pet memorial</span>
+                                </label>
+                              </div>
+                              
+                              
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                          <div class="relative">
+                            <label for="petSelectText" class="block font-medium">Pet type</label>
+                            <p class="text-xs">Type in the pet type (e.g. Dogs)</p>
+                            <div id="petSelect" class="relative closed flex flex-row justify-between items-center h-10 block rounded border border-solid border-gray-500 px-3 py-2 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                <input class="border-none outline-none block w-full" id="petSelectText" type="text" placeholder="Select your pet type">
+                            </div>
+      
+                            <div id="petSelectOptions" class="z-10 absolute top-18 left-0 w-full hidden ">
+                              <ul class=" bg-white border border-gray-500 border-t-0 rounded-b h-40 overflow-y-scroll">
+                                <li class="petSelectItem p-2 selected bg-gray-100" data-pettype="Dogs">Dogs</li>
+                                <li class="petSelectItem p-2 hover:bg-gray-100" data-pettype="Cats">Cats</li>
+                                <li class="petSelectItem  p-2 hover:bg-gray-100" data-pettype="Rabbits">Rabbits</li>
+                                <li class="petSelectItem p-2 hover:bg-gray-100" data-pettype="Horses">Horses</li>
+                              </ul>
+                            </div>
+                          </div>
+                          
+                          <div class="mt-4 relative">
+                            <label for="breedSelectText" class="block font-medium">Breed</label>
+                            <p class="text-xs">Type in the name of your breed (e.g. Maine Coon)</p>
+                            <div id="breedSelect" class="relative closed flex flex-row justify-between items-center h-10 block rounded border border-solid border-gray-500 px-3 py-2 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                <input class="border-none outline-none block w-full" id="breedSelectText" type="text" placeholder="Select your breed">
+                            </div>
+      
+                            <div id="breedSelectOptions" class="z-10 absolute top-18 left-0 w-full hidden ">
+                              <ul class=" bg-white border border-gray-500 border-t-0 rounded-b h-40 overflow-y-scroll">
+                                <li class="breedSelectItem p-2 selected bg-gray-100" data-breed="Australian Kelpie">Australian Kelpie</li>
+                                <li class="breedSelectItem p-2 hover:bg-gray-100" data-breed="German Shepard">German Shepard</li>
+                                <li class="breedSelectItem  p-2 hover:bg-gray-100" data-breed="Border Collie">Border Collie</li>
+                                <li class="breedSelectItem p-2 hover:bg-gray-100" data-breed="Labrador">Labrador</li>
+                                <li class="breedSelectItem p-2 hover:bg-gray-100" data-breed="Silky Terrier">Silky Terrier</li>
+                                <li class="breedSelectItem p-2 hover:bg-gray-100" data-breed="Lagotto">Lagotto</li>
+                                <li class="breedSelectItem p-2 hover:bg-gray-100" data-breed="Australian Shepard">Australian Shepard</li>
+                                <li class="breedSelectItem p-2 hover:bg-gray-100" data-breed="West Highland Terrier">West Highland Terrier</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- profile information -->
+                        <div class="swiper-slide">
+                          <div>
+                            <label class="block font-medium" for="profileTitle">Profile title</label>
+                            <p class="text-sm">This is the title for your profile</p>
+                            <input type="text" name="profileTitle" id="profileTitle" class="border border-gray-500 block w-full p-2 rounded">
+                          </div>
+                          <div class="mt-2">
+                            <label for="description" class="block">Description</label>
+                            <textarea placeholder="Description" rows="3" class="border border-gray-500 block w-full p-2 rounded" name="location" id="location"></textarea>
+                          </div>
+                          <div class="mt-2">
+                            <p>Images</p>
+                            <div class="w-full rounded border border-dashed border-gray-500 p-2 min-h-20 relative p-2">
+                              <div class="flex flex-col items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                                </svg>
+                                <span>image upload will go here</span>
+                                <span class="text-xs">needs to be restricted by membership level etc</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <fieldset class="">
+                            <legend class="font-medium">Contact Information</legend>
+                            <p class="text-sm">For your privacy you can choose what you want to display publicly</p>
+                            <p class="text-sm font-extralight">[note: fields can be prepop from user acc details!]</p>
+                            <div class="mt-2 md:grid grid-cols-2 gap-2">
+                              <div>
+                                <label for="fname" class="block">First name</label>
+                              <input placeholder="First name" class="border border-gray-500 block w-full p-2 rounded" type="text" name="fname" id="fname">
+                              </div>
+                              <div>
+                                <label for="lname" class="block">Last name</label>
+                                <input placeholder="Last name" class="border border-gray-500 block w-full p-2 rounded" type="text" name="lname" id="lname">
+                              </div>
+                              
+                            </div>
+                            <div class="mt-2">
+                              <div class="flex flex-row items-center">
+                                <span>
+                                  <input type="checkbox" name="showName" id="showName" class="mt-2 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-600 rounded mr-2">
+                                </span>
+                                <span>
+                                  <label for="showName">Display my name</label>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="mt-2 md:grid grid-cols-2 gap-2">
+                              <div class="">
+                                <label for="email" class="block">Email</label>
+                                <input placeholder="Email" class="border border-gray-500 block w-full p-2 rounded" type="email" name="email" id="email">
+                                <p class="text-sm">Your email will not be displayed publicly</p>
+                              </div>
+                              <div class="">
+                                <label for="phone" class="block">Phone number</label>
+                                <input placeholder="Phone number" class="border border-gray-500 block w-full p-2 rounded" type="tel" name="phone" id="phone">
+                                <div class="mt-2 flex flex-row items-center">
+                                  <span>
+                                    <input type="checkbox" name="showPhone" id="showPhone" class="mt-2 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-600 rounded mr-2">
+                                  </span>
+                                  <span>
+                                    <label for="showPhone">Display my phone number</label>
+                                  </span>
+                                </div>
+                              </div>  
+                            </div>
+                            
+                            <div class="mt-2">
+                              
+                            </div>
+                            <div class="">
+                              <label for="location" class="block">Location</label>
+                              <input placeholder="Location [mapbox search here?]" class="border border-gray-500 block w-full p-2 rounded" type="text" name="location" id="location">
+                            </div>
+                            <div class="mt-2">
+                              <div class="flex flex-row items-center">
+                                <span>
+                                  <input type="checkbox" name="showLocation" id="showLocation" class="mt-2 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-600 rounded mr-2">
+                                </span>
+                                <span>
+                                  <label for="showLocation">Display my location</label>
+                                </span>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                        <!-- registrations / meberships / activitites -->
+                        <div class="swiper-slide">
+                          <div>
+                            capture rego info here ?
+                          </div>
+                          <div class="mt-2">
+                            tyeahead for memberships?
+                          </div>
+                          <div class="mt-2">
+                            tyoeahead for activities here?
+                          </div>
+                        </div>
+                        <!-- special message 1 capture -->
+                        <div class="swiper-slide">
+                          <label for="smessage" class="block">Special message</label>
+                          <p class="text-sm">Give profile visitors... </p>
+                          <textarea rows="5" placeholder="special message for your profile" class="border border-gray-500 block w-full p-2 rounded"  name="smessage" id="smessage"></textarea>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div class="flex flex-row justify-between">
+                      <div>
+                        <div class="hidden z-10">
+                          <button id="profileBtnPrev" type="button" class="border-b border-gray-600">previous</button> 
+                        </div>
+                      </div>
+                      <div class="z-10">
+                        <button id="profileBtnNext" type="button" class="border-b border-gray-600">next</button> 
+                      </div>
+                    </div>
+                  </div>
+                  </form>
+                
+              </div>
+                     
             </section>
           </div>
         </div>
@@ -455,26 +551,102 @@
     </footer>
 
 
-
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="../../js/swiper.js"></script>
     <script type="module" src="../../js/pets2.js"></script>
     <script>
       window.addEventListener('DOMContentLoaded', function(){
-        const pwdeye = document.getElementById('pwdEye');
-        const pwd = document.getElementById('password');
-        if(pwdeye && pwd){
-          pwdEye.addEventListener('click', function(el){
-            if(this.classList.contains('fa-eye')){
-              this.classList.remove('fa-eye')
-              this.classList.add('fa-eye-slash');
-              pwd.type = 'text';
+        const profSelect = document.getElementById('profileSelect');
+        const profSelectOpt = document.getElementById('profileSelectOptions');
+        const profSelectText = document.getElementById('profileSelectText');
+        const profAngle = document.getElementById('profileAngle');
+
+        const breedSelect = document.getElementById('breedSelect');
+        const breedSelectOpt = document.getElementById('breedSelectOptions');
+        const breedSelectText = document.getElementById('breedSelectText');
+        
+        const petSelect = document.getElementById('petSelect');
+        const petSelectOpt = document.getElementById('petSelectOptions');
+        const petSelectText = document.getElementById('petSelectText');
+        
+
+        // breed select
+        breedSelect.addEventListener('keyup', function(el){
+          console.log(el.target.value) ;
+          if(el.target.value.length >= 3){ 
+            if(this.classList.contains('closed')){
+              this.classList.remove('closed');
+              breedSelectOpt.classList.remove('hidden');
             } else {
-              this.classList.remove('fa-eye-slash')
-              this.classList.add('fa-eye');  
-              pwd.type = 'password';
+              this.classList.add('closed');
+              breedSelectOpt.classList.add('hidden');
+            }
+          }
+        });
+        // so hacky
+        breedSelectOpt.addEventListener('click', (el)=>{
+          const cid = el.target.dataset.breed;
+          breedSelectText.value = cid;
+          breedSelect.classList.add('closed');
+          breedSelectOpt.classList.add('hidden');
+        });
+
+        // pet type select
+        petSelect.addEventListener('keyup', function(el){
+          console.log(el.target.value) ;
+          if(el.target.value.length >= 3){ 
+            if(this.classList.contains('closed')){
+              this.classList.remove('closed');
+              petSelectOpt.classList.remove('hidden');
+            } else {
+              this.classList.add('closed');
+              petSelectOpt.classList.add('hidden');
+            }
+          }
+        });
+        // so hacky
+        petSelectOpt.addEventListener('click', (el)=>{
+          const cid = el.target.dataset.pettype;
+          petSelectText.value = cid;
+          petSelect.classList.add('closed');
+          petSelectOpt.classList.add('hidden');
+        });
+
+        /* const profileBtnNext = document.getElementById('profileBtnNext');
+        const profileBtnPrev = document.getElementById('profileBtnPrev'); */
+        const profileBtnsNext = document.querySelectorAll('.profileBtnNext');
+        const profileBtnsPrev = document.querySelectorAll('.profileBtnPrev');
+        const profileForm = document.getElementById('profileForm');
+
+        if(profileSwiper && profileBtnNext){
+          profileSwiper.onAny(()=>{
+            if(profileSwiper.activeIndex>0){
+              profileBtnPrev.parentElement.classList.remove('hidden');
+            }
+          });
+          // we can navigate
+          const slides = profileSwiper.slides.length;
+          profileBtnNext.addEventListener('click', (el)=>{
+
+            if(profileSwiper.activeIndex < slides-1){
+              // next slide
+              profileSwiper.slideNext(700);
+            } else {
+              // submit form
+              profileForm.submit();
+            }
+          });
+          profileBtnPrev.addEventListener('click', (el)=>{
+
+            if(profileSwiper.activeIndex > 0){
+              // next slide
+              profileSwiper.slidePrev(700);
             }
           });
         }
+        
       });
-    </script>  
+    </script> 
+     
   </body>
 </html>

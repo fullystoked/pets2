@@ -12,9 +12,21 @@ module.exports = {
     extend: {
       maxHeight: {
         'mh-pp1': '44rem',
+        
+      },
+      minHeight: {
+        '20':'5rem',
+        '40': '10rem',
+        '80': '20rem',
+        '100': '25rem',
+        '120': '30rem'
       },
       minWidth: {
-        '40': '10rem'
+        '20':'5rem',
+        '40': '10rem',
+        '80': '20rem',
+        '100': '25rem',
+        '120': '30rem'
       },
       fontFamily: {
         'ppPoppins': ['Poppins', ...defaultTheme.fontFamily.sans],
