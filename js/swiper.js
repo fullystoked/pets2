@@ -193,15 +193,14 @@ const swiper5G = new Swiper('.swiperg', {
 // bottom dogs/cats swiper
 const swiper6 = new Swiper('.swiper6', {
   loop: false,
-  slidesPerView: 'auto',
-  slidesPerGroup: 1,
+  slidesPerView: 1,
+  // slidesPerGroup: 1,
   // loopedSlides: 6,
   
   breakpoints: {
-    1200: {
-      slidesPerGroup: 2
+    640: {
+      slidesPerView: 2
     }
-
   },
 
   // pagination
@@ -234,15 +233,14 @@ const swiper6 = new Swiper('.swiper6', {
 
 const swiper7 = new Swiper('.swiper7', {
   loop: false,
-  slidesPerView: 'auto',
-  slidesPerGroup: 1,
+  slidesPerView: 1,
+  // slidesPerGroup: 1,
   // loopedSlides: 6,
   
   breakpoints: {
-    1200: {
-      slidesPerGroup: 2
+    640: {
+      slidesPerView: 2
     }
-
   },
   
   // pagination
