@@ -58,6 +58,9 @@ module.exports = {
         'pp-pink': {
           DEFAULT: 'rgb(245, 107, 107)'
         },
+        'pp-purple': {
+          DEFAULT: 'rgb(186, 153, 253)'
+        },
         'pp-black': {
           DEFAULT: 'rgb(31, 41, 55)'
         }
@@ -156,7 +159,8 @@ module.exports = {
                 li: {
                   padding: '0rem'
                 }
-              }
+              },
+              
             },
           }
         }
@@ -232,7 +236,12 @@ module.exports = {
           backgroundColor: 'rgb(255, 164, 6)',
           borderColor: 'rgb(255, 164, 6)',
           color: theme('colors.black')
-        }
+        },
+        '.badge-purple': {
+          backgroundColor: 'rgb(186, 153, 253)',
+          borderColor: 'rgb(186, 153, 253)',
+          color: theme('colors.white')
+        },
 
       };
 
@@ -393,6 +402,8 @@ module.exports = {
           }
         }
       };
+
+     
 
       addComponents([ads, badges, tagCard, charCard, charBar, chips, navTab]);
     })
