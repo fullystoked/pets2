@@ -180,7 +180,7 @@
                 <div class="char-card char-card-lg w-full md:w-56">
                   <p class="text-xs flex flex-row items-center">
                     <span class="mr-2">DOB, Age</span>
-                    <span class="cursor-pointer fas fa-info-circle text-lg text-gray-500" data-modal-open="petsEstimate"></span> 
+                    <span class="text-xs">(estimate)</span> 
                   </p>
                   <p class="font-semibold">
                     <span>15/12/2011, 10yrs</span>
@@ -297,101 +297,123 @@
         <a id="behaviour" class="absolute -top-32">&nbsp;</a>
         <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:max-w-7xl py-4 prose">
           <h2 class="">Other details, health and behavioural notes</h2>
-          <div class="lg:grid grid-cols-2 gap-4 py-4">
-            <div class="py-2">
-              <ul class="no-prose no-padding check">
-                <li>
-                  <p class="flex flex-row">
-                    <span class="pp-tick" aria-label="Yes"></span>
-                    <span>Desexed</span>
-                  </p>
-                </li>
-                <li>
-                  <p class="flex flex-row">
-                    <span class="pp-cross" aria-label="No"></span>
-                    <span>Microchipped</span>
-                  </p>
-                </li>
-                <li>
-                  <p class="flex flex-row">
-                    <span class="pp-cross" aria-label="No"></span>
-                    <span>Vaccinated</span>
-                  </p>
-                </li>
-                <li>
-                  <p class="flex flex-row">
-                    <span class="pp-cross" aria-label="No"></span>
-                    <span>Wormed</span>
-                  </p>
-                </li>
-                <li>
-                 
-                    <div class="flex flex-row">
-                      <span class="pp-cross" aria-label="No"></span>
-                      <p class="flex-grow flex flex-col">
-                        <span>Heart worm preventative</span>
-                        <span class="no-prose text-xs pt-2">Details and notes relating to vaccinations and worming.</span>
+          <div class="lg:grid grid-cols-4 py-4">
+            <div class="col-span-3 gap-4 lg:grid grid-cols-2">
+              <div class="lg:w-11/12">
+                <div class="p-2 bg-white ">
+                  <ul class="no-prose no-padding space-out">
+                    <li>
+                      <p class="flex flex-row">
+                        <span class="pp-tick" aria-label="Yes"></span>
+                        <span>Desexed</span>
                       </p>
-                    </div>
+                    </li>
+                    <li>
+                      <div class="flex flex-row">
+                        <span class="pp-tick" aria-label="No"></span>
+                        <p class="no-prose flex-grow flex flex-col">
+                          <span>Microchipped</span>
+                          <span class="text-xs pt-2">(microchip number here)</span>
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="no-prose flex flex-row">
+                        <span class="pp-cross" aria-label="No"></span>
+                        <span>Vaccinated</span>
+                      </p>
+                    </li>
+                    <li>
+                      <p class="no-prose flex flex-row">
+                        <span class="pp-cross" aria-label="No"></span>
+                        <span>Wormed</span>
+                      </p>
+                    </li>
+                    <li>
                     
-                 
-                </li>
-                <li class="">
-                  <div class="flex flex-row">
-                    <span class="pp-cross" aria-label="No"></span>
-                    <p class="flex flex-col">
-                      <span>Apparent health issues</span>
-                      <span class="no-prose text-xs pt-2">Details and notes relating to apparent health issues.</span>
-                    </p>
-                  </div>
-                </li>
-              </ul>
+                        <div class="flex flex-row">
+                          <span class="pp-cross" aria-label="No"></span>
+                          <p class="no-prose flex-grow flex flex-col">
+                            <span>Heart worm preventative</span>
+                            <span class="text-xs pt-2">Details and notes relating to vaccinations and worming.</span>
+                          </p>
+                        </div>
+                        
+                    
+                    </li>
+                    <li class="">
+                      <div class="flex flex-row">
+                        <span class="pp-cross" aria-label="No"></span>
+                        <p class="no-prose flex flex-col">
+                          <span>Apparent health issues</span>
+                          <span class="text-xs pt-2">Details and notes relating to apparent health issues.</span>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="lg:w-11/12">
+                <div class="bg-white p-2">
+                  <ul class="no-padding no-prose space-out">
+                    <li class="lg:flex flex-row">
+                      <span class="flex-grow font-semibold">Estimated adult size</span>
+                      <span class="flex-intial flex flex-row items-center">
+                        <span>Medium</span>
+                        <span class="ml-2 cursor-pointer fas fa-info-circle text-lg text-gray-500" data-modal-open="petsVerified" role="button" tabindex="0" id="petsVerified__trigger-SPAN"></span>
+                      </span>  
+                    </li>
+                    <li class="lg:flex flex-row">
+                      <span class="flex-grow font-semibold">Basic type</span>
+                      <span class="flex-intial flex flex-row items-center">
+                        <span>Working type</span>
+                        <span class="ml-2 cursor-pointer fas fa-info-circle text-lg text-gray-500" data-modal-open="petsVerified" role="button" tabindex="0" id="petsVerified__trigger-SPAN"></span>
+                      </span> 
+                    </li>
+                    <li class="lg:flex flex-row">
+                      <span class=" flex-grow font-semibold">Temperament</span>
+                      <span class="flex-intial">Friendly</span>
+                    </li>
+                    <li class="lg:flex flex-row">
+                      <span class=" flex-grow font-semibold">Displays reliable obedience</span>
+                      <span class="pp-tick" aria-label="Yes"></span>
+                    </li>
+                    <li class="lg:flex flex-row">
+                      <span class=" flex-grow font-semibold">Displays acceptable socialisation</span>
+                      <span class="pp-tick" aria-label="Yes"></span>
+                    </li>
+                    <li class="lg:flex flex-row">
+                      <span class=" flex-grow font-semibold">House trained</span>
+                      <span class="pp-cross" aria-label="No"></span>
+                    </li>
+                    <li class="lg:flex flex-row">
+                      <span class=" flex-grow font-semibold">Apparent behavioural issues</span>
+                      <span class="pp-tick" aria-label="Yes"></span>
+                    </li>
+                    <li>
+                      Details and nots relating to apparent behavioural issues ...
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="mt-4">
+                  <p class="font-bold text-xl">Please note</p>
+                  <p class="text-sm">Rescue pets and animals often suffer behavioural issues...</p>
+                  <p class="text-sm">[content drawn from contentful]</p>
+                </div>
+              </div>
             </div>
-            <div>
-              <div class="bg-white p-2">
-                <ul class="no-padding no-prose">
-                  <li class="lg:flex flex-row">
-                    <span class="flex-grow font-semibold">Estimated adult size</span>
-                    <span class="flex-intial flex flex-row items-center">
-                      <span>Medium</span>
-                      <span class="ml-2 cursor-pointer fas fa-info-circle text-lg text-gray-500" data-modal-open="petsVerified" role="button" tabindex="0" id="petsVerified__trigger-SPAN"></span>
-                    </span>  
-                  </li>
-                  <li class="lg:flex flex-row">
-                    <span class="mt-4 flex-grow font-semibold">Basic type</span>
-                    <span class="flex-intial flex flex-row items-center">
-                      <span>Working type</span>
-                      <span class="ml-2 cursor-pointer fas fa-info-circle text-lg text-gray-500" data-modal-open="petsVerified" role="button" tabindex="0" id="petsVerified__trigger-SPAN"></span>
-                    </span> 
-                  </li>
-                  <li class="lg:flex flex-row">
-                    <span class="mt-4 flex-grow font-semibold">Temperament</span>
-                    <span class="flex-intial">Friendly</span>
-                  </li>
-                  <li class="lg:flex flex-row">
-                    <span class="mt-4 flex-grow font-semibold">Displays reliable obedience</span>
-                    <span class="pp-tick" aria-label="Yes"></span>
-                  </li>
-                  <li class="lg:flex flex-row">
-                    <span class="mt-4 flex-grow font-semibold">Displays acceptable socialisation</span>
-                    <span class="pp-tick" aria-label="Yes"></span>
-                  </li>
-
-
-                </ul>
-              </div>
-              <div class="mt-4 bg-white p-2">
-                <ul class="no-padding no-prose">
-                  <li class="lg:flex flex-row">
-                    <span class="flex-grow font-semibold">House trained</span>
-                    <span class="pp-cross" aria-label="No"></span>
-                  </li>
-                </ul>
-              </div>
-              <div class="mt-4">
-                <p class="font-bold text-xl">Please note</p>
-                <p class="text-sm">Rescue pets and animals often suffer behavioural issues...</p>
-                <p class="text-sm">[content drawn from contentful]</p>
+            <div class="w-full">
+              <div class="ad-container">
+                <div class="ad-right-side">
+                  <p class="ad-text no-prose">Sponsored</p>
+                  <div class="p-2">
+                    <img class="no-prose lg:object-right lg:ml-auto" src="../../images/ads/300_600.png" alt="shopify">
+                  </div>
+                  <p class="flex lg:justify-end">
+                    <a class="text-sm" href="#">Advertise here &gt;&gt;</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -452,7 +474,7 @@
           <div class="md:grid md:grid-cols-4">
             <div class="md:grid md:grid-cols-2 md:col-span-3">
               <div class="md:w-4/5">
-                <h3 class="font-bold">Provided with our puppies:</h3>
+                <h3 class="font-bold">We provide:</h3>
                 <ul class="list-none no-prose pt-3">
                   <li class="p-2 bg-white"><span class="pp-tick">Puppy Pack</span></li>
                   <li class="p-2 bg-white"><span class="pp-tick">Take home instructions and feeding care</span></li>
@@ -499,41 +521,42 @@
       <section id="practicesSection" class="py-4 relative bg-pp-gray-100">
         <a id="practices" class="absolute -top-32">&nbsp;</a>
         <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
-          <h2 class="">Our Breeding Practices & Standards</h2>
-          <p class="pt-3 font-medium">How we ensure the long term health & well being of our dogs and puppies</p>
-          <div class="mt-8">
-            <nav class="flex flex-col lg:flex-row justify-between items-center border-b-2 border-pp-green">
-              <button data-panel="tab1" class="active navtab navtab-green navtab-alt px-4 py-2 lg:px-16">Health</button>
-              <button data-panel="tab2" class="navtab navtab-green navtab-alt px-4 py-2 lg:px-16">Breeding Environment</button>
-              <button data-panel="tab3" class="navtab navtab-green navtab-alt px-4 py-2 lg:px-16">Socialisation & Preparedness</button>
-              <button data-panel="tab4" class="navtab navtab-green navtab-alt px-4 py-2 lg:px-16">Ongoing Support</button>
-            </nav>
-          </div>
-          <div id="panels" class="p-2">
-            <div class="tab1 tab-content py-5 active">
-              <div class="flex flex-col lg:flex-row">
-                <div class="w-full lg:w-1/2 lg:mr-4">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
-                  
-                </div>
-                <div class="w-full lg:w-1/2">
-                  <!-- profile main image can go here -->
-                  <img class="object-cover w-full no-prose" src="../../images/Welsh-corgi-pembroke-elfinfox.jpg"  alt="profile main image can go here">
+          <h2 class="">Our Practices & Standards</h2>
+          <div>
+            <div class="mt-8">
+              <nav class="flex flex-col lg:flex-row justify-between items-center border-b-2 border-pp-green">
+                <button data-panel="tab1" class="active navtab navtab-green navtab-alt px-4 py-2 lg:px-16">Health</button>
+                <button data-panel="tab2" class="navtab navtab-green navtab-alt px-4 py-2 lg:px-16">Breeding Environment</button>
+                <button data-panel="tab3" class="navtab navtab-green navtab-alt px-4 py-2 lg:px-16">Socialisation & Preparedness</button>
+                <button data-panel="tab4" class="navtab navtab-green navtab-alt px-4 py-2 lg:px-16">Ongoing Support</button>
+              </nav>
+            </div>
+            <div id="panels" class="p-2">
+              <div class="tab1 tab-content py-5 active">
+                <div class="flex flex-col lg:flex-row">
+                  <div class="w-full lg:w-1/2 lg:mr-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                    
+                  </div>
+                  <div class="w-full lg:w-1/2">
+                    <!-- profile main image can go here -->
+                    <img class="object-cover w-full no-prose" src="../../images/Welsh-corgi-pembroke-elfinfox.jpg"  alt="profile main image can go here">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="tab2 tab-content py-5">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
-            </div>
-            <div class="tab3 tab-content py-5">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
-            </div>
-            <div class="tab4 tab-content py-5">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+              <div class="tab2 tab-content py-5">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+              </div>
+              <div class="tab3 tab-content py-5">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+              </div>
+              <div class="tab4 tab-content py-5">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -550,15 +573,14 @@
             <div class="w-full md:col-span-3 pr-20">
               <div class="lg:grid lg:grid-cols-2 gap-14">
                 <div class="">
-                  <p class="pt-3">Ensuring or puppies go to the right home is a high priority and we screen all of our puppy buyers thoroughly. The types of people and homes we are looking for are:</p>
+                  <!-- <p class="pt-3">Ensuring or puppies go to the right home is a high priority and we screen all of our puppy buyers thoroughly. The types of people and homes we are looking for are:</p> -->
                   <ol>
-                    <li>Prepared to wait for a puppy</li>
+                    <li>Prepared to wait for an adoption</li>
                     <li>Experienced with the breed</li>
                     <li>Have sufficient budget</li>
                     <li>Have an adequate and safe environment</li>
                     <li>Have the capacity to exercise the breed sufficiently and appropriately</li>
                     <li>Have an understanding of the grooming requirents of the breed</li>
-                    <li>Willin and able to visit and get to know us</li>
                   </ol>
                   
                 </div>
@@ -646,12 +668,12 @@
           </div>
           
           <div class="lg:grid grid-cols-3 grid-flow-row gap-4">
-            <div class="start-row-1 col-span-2 prose max-w-none">
+            <!-- <div class="start-row-1 col-span-2 prose max-w-none">
               <p class="font-medium pt-4">Before you make contact</p>
               <p>Please read all the information the Breeder has provided, and the <a class="text-pp-blue hover:underline" href="#">Australian Kelpie breed information</a> so you have a good understanding 
               of the breed and you can make sure it will suit you, your family and your lifestyle.</p>
               <p>Please also read our <a class="text-pp-blue hover:underline" href="#" data-modal-open="petsBreederContact">Tips and advice when contacting a breeder</a></p>
-            </div>
+            </div> -->
             <div class="row-start-2 col-span-2 bg-white p-2 rounded-lg mt-4">
               <div class="lg:grid grid-cols-3 gap-4 pb-4 border-b border-gray-200">
                 <div class="">
