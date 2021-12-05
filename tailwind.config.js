@@ -59,7 +59,8 @@ module.exports = {
           DEFAULT: 'rgb(245, 107, 107)'
         },
         'pp-purple': {
-          DEFAULT: 'rgb(186, 153, 253)'
+          DEFAULT: 'rgb(186, 153, 253)',
+          dark: 'rgb(130, 79, 164)',
         },
         'pp-black': {
           DEFAULT: 'rgb(31, 41, 55)'
@@ -223,6 +224,11 @@ module.exports = {
           borderRadius: '9999px',
           padding: '0.25rem 1rem',
           margin: '0rem 1rem'
+        },
+        '.badge-adoption':{
+           backgroundColor: 'rgb(130, 79, 164)',
+          borderColor: 'rgb(130, 79, 164)',
+          color: theme('colors.white')
         },
         '.badge-icon':{
           padding:'0.25rem 2rem 0.25rem 1rem'
