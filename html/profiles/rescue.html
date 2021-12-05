@@ -237,17 +237,28 @@
             <div class="row-start-2 col-start-5">
               
               <div class="mt-4 p-2 bg-white rounded-lg border border-pp-gray-100 filter drop-shadow-md">
-                <div class="flex flex-row gap-4 py-2 items-center align-center">
-                  <div class="flex-none pl-3">
-                    <p class="text-xs m-0 font-light">Contact</p>
-                    <p class="font-bold">Kerrie</p>
-                    <p><a href="#" class="text-pp-blue hover:underline text-xs font-semibold">View profile</a></p>
+                <div class="flex flex-row gap-4 py-4 border-b border-pp-gray-200 items-center align-center">
+                  <div class="w-full flx-grow">
+                    <p class="font-bold">Lucky Stars Animal Sanctuary</p>
                   </div>
-                  <div class="w-full h-full relative flex-grow">
-                    <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20 absolute left-2 2xl:left-2/4 top-1/2 transform -translate-y-1/2">
+                  <div class="w-20 h-full flex-none">
+                    <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden 
+                        h-20 w-20">
                       <img src="../../images/welsh1.gif" alt="Truda - Dog Breeder" class="object-cover h-full w-full no-prose">
                     </div>
                   </div>
+                </div>
+                
+                <div class="border-b border-gray-200 mt-2 py-4">
+                  
+                  <p class="flex flex-row items-baseline">
+                    <span class="font-semibold text-sm w-20 flex-none">Contact:</span>
+                    <span class="flex-grow"><a href="#" class="text-pp-blue hover:underline" title="link to profile is selected">Kerrie</a></span>
+                  </p>
+                  <p class="flex flex-row items-center mt-4">
+                    <span class="font-semibold text-sm w-20 flex-none">Phone:</span>
+                    <span class="flex-grow">(02) 6666 6666</span>
+                  </p>
                 </div>
                 
                
@@ -255,8 +266,8 @@
                   <button class="text-left text-sm font-semibold question-btn badge badge-green py-2 mb-3 mx-0 pr-10 w-3/4 sm:w-1/2 xl:w-full ">
                     Contact Us
                   </button>
-                  <button class="text-left text-sm font-semibold question-btn badge badge-green py-2 mb-3 mx-0 w-3/4 sm:w-1/2 pr-10 xl:w-full">
-                    Donate
+                  <button class="text-left text-sm font-semibold question-btn badge badge-purple py-2 mb-3 mx-0 w-3/4 sm:w-1/2 pr-10 xl:w-full">
+                    Make a donation
                   </button>
                 </div>
                 
@@ -273,11 +284,11 @@
                 </div>
                 
                 <p class="text-xs mt-4 font-light" id="sheltermate">Sheltermate ID</p>
-                <p class="font-bold" aria-labelledby="sheltermate">BR103116</p>
+                <p class="font-bold pb-3 border-b border-gray-200" aria-labelledby="sheltermate">BR103116</p>
                 <p class="text-xs mt-4 font-light" id="sheltermate">Rehoming number</p>
-                <p class="font-bold" aria-labelledby="sheltermate">58949332</p>
+                <p class="font-bold pb-3 border-b border-gray-200" aria-labelledby="sheltermate">58949332</p>
                 <p class="text-xs mt-4 font-light" id="sheltermate">Bin</p>
-                <p class="font-bold" aria-labelledby="sheltermate">58949332</p>
+                <p class="font-bold pb-3 border-b border-gray-200" aria-labelledby="sheltermate">58949332</p>
                 <p class="text-xs mt-4 font-light" id="sheltermate">Source number</p>
                 <p class="font-bold pb-3 border-b border-gray-200" aria-labelledby="sheltermate">58949332</p>
                 <p class="py-4 flex flex-row gap-2 items-center">
@@ -314,11 +325,10 @@
       <!-- practices -->
       <section id="practicesSection" class="py-4 relative">
         <a id="practices" class="absolute -top-32">&nbsp;</a>
-        <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
+        <div class="container mx-auto px-2 max-w-none md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
           <h2 class="">Our Practices & Standards</h2>
-          <p class="pt-3 font-medium">How we ensure the long term health & well being of our rescued animals</p>
-          <div class="mt-8">
-            <nav class="flex flex-col lg:flex-row justify-between items-center border-b-2 border-pp-green">
+          <div class="pt-8">
+            <nav class="flex flex-col xl:flex-row justify-between items-center border-b-2 border-pp-green">
               <button data-panel="tab1" class="active navtab navtab-green px-4 py-2 lg:px-16">Health</button>
               <button data-panel="tab2" class="navtab navtab-green px-4 py-2 lg:px-16">xxxxxxxx</button>
               <button data-panel="tab3" class="navtab navtab-green px-4 py-2 lg:px-16">Socialisation & Preparedness</button>
@@ -356,7 +366,7 @@
 
       <!-- mid page nav sticks to top when scolling -->
       <aside class="w-full bg-pp-navy sticky top-20 z-10">
-        <nav id="pagenav" class="container mx-auto px-2 md:px-6 lg:px-12 xl:px-16 px-2">
+        <nav id="pagenav" class="container mx-auto px-2 max-w-none md:px-6 lg:px-12 xl:px-16 px-2">
           <div class="lg:flex lg:flex-row hidden">
             <ul class="list-reset lg:flex justify-between flex-1 items-center">
               <li class="mr-6 py-4 text-white text-sm">On this page...</li>
@@ -405,7 +415,7 @@
       <!-- screening processes -->
       <section id="screeningSection" class="py-4 relative bg-pp-gray-100">
         <a id="screening" class="absolute -top-32">&nbsp;</a>
-        <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
+        <div class="container mx-auto px-2 max-w-none md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
           <h2>Application process</h2>
           <div class="md:grid md:grid-cols-4">
             <div class="w-full md:col-span-3 pr-20">
@@ -465,11 +475,11 @@
       <!-- FAQs-->
       <section id="faqSection" class="py-4 relative">
         <a id="faqs" class="absolute -top-32">&nbsp;</a>
-        <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
+        <div class="container mx-auto max-w-none px-2 md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
           <h2>FAQs</h2>
           <div class="md:grid md:grid-cols-4">
-            <div class="w-full md:col-span-3">
-              <p class="font-medium">Questions we are often asked about our rescues</p>
+            <div class="w-full md:col-span-3 md:pr-20">
+              <p class="font-medium">Questions we are often asked</p>
               <div class="faq-items"> 
                 <div class="mt-4">
                   <h3 class="">What if?</h3>
@@ -509,26 +519,21 @@
           </div>
           
           <div class="lg:grid grid-cols-3 grid-flow-row gap-4">
-            <div class="start-row-1 col-span-2 prose max-w-none">
-              <p class="font-medium pt-4">Before you make contact</p>
-              <p>Please read all the information the Rescue has provided.</p>
-              <p>Please also read our <a class="text-pp-blue hover:underline" href="#" data-modal-open="petsBreederContact">Tips and advice when contacting a rescue</a></p>
-            </div>
             <div class="row-start-2 col-span-2 bg-white p-2 rounded-lg mt-4">
-              <p class="font-bold">Lucky Stars Animal Sanctuary</p>
               <div class="lg:grid grid-cols-3 gap-8 pb-4 border-b border-gray-200">
                 <div class="">
-                  <div class="flex flex-row gap-8 py-2 items-center align-center ">
-                    <div class="flex-none pl-3">
-                      <p class="text-xs m-0 font-light">Contact</p>
-                      <p class="font-bold">Kerrie</p>
-                      <p><a href="#" class="text-pp-blue hover:underline text-xs font-semibold">View profile</a></p>
-                    </div>
-                    <div class="w-full h-full relative flex-grow">
-                      <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20 absolute left-2 2xl:left-2/4 top-1/2 transform -translate-y-1/2">
-                        <img src="../../images/welsh1.gif" alt="Truda - Dog Breeder" class="object-cover h-full w-full no-prose">
+                  <div class="flex flex-row gap-4 py-2 items-center align-center ">
+                    <p class="font-bold pl-2 flex-grow">Lucky Stars Animal Sanctuary</p>
+                    <div class="flex-initial">
+                      <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
+                        <img src="../../images/welsh1.gif" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose" title="Profile Logo Image">
                       </div>
                     </div>
+                  </div>
+                  <div class="flex flex-row mt-4 pl-2 items-baseline">
+                    <span class="text-sm m-0 font-semibold w-20">Contact:</span>
+                    <span class="flex-grow"><a href="#" class="text-pp-blue hover:underline" title="link to profile if selected">Kerrie</a></span>
+                    <!-- <p><a href="#" class="text-pp-blue hover:underline text-xs font-semibold">View profile</a></p> -->
                   </div>
                 </div>
                 <!-- special message 2 -->
@@ -549,15 +554,14 @@
                     <button class="text-left text-sm font-semibold question-btn badge badge-green py-2 mb-3 mx-0 pr-10 w-3/4 sm:w-1/2 xl:w-full ">
                       Contact us
                     </button>
-                    <button class="text-left text-sm font-semibold question-btn badge badge-green py-2 mb-3 mx-0 w-3/4 sm:w-1/2 pr-10 xl:w-full">
-                      Donate
+                    <button class="text-left text-sm font-semibold question-btn badge badge-purple py-2 mb-3 mx-0 w-3/4 sm:w-1/2 pr-10 xl:w-full">
+                      Make a donation
                     </button>
                   </div>
                 </div>
                 <div class="text-sm prose max-w-none col-span-2 py-4  pl-0 lg:pl-14">
                   <p>
-                    When contacting this breeder you will be asked some standard questions so they can best answer your enquiry.
-                    If you've created a personal profile, you can include a link.  They will then get back to you with next steps.
+                    When contacting us you'll be asked some standard questions so we can best answer your enquiry.  If you've created a personal profile, you can include a link.  We can then get back to you with next steps.
                   </p>
                   <p class="flex flex-row items-center">
                     <span class="mr-1">Don't have a profile?</span>  
@@ -586,12 +590,17 @@
                     </ul>
                   </div>
                   <div class="p-2 py-6">
-                    <div class="flex flex-row justify-between">
+                    <div class="flex flex-row gap-2">
                       <span class="font-bold">Location:</span>
-                      <span class="text-right">Dandenong, VIC</span>
+                      <span class="ext-right">Dandenong, VIC</span>
                     </div>
                     <div class="mt-4">
-                      <a class="text-sm text-pp-blue hover:underline" href="#map">View map</a>
+                      <a class="flex flex-row items-center text-sm font-bold text-pp-blue hover:underline" href="#map">
+                        <span>See map</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -683,9 +692,9 @@
         <a id="map" class="absolute -top-32">&nbsp;</a>
         <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
           <h2>Location Map</h2>
-          <div class="w-full">
-            <p class="pt-4 no-prose text-sm font-bold">Address:</p>
-            <p class="">Dandenong, ACT, Australia</p>
+          <div class="w-full flex flex-row gap-2 pt-4">
+            <p class="no-prose text-sm font-bold">Address:</p>
+            <p class="no-prose">Dandenong, ACT, Australia</p>
           </div>
           
           <div class="w-full mt-6">
@@ -728,10 +737,10 @@
                       <div class="relative">
                         <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../../images/big_corgy.jpg" alt="breeder corgi">
                       </div>
-                      <div class="text-center">
-                        <p class="uppercase font-bold pt-2">NSW Welsh Corgi Breeder r'us</p>
-                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
-                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">NSW Welsh Corgi Breeder r'us</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
                           <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                           <p class="no-prose">Sydney, NSW </p>
                         </div>
@@ -744,10 +753,10 @@
                       <div class="relative">
                         <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../../images/users/groomer.png" alt="groomer">
                       </div>
-                      <div class="text-center">
-                        <p class="uppercase font-bold pt-2">NSW Welsh Corgi Breeder r'us</p>
-                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
-                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">NSW Welsh Corgi Breeder r'us</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
                           <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                           <p class="no-prose">Sydney, NSW </p>
                         </div>
@@ -760,10 +769,10 @@
                       <div class="relative">
                         <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../../images/users/shelter.png" alt="shelter">
                       </div>
-                      <div class="text-center">
-                        <p class="uppercase font-bold pt-2">AKAE Dog Shelter</p>
-                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
-                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">NSW Welsh Corgi Breeder r'us</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
                           <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                           <p class="no-prose">Sydney, NSW </p>
                         </div>
@@ -776,10 +785,10 @@
                       <div class="relative">
                         <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../../images/big_corgy.jpg" alt="breeder corgi">
                       </div>
-                      <div class="text-center">
-                        <p class="uppercase font-bold pt-2">AKAE Cat Shelter</p>
-                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
-                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">NSW Welsh Corgi Breeder r'us</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
                           <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                           <p class="no-prose">Sydney, NSW </p>
                         </div>
@@ -811,10 +820,10 @@
                       <div class="relative">
                         <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../../images/big_corgy.jpg" alt="breeder corgi">
                       </div>
-                      <div class="text-center">
-                        <p class="uppercase font-bold pt-2">AKAE Grooming Services</p>
-                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
-                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">AKAE Grooming Services</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
                           <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                           <p class="no-prose">Sydney, NSW </p>
                         </div>
@@ -827,10 +836,10 @@
                       <div class="relative">
                         <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../../images/users/groomer.png" alt="groomer">
                       </div>
-                      <div class="text-center">
-                        <p class="uppercase font-bold pt-2">AKA Grooming</p>
-                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
-                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">AKA Grooming</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
                           <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                           <p class="no-prose">Sydney, NSW </p>
                         </div>
@@ -843,10 +852,10 @@
                       <div class="relative">
                         <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../../images/users/shelter.png" alt="shelter">
                       </div>
-                      <div class="text-center">
-                        <p class="uppercase font-bold pt-2">AKAE Dog Walking</p>
-                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
-                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">AKAE Dog Walking</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
                           <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                           <p class="no-prose">Sydney, NSW </p>
                         </div>
@@ -859,10 +868,10 @@
                       <div class="relative">
                         <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../../images/big_corgy.jpg" alt="breeder corgi">
                       </div>
-                      <div class="text-center">
-                        <p class="uppercase font-bold pt-2">AKAE Dog Walking</p>
-                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the governing body. Our puppies are happy</p>
-                        <div class="flex flex-row justify-center items-center font-semibold pb-4">
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">AKAE Dog Walking</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
                           <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                           <p class="no-prose">Sydney, NSW </p>
                         </div>
