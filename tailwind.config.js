@@ -160,6 +160,11 @@ module.exports = {
                   padding: '0rem'
                 }
               },
+              '&.space-out': {
+                li: {
+                  marginBottom: '1.5rem'
+                }
+              }
               
             },
           }
