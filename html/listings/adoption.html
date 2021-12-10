@@ -304,7 +304,7 @@
         <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:max-w-7xl py-4 prose">
           <h2 class="">Other details, health and behavioural notes</h2>
           <div class="lg:grid grid-cols-4 py-4">
-            <div class="col-span-3 gap-4 lg:grid grid-cols-2">
+            <div class="col-span-3 gap-4 lg:grid grid-cols-2 mt-4 md:pr-20">
               <div class="lg:w-11/12">
                 <div class="p-2 bg-white rounded-lg">
                   <ul class="no-prose no-padding space-out">
@@ -339,10 +339,10 @@
                     
                         <div class="flex flex-row">
                           <span class="pp-cross" aria-label="No"></span>
-                          <p class="no-prose flex-grow flex flex-col">
+                          <div class="flex-grow flex flex-col">
                             <span>Heart worm preventative</span>
                             <span class="text-xs pt-2">Details and notes relating to vaccinations and worming.</span>
-                          </p>
+                          </div>
                         </div>
                         
                     
@@ -350,10 +350,10 @@
                     <li class="">
                       <div class="flex flex-row">
                         <span class="pp-cross" aria-label="No"></span>
-                        <p class="no-prose flex flex-col">
+                        <div class="flex flex-col">
                           <span>Apparent health issues</span>
                           <span class="text-xs pt-2">Details and notes relating to apparent health issues.</span>
-                        </p>
+                        </div>
                       </div>
                     </li>
                   </ul>
@@ -363,41 +363,41 @@
                 <div class="bg-white p-2 rounded-lg">
                   <ul class="no-padding no-prose space-out">
                     <li class="lg:flex flex-row">
-                      <span class="flex-grow font-semibold">Estimated adult size</span>
+                      <span class="flex-grow">Estimated adult size</span>
                       <span class="flex-intial flex flex-row items-center">
                         <span>Medium</span>
                         <span class="ml-2 cursor-pointer fas fa-info-circle text-lg text-gray-500" data-modal-open="petsVerified" role="button" tabindex="0" id="petsVerified__trigger-SPAN"></span>
                       </span>  
                     </li>
                     <li class="lg:flex flex-row">
-                      <span class="flex-grow font-semibold">Basic type</span>
+                      <span class="flex-grow">Basic type</span>
                       <span class="flex-intial flex flex-row items-center">
                         <span>Working type</span>
                         <span class="ml-2 cursor-pointer fas fa-info-circle text-lg text-gray-500" data-modal-open="petsVerified" role="button" tabindex="0" id="petsVerified__trigger-SPAN"></span>
                       </span> 
                     </li>
                     <li class="lg:flex flex-row">
-                      <span class=" flex-grow font-semibold">Temperament</span>
+                      <span class=" flex-grow">Temperament</span>
                       <span class="flex-intial">Friendly</span>
                     </li>
                     <li class="lg:flex flex-row">
-                      <span class=" flex-grow font-semibold">Displays reliable obedience</span>
+                      <span class=" flex-grow">Displays reliable obedience</span>
                       <span class="pp-tick" aria-label="Yes"></span>
                     </li>
                     <li class="lg:flex flex-row">
-                      <span class=" flex-grow font-semibold">Displays acceptable socialisation</span>
+                      <span class=" flex-grow">Displays acceptable socialisation</span>
                       <span class="pp-tick" aria-label="Yes"></span>
                     </li>
                     <li class="lg:flex flex-row">
-                      <span class=" flex-grow font-semibold">House trained</span>
+                      <span class=" flex-grow">House trained</span>
                       <span class="pp-cross" aria-label="No"></span>
                     </li>
                     <li class="lg:flex flex-row">
-                      <span class=" flex-grow font-semibold">Apparent behavioural issues</span>
+                      <span class=" flex-grow">Apparent behavioural issues</span>
                       <span class="pp-tick" aria-label="Yes"></span>
                     </li>
                     <li>
-                      Details and nots relating to apparent behavioural issues ...
+                      Details and notes relating to apparent behavioural issues ...
                     </li>
                   </ul>
                 </div>
@@ -482,12 +482,10 @@
               <div class="md:w-4/5">
                 <h3 class="font-bold">We provide:</h3>
                 <ul class="list-none no-prose pt-3">
-                  <li class="p-2 bg-white"><span class="pp-tick">Puppy Pack</span></li>
-                  <li class="p-2 bg-white"><span class="pp-tick">Take home instructions and feeding care</span></li>
-                  <li class="p-2 bg-white"><span class="pp-tick">6 weeks pet insurance</span></li>
+                  <li class="p-2 bg-white"><span class="pp-tick">Take home instructions on feeding and care</span></li>
                   <li class="p-2 bg-white"><span class="pp-tick">Instructions regarding council regulations</span></li>
                   <li class="p-2 bg-white"><span class="pp-tick">Food and Toys</span></li>
-                  <li class="p-2 bg-white"><span class="pp-tick">Lifelong support</span></li>
+                  <li class="p-2 bg-white"><span class="pp-tick">Ongoing support</span></li>
                 </ul>
                 <!-- free text for anything else mentioned -->
                 <p class="p-2 bg-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
@@ -495,11 +493,8 @@
               <div class="md:w-4/5">
                 <h3 class="font-bold">Includes the following documentation:</h3>
                 <ul class="list-none no-prose pt-3">
-                  <li class="p-2 bg-white"><span class="pp-tick">DNA health testing</span></li>
                   <li class="p-2 bg-white"><span class="pp-tick">Vet check certificate</span></li>
                   <li class="p-2 bg-white"><span class="pp-tick">Vaccination certificate</span></li>
-                  <li class="p-2 bg-white"><span class="pp-tick">Hip and elbow scores (parents)</span></li>
-                  <li class="p-2 bg-white"><span class="pp-tick">ANKC Pedigree</span></li>
                   <li class="p-2 bg-white"><span class="pp-tick">Microchip and transfer papers</span></li>
                 </ul>
                 <!-- free text for anything else mentioned -->
@@ -532,7 +527,7 @@
             <div class="mt-8">
               <nav class="flex flex-col lg:flex-row justify-between items-center border-b-2 border-pp-green">
                 <button data-panel="tab1" class="active navtab navtab-green navtab-alt px-4 py-2 lg:px-16">Health</button>
-                <button data-panel="tab2" class="navtab navtab-green navtab-alt px-4 py-2 lg:px-16">Breeding Environment</button>
+                <button data-panel="tab2" class="navtab navtab-green navtab-alt px-4 py-2 lg:px-16">xxxxxx</button>
                 <button data-panel="tab3" class="navtab navtab-green navtab-alt px-4 py-2 lg:px-16">Socialisation & Preparedness</button>
                 <button data-panel="tab4" class="navtab navtab-green navtab-alt px-4 py-2 lg:px-16">Ongoing Support</button>
               </nav>
@@ -576,7 +571,7 @@
         <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
           <h2>Our process</h2>
           <div class="md:grid md:grid-cols-4">
-            <div class="w-full md:col-span-3 pr-20">
+            <div class="w-full md:col-span-3 mt-4 md:pr-20">
               <div class="lg:grid lg:grid-cols-2 gap-14">
                 <div class="">
                   <!-- <p class="pt-3">Ensuring or puppies go to the right home is a high priority and we screen all of our puppy buyers thoroughly. The types of people and homes we are looking for are:</p> -->
@@ -632,8 +627,8 @@
         <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
           <h2>FAQs</h2>
           <div class="md:grid md:grid-cols-4">
-            <div class="w-full md:col-span-3">
-              <p class="font-medium">Questions we are often asked about our dogs and our breed</p>
+            <div class="w-full md:col-span-3 mt-4 md:pr-20">
+              <p class="font-medium">Questions we are often asked</p>
               <p class="text-xs font-medium">[FAQ's drawn from a selected profile - user selects in account area] - do not display this message</p>
               <div class="faq-items"> 
                 <div class="mt-4">
@@ -725,7 +720,8 @@
                 </div>
                 <div class="prose max-w-none text-sm col-span-2 py-4  pl-0 lg:pl-14">
                   <p>
-                    When contacting us you'll be asked some standard questions so we can best answer your enquiry.  If you've created a personal profile, you can include a link.  We can then get back to you with next steps.  
+                    When contact us you'll be asked some standard questions so we can best answer your enquiry.
+                    If you've created a personal profile, you can include a link.  We can then get back to you with next steps.
                   </p>
                   <p class="flex flex-row items-center">
                     <span class="mr-1">Don't have a profile?</span>  
