@@ -1,0 +1,1582 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pets 2 Mockups - Pet (by Breeder) Profile</title>
+
+  <!-- Mapbox maps styles -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../css/fall.css">
+  <!-- PP styles -->
+  <link rel="stylesheet" href="../../dist/pets2.css">
+
+
+</head>
+  <body class="flex flex-col min-h-screen font-ppPoppins">
+    <div class="fixed top-0 w-full z-30">
+      <!-- header navigation area -->
+      <header class="bg-pp-blue">
+        <nav class="container mx-auto px-2 md:px-6 lg:px-12 xl:px-16 flex items-center gap-2 xl:gap-6 flex-wrap p-2  top-0">
+          <div class="block lg:hidden">
+            <button id="nav-toggle-open" class="nav-toggle flex items-center px-3 py-2 text-white hover:text-white ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <title>Open Menu</title>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div> 
+          <div class="flex items-center flex-grow justify-center lg:justify-start lg:flex-shrink-0 text-white mr-6">
+            <a href="../../index.html" class="text-white">
+              <img src="../../images/perfect_pets_WTE.png" class="block h-8 lg:h-10 w-auto mx-auto">
+            </a>
+          </div>
+          
+          
+      
+          <div class="fixed bottom-0 top-0 transition transform -translate-x-full ease-in-out duration-700 inset-x-0 bg-pp-blue
+            lg:top-0 lg:translate-x-0 lg:relative lg:flex lg:flex-grow lg:items-center lg:w-auto lg:bg-transparent" id="main-menu">
+            <div class="block text-right lg:hidden">
+              <button id="nav-toggle-close" class="nav-toggle flex items-center px-3 pt-4 pb-2 text-white hover:text-white ">
+                <span>close</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <title>Close Menu</title>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="grid grid-cols-2 lg:flex lg:flex-grow lg:items-center">
+
+            
+              <ul class="list-reset lg:flex-grow lg:flex lg:justify-center items-center font-medium text-sm">
+                <li class="my-4 lg:my-6 mx-2">
+                  <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent hover:border-white px-2 py-4 ">Listings</a>
+                </li>
+                <li class="my-4 lg:my-6 mx-2">
+                  <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent hover:border-white px-2 py-4">Services</a>
+                </li>
+                <li class="my-4 lg:my-6 mx-2">
+                  <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent hover:border-white px-2 py-4">Learning</a>
+                </li>
+                <li class="my-4 lg:my-6 mx-2">
+                  <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent hover:border-white px-2 py-4">Blog</a>
+                </li>
+                <li class="my-4 lg:my-6 mx-2">
+                  <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent hover:border-white px-2 py-4">About</a>
+                </li>
+                <li class="my-4 lg:my-6 mx-2">
+                  <a href="#" class="text-white rounded-none border-l-2 lg:border-l-0 lg:border-b-2 border-solid border-transparent hover:border-white px-2 py-4">Premium</a>
+                </li>
+              </ul>
+              <div class="ml-2 lg:ml-0 lg:justify-end p-2 text-sm block lg:flex text-white userAcc">
+                <a href="../user/login.html" class="duration-150 text-sm font-medium transition-all ease-linear py-2 px-8 rounded-full bg-pp-green outline-none focus:outline-none  hover:bg-pp-green-dark text-white">Login</a>
+              </div>
+            </div>
+          </div>
+          
+        </nav>
+      </header>
+    </div>
+
+    <!-- breadcrums area -->
+      <!-- Breed / profile type / location / title -->
+      <div id="breadcrumbs" class="bg-pp-navy hidden md:block mt-14 lg:mt-20">
+        <nav class="text-white container mx-auto  px-2 md:px-6 lg:px-12 xl:px-16 py-4">
+          <ul class="list-reset flex text-xs font-semibold">
+            <li class="inline-flex items-center">
+              <a class="hover:underline" href="../index.html">Home</a>
+              <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+            </li>
+            <li class="inline-flex items-center">
+              <a class="hover:underline" href="#">Profiles</a>
+              <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+            </li>
+            <li class="inline-flex items-center">
+              <a class="hover:underline" href="#">Pet</a>
+              <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+            </li>
+            <li class="inline-flex items-center">Bibi-lee [call name]</li>
+          </ul>
+        </nav>
+      </div>
+    
+    
+
+    <!-- start main content area -->
+    <main id="main" class="mt-14 md:mt-0">
+      <a id="top" class="absolute -top-32">&nbsp;</a>
+       
+      <section id="profileImages" class="">
+        <div class="relative ImageWrapper">
+          <div class="mobileHeroImage sm:hidden w-full">
+            <img class="w-full object-cover" src="../../images/dogs/kelpie3.jpg" alt="Kelpie 1">
+          </div>
+          <div id="pageImages" class="desktopHeroImages hidden w-full sm:flex sm:flex-row sm:gap-1 overflow-hidden">
+            <img src="../../images/dogs/kelpie1.jpg" alt="Kelpie 1">
+            <img src="../../images/dogs/kelpie2.jpg" alt="Kelpie 1">
+            <img src="../../images/dogs/kelpie3.jpg" alt="Kelpie 1">
+            <img src="../../images/dogs/kelpie4.jpg" alt="Kelpie 1">
+            <img src="../../images/dogs/kelpie5.jpg" alt="Kelpie 1">
+            <img src="../../images/dogs/kelpie6.jpg" alt="Kelpie 1">
+          </div>
+          <button data-modal-open="profileGallery" class="modal-photos text-sm absolute bottom-2 right-4 sm:right-6 text-white opacity-70 bg-gray-800 hover:bg-gray-900 rounded-lg pl-4 pr-2 py-2">
+            More photos
+          </button>
+          
+        </div>
+      </section>  
+      
+      <section id="information">
+        <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:px-16 mt-8 mb-10">
+          <div class="xl:grid gap-2 grid-cols-5 grid-flow-rows">
+            <div class="col-start-2 col-span-3 prose">
+              <h1 class="font-ppMontserrat">
+                <span class="block mb-3">Aust CH Willow Park Blue Breeze RN HT ET 'Bibe-lee [call name]'</span>
+                <span class="block sub-text">Lives in - Chifley, ACT</span>
+              </h1>
+              <p class="no-prose sub-text pt-2">with <a href="">Teddy</a>, <a href="">Marnee</a> & <a href="">Maria</a> [selected pet and Breeder/personal profile]</p>
+            </div>
+            <div class="col-start-5 text-right">
+              <div class="lg:flex lg:flex-row lg:gap-2 lg:items-center lg:justify-end">
+                <button title="Please report any errors or concerns" class="badge report-btn text-xs font-semibold text-left border-0 lg:mt-0 hover:underline">
+                  Report
+                </button>
+                <button class="mt-2  lg:mt-0 badge favourite-btn text-xs font-semibold hover:underline">
+                  Favourite
+                </button>
+              </div>
+            </div>
+            <div class="row-start-2 col-span-3 col-start-2 max-w-none">
+              
+              <div class="prose max-w-none lg:pr-16 pt-10">
+                <p>Bibi-lee is an awesome caniine.... </p>
+                <p>Our kelpies are known for having correct conformation, and being correct generation after generation.  Let me help you find the perfect companion.  </p>
+                <p>Our kelpies are known for having correct conformation, and being correct generation after generation.  Let me help you find the perfect companion.  </p>
+                <p>Our kelpies are known for having correct conformation, and being correct generation after generation.  Let me help you find the perfect companion.  </p>
+              </div>
+              <div class="mt-10 lg:flex lg:flex-row gap-6 prose">
+                <div class="flex-initial">
+                  <h3>Club involvement</h3>
+                  <ul class="no-top">
+                    <li>Agility Club NSW</li>
+                    <li>Kelpie Club NSW</li>
+                    <li>Obedience Clubs Suffolk Park</li>
+                    <li>Membership 4</li>
+                  </ul>
+                </div>
+                
+                <div class="flex-grow">
+                  <h3>Activities & special interests</h3>
+                  <div class="flex flex-wrap pt-4">
+                    <span class="chip">Scent work</span>
+                    <span class="chip">Agility</span>
+                    <span class="chip">Breed mentor</span>
+                    <span class="chip">Agility</span>
+                    <span class="chip">Breed mentor</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="font-bold">Pet Profile rules: [do not display]</p>
+                <p class="font-semibold">Unless linked to a Breeder Profile - no stud availability option.</p>
+                <p class="font-semibold">On cross breeds - no pedigree information options</p>
+              </div>
+            </div>
+            <!-- row 3 -->
+            <div class="hidden xl:block row-start-2 justify-self-end prose">
+              <nav class="side-nav pr-16 pt-28">
+                <p class="no-prose font-light text-sm">On this page:</p>
+                <ul class="no-prose no-top no-padding">
+                  <li><a href="#achievements">Achievements</a></li>
+                  <li><a href="#pedigree">Pedigree information</a></li>
+                  <li><a href="#health">Health information</a></li>
+                  <li><a href="#intouch">Get in touch</a></li>
+                  <li><a href="#mapLocation">Location</a></li>
+                  <li><a href="#records">Records [private / link access]</a></li>
+                </ul>
+              </nav>
+            </div>
+            
+            
+
+
+            <div class="row-start-2 col-start-5">
+
+              <div class="relative mt-4 p-2 bg-white rounded-lg border border-pp-gray-100 filter drop-shadow-md">
+                
+                <p class="font-light">
+                  About - 'Bibi-lee [call name]'
+                </p>
+                <p class="flex flex-row mt-4">
+                  <span>Age:</span>
+                  <span class="ml-2 font-semibold">9 years</span>
+                </p>
+                <p class="flex flex-row mt-4">
+                  <span>Sex:</span>
+                  <span class="ml-2 font-semibold">Female</span>
+                </p>
+                <p class="mt-4">
+                  <span class="block">Breed:</span>
+                  <span class="block font-semibold"><a href="#" class="text-pp-blue hover:underline">Australian Cattle Dog</a></span>
+                </p>
+                <p class="mt-4">
+                  <span class="block">Available at stud:</span>
+                  <span class="block font-semibold">yes - on approval</span>
+                </p>
+              </div>
+
+              <div class="mt-4 p-2 bg-white rounded-lg border border-pp-gray-100 filter drop-shadow-md">
+
+                <div class="flex flex-row gap-4 py-4 border-b border-pp-gray-200 items-center align-center">
+                  <div class="w-full flx-grow">
+                    <p class="font-bold">Willow Park Australian Cattle Dogs</p>
+                  </div>
+                  <div class="w-20 h-full flex-none">
+                    <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden 
+                        h-20 w-20">
+                      <img src="../../images/welsh1.gif" alt="Maria - Dog Breeder" class="object-cover h-full w-full no-prose">
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="border-b border-gray-200 mt-2 py-4">
+                  
+                  <p class="flex flex-row items-baseline">
+                    <span class="font-semibold text-sm w-20 flex-none">Contact:</span>
+                    <span class="flex-grow"><a href="#" class="text-pp-blue hover:underline" title="link to profile is selected">Maria</a></span>
+                  </p>
+                  <p class="flex flex-row items-center mt-4">
+                    <span class="font-semibold text-sm w-20 flex-none">Phone:</span>
+                    <span class="flex-grow">(02) 6666 6666</span>
+                  </p>
+                </div>
+                <p class="py-4 flex flex-row gap-2 items-center border-b border-gray-200">
+                  <span class="pp-tick text-pp-green font-semibold">Perfect Pets verified</span>
+                  <span class="cursor-pointer fas fa-info-circle text-lg text-gray-500" data-modal-open="petsVerified" role="button" tabindex="0" id="petsVerified__trigger-SPAN"></span>
+                </p>
+                <div class="py-4 bg-transparent mt-6 md:p-0">
+                  <button class="text-left text-sm font-semibold question-btn badge badge-green py-2 mb-3 mx-0 pr-10 w-3/4 sm:w-1/2 xl:w-full ">
+                    Get in touch
+                  </button>
+                  
+                </div>
+                
+              </div>
+              
+              
+            </div>
+          </div> <!-- grid end -->
+        </div>
+      </section>
+
+      
+      
+      
+      
+
+      <section id="specialSection" class="py-4 relative bg-pp-gray-100">
+        
+        <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:px-16 py-10"> 
+          <!-- special message 1 -->
+          <div class="italic font-light lg:pl-16 text-center w-full lg:max-w-7xl mx-auto">
+            <p>Special message 1</p>
+            <p>
+              <span class="fas fa-quote-left mr-2 italic"></span>Bibi-lee is a very special girl, she has an outstanding temperament and personality and is a superb example of the breed<span class="fas fa-quote-right ml-2 italic"></span>
+            </p>
+          </div>
+        </div>
+        
+      </section>
+
+      
+      <!-- achievements -->
+      <section id="achievementsSection" class="py-4 relative">
+        <a id="achievements" class="absolute -top-32">&nbsp;</a>
+        <div class="container mx-auto px-2 max-w-none md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
+          <h2 class="">Achievements</h2>
+          <div class="pt-3">
+            <p class="">At her first weekend away showing she picked 25 points, being unbeaten in the bitch class, and also picking up a best of breed.</p>
+            <p>She achieved her HT title ...</p>
+          </div>
+          <div class="mt-4">
+            <div class="hidden w-full lg:grid grid-cols-4 gap-2">
+              <div>
+                <p class="no-prose font-semibold">Awards & Titles</p>
+              </div>
+              <div>
+                <p class="no-prose font-semibold">Date</p>
+              </div>
+              <div>
+                <p class="no-prose font-semibold">Show / Event</p>
+              </div>
+              <div>
+                <p class="no-prose font-semibold">Notes</p>
+              </div>
+            </div>
+
+            <div class="mt-2 grid grid-row gap-1">
+              <!-- row 1 -->
+              <div class="lg:grid grid-cols-4 gap-1">
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Award & Title</p>
+                  <p class="no-prose">Challenge Bitch</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Date</p>
+                  <p class="no-prose">29 Nov 2013</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Show / Event</p>
+                  <p class="no-prose">Cessnock Dog Club (CH)</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Notes</p>
+                  <p class="no-prose">Judge was Mr J Hodgkinson</p>
+                </div>
+              </div>
+              <!-- row 2 -->
+              <div class="lg:grid grid-cols-4 gap-1">
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Award & Title</p>
+                  <p class="no-prose">Challenge Bitch</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Date</p>
+                  <p class="no-prose">29 Nov 2013</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Show / Event</p>
+                  <p class="no-prose">Cessnock Dog Club (CH)</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Notes</p>
+                  <p class="no-prose">Judge was Mr J Hodgkinson</p>
+                </div>
+              </div>
+              <!-- row 3 -->
+              <div class="lg:grid grid-cols-4 gap-1">
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Award & Title</p>
+                  <p class="no-prose">Challenge Bitch</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Date</p>
+                  <p class="no-prose">29 Nov 2013</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Show / Event</p>
+                  <p class="no-prose">Cessnock Dog Club (CH)</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Notes</p>
+                  <p class="no-prose">Judge was Mr J Hodgkinson</p>
+                </div>
+              </div>
+              <!-- row 4 -->
+              <div class="lg:grid grid-cols-4 gap-1">
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Award & Title</p>
+                  <p class="no-prose">Challenge Bitch</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Date</p>
+                  <p class="no-prose">29 Nov 2013</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Show / Event</p>
+                  <p class="no-prose">Cessnock Dog Club (CH)</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Notes</p>
+                  <p class="no-prose">Judge was Mr J Hodgkinson</p>
+                </div>
+              </div>
+              <!-- row 5 -->
+              <div class="lg:grid grid-cols-4 gap-1">
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Award & Title</p>
+                  <p class="no-prose">Challenge Bitch</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Date</p>
+                  <p class="no-prose">29 Nov 2013</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Show / Event</p>
+                  <p class="no-prose">Cessnock Dog Club (CH)</p>
+                </div>
+                <div class="p-2 bg-pp-gray-100 border-b-2 lg:border-0">
+                  <p class="lg:hidden no-prose font-semibold">Notes</p>
+                  <p class="no-prose">Judge was Mr J Hodgkinson</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          
+          
+        </div>
+      </section>
+
+      <!-- mid page nav sticks to top when scolling -->
+      <aside class="w-full bg-pp-navy sticky top-20 z-10">
+        <nav id="pagenav" class="container mx-auto px-2 md:px-6 lg:px-12 xl:px-16 px-2">
+          <div class="lg:flex lg:flex-row hidden">
+            <ul class="list-reset lg:flex justify-between flex-1 items-center">
+              <li class="mr-6 py-4 text-white text-sm">On this page...</li>
+              <li class="mr-6 py-4">
+                <a class="inline-flex items-center hover:underline text-white" href="#achievements" title="Burmese Cat History">
+                  <span>Achievements</span>
+                  <!-- <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+              <li class="mr-6 py-4">
+                <a class="inline-flex items-center hover:underline text-white" href="#pedigree" title="Burmese Cat Health">
+                  <span>Pedigree information</span>
+                  <!-- <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+              <li class="mr-6 py-4">
+                <a class="inline-flex items-center hover:underline text-white" href="#health" title="Burmese Cat FAQs">
+                  <span>Health information</span>
+                 <!--  <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+              <li class="mr-6 py-4">
+                <a class="inline-flex items-center hover:underline text-white" href="#intouch" title="Burmese Cat Breeder List">
+                  <span>Get in touch</span>
+                 <!--  <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+              <li class="mr-6 py-4">
+                <a class="inline-flex items-center hover:underline text-white" href="#locationMap" title="Burmese Cat FAQs">
+                  <span>Location</span>
+                 <!--  <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+              <li class="mr-6 py-4">
+                <a class="inline-flex items-center hover:underline text-white" href="#records" title="Burmese Cat FAQs">
+                  <span>Records</span>
+                 <!--  <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+              <li class="mr-6 py-4 text-sm">
+                <a class="inline-flex items-center hover:underline text-white" href="#top" title="Burmese Cat Breeder List">
+                  <span>Back to top</span>
+                 <!--  <svg fill="currentColor" viewBox="0 0 20 20" class="h-5 w-auto text-white"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg> -->
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- screening processes -->
+      <section id="pedigreeSection" class="py-4 relative bg-pp-gray-100">
+        <a id="pedigree" class="absolute -top-32">&nbsp;</a>
+        <div class="container mx-auto px-2 max-w-none md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
+          <h2>Pedigree information</h2>
+          <div class="pt-4">
+            <div class="flex flex-row gap-2 items-center">
+              <span>Bred by:</span>
+              <span>Sandra Stapely</span>
+            </div>
+            <div class="mt-2 flex flex-row gap-2 items-center">
+              <span>Prefix:</span>
+              <span>Willow Park Australian Cattle Dogs</span>
+            </div>
+          </div>
+          <div class="mt-8">
+            <p class="font-bold">Aust Ch Willowpark Blue Breeze RN HT ET 'Bibi-lee'</p>
+            <div class="mt-2">
+              <div class="lg:grid grid-rows-2 gap-2">
+                <!-- Sire -->
+                <div class="lg:grid grid-cols-3 gap-1">
+                  <div class="bg-white p-2">
+                    <p class="no-prose flex flex-row gap-2">
+                      <span class="font-semibold">Sire:</span>
+                      <span>Willowpark Blue Anzac</span>
+                    </p>
+                  </div>
+                  <div class="mt-1 lg:mt-0 grid grid-cols-2 lg:grid-cols-none lg:grid-rows-2 lg:col-span-2 gap-1">
+                    <div class="grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 gap-1">
+                      <div class="bg-white p-2">
+                        <p class="no-prose flex flex-row gap-2">
+                          <span class="font-semibold">S:</span>
+                          <span>Jellendore Shogun</span>
+                        </p>
+                      </div>
+                      <div class="grid sm:grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-1">
+                        <div class="bg-white p-2">
+                          <p class="no-prose flex flex-row gap-2">
+                            <span class="font-semibold">S:</span>
+                            <span>Berrilyn Blue Typan</span>
+                          </p>
+                        </div>
+                        <div class="bg-white p-2">
+                          <p class="no-prose flex flex-row gap-2">
+                            <span class="font-semibold">D:</span>
+                            <span>Jellendore Blue Maritta</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 gap-1">
+                      <div class="bg-white p-2">
+                        <p class="no-prose flex flex-row gap-2">
+                          <span class="font-semibold">D:</span>
+                          <span>Jellendore Bush Deany</span>
+                        </p>
+                      </div>
+                      <div class="grid sm:grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-1">
+                        <div class="bg-white p-2">
+                          <p class="no-prose flex flex-row gap-2">
+                            <span class="font-semibold">S:</span>
+                            <span>Jellendore Bush Dean</span>
+                          </p>
+                        </div>
+                        <div class="bg-white p-2">
+                          <p class="no-prose flex flex-row gap-2">
+                            <span class="font-semibold">D:</span>
+                            <span>Jellendore Blue Dea</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                  </div>
+                  
+                </div>
+
+                <!-- Dam -->
+                <div class="mt-2 lg:mt-0 lg:grid grid-cols-3 gap-1">
+                  <div class="bg-white p-2">
+                    <p class="no-prose flex flex-row gap-2">
+                      <span class="font-semibold">Dam:</span>
+                      <span>Willowpark Blue Chance</span>
+                    </p>
+                  </div>
+                  <div class="mt-1 lg:mt-0 grid grid-cols-2 lg:grid-cols-none lg:grid-rows-2 lg:col-span-2 gap-1">
+                    <div class="grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 gap-1">
+                      <div class="bg-white p-2">
+                        <p class="no-prose flex flex-row gap-2">
+                          <span class="font-semibold">S:</span>
+                          <span>Willowpark Red Major</span>
+                        </p>
+                      </div>
+                      <div class="grid sm:grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-1">
+                        <div class="bg-white p-2">
+                          <p class="no-prose flex flex-row gap-2">
+                            <span class="font-semibold">S:</span>
+                            <span>Willowpark Blue Anzac</span>
+                          </p>
+                        </div>
+                        <div class="bg-white p-2">
+                          <p class="no-prose flex flex-row gap-2">
+                            <span class="font-semibold">D:</span>
+                            <span>Willowpark Ginger Meggs</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-rows-2 lg:grid-rows-none lg:grid-cols-2 gap-1">
+                      <div class="bg-white p-2">
+                        <p class="no-prose flex flex-row gap-2">
+                          <span class="font-semibold">D:</span>
+                          <span>Willowpark Red Charity</span>
+                        </p>
+                      </div>
+                      <div class="grid sm:grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-1">
+                        <div class="bg-white p-2">
+                          <p class="no-prose flex flex-row gap-2">
+                            <span class="font-semibold">S:</span>
+                            <span>Jellevada Soldiers Blade</span>
+                          </p>
+                        </div>
+                        <div class="bg-white p-2">
+                          <p class="no-prose flex flex-row gap-2">
+                            <span class="font-semibold">D:</span>
+                            <span>Adavale Peggy Sue</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          </div>
+          
+        
+      </section>
+
+      <!-- Health information -->
+      <section id="healthSection" class="py-4 relative">
+        <a id="health" class="absolute -top-32">&nbsp;</a>
+        <div class="container mx-auto px-2 max-w-none md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
+          <h2>Health information</h2>
+          <div class="md:grid grid-cols-4 pt-4">
+            <div class="w-full col-span-3 md:pr-20">
+              <p>Full dentitions and correct scissor bite</p>
+              <p>PRA B</p>
+              <p>Hip & Elbow scores: xxx</p>
+            </div>
+            <div class="w-full">
+              <div class="ad-container">
+                <div class="ad-right-side">
+                  <p class="ad-text no-prose">Sponsored</p>
+                  <div class="px-2">
+                    <img class="no-prose h-auto w-auto lg:object-right lg:ml-auto" src="../../images/ads/300_600.png" alt="long ad image">
+                    <p class="flex lg:justify-end">
+                      <a class="text-sm" href="#">Advertise here &gt;&gt;</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <!-- Get in touch -->
+      <section id="intouchSection" class="py-4 realtive bg-pp-gray-100">
+        <a id="intouch" class="absolute -top-32">&nbsp;</a>
+        <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:max-w-7xl py-4">
+          <div class="prose">
+            <h2 class="">Get in touch</h2>
+          </div>
+          
+          <div class="lg:grid grid-cols-3 grid-flow-row gap-4">
+            
+            <div class="row-start-2 col-span-2 bg-white p-2 rounded-lg mt-4">
+              
+              <div class="lg:grid grid-cols-3 gap-4 pb-4 border-b border-gray-200">
+                <div class="">
+                  <div class="flex flex-row gap-4 py-2 items-center align-center ">
+                    <p class="pl-2 flex-grow"><a href="#" class="text-pp-blue hover:underline font-semibold">Willowpark Australian Cattle Dogs [selected profile]</a></p>
+                    <div class="flex-initial">
+                      <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
+                        <img src="../../images/welsh1.gif" alt="Kerrie - Dog Breeder" class="object-cover h-full w-full no-prose" title="Profile Logo Image">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-row mt-4 pl-2 items-baseline">
+                    <span class="text-sm m-0 font-semibold w-20">Contact:</span>
+                    <span class="flex-grow">Kerrie</span>
+                    <!-- <p><a href="#" class="text-pp-blue hover:underline text-xs font-semibold">View profile</a></p> -->
+                  </div>
+                  
+                </div>
+                <!-- special message 2 -->
+                <div class="italic font-light text-center prose col-span-2 mt-4 pl-0 lg:pl-14 lg:mt-0">
+                  <p>Special message 2</p>
+                  <p>
+                    <span class="fas fa-quote-left mr-2 italic"></span>
+                      Bibi-lee is a wonderful animal
+                    <span class="fas fa-quote-right ml-2 italic"></span>
+
+                  </p>
+                  <p></p> 
+                </div>
+              </div>
+              <div class="lg:grid grid-cols-3 gap-8 py-4 border-b border-gray-200">
+                <div>
+                  <div class="py-4 bg-transparent">
+                    <button class="text-left text-sm font-semibold question-btn badge badge-green py-2 mb-3 mx-0 pr-10 w-3/4 sm:w-1/2 xl:w-full ">
+                      Get in touch
+                    </button>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="lg:grid grid-cols-3 gap-8 ">
+                <div class="border-b border-gray-200 lg:border-0">
+                  <div class="border-b border-gray-200 py-6">
+                    <div class="flex flex-row justify-between">
+                      <span class="font-bold">Phone:</span>
+                      <span class="text-right">(02) 6129 2089</span>
+                    </div>
+                  </div>
+                  <div class="my-2 border-b-2 p-2 border-pp-gray-200 prose">
+                    <ul class="no-prose no-padding list-none">
+                      <li><a href="#" target="blank" class="text-xs"><span class="fab fa-facebook-square text-2xl mr-2"></span><span>Facebook</span></a></li>
+                      <li><a href="#" target="blank" class="text-xs"><span class="fab fa-instagram text-2xl mr-2"></span><span>Instagram</span></a></li>
+                      <li><a href="#" target="blank" class="text-xs"><span class="fas fa-globe text-2xl mr-2"></span><span class="break-all">www.akaekelpies.com.au</span></a></li>
+                    </ul>
+                  </div>
+                  <div class="p-2 py-6">
+                    <div class="flex flex-row justify-between">
+                      <span class="font-bold">Location:</span>
+                      <span class="text-right">Bryon Bay, NSW</span>
+                    </div>
+                    <div class="mt-4">
+                      <a class="text-sm text-pp-blue hover:underline" href="#map">View map</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-2 py-6  pl-0 lg:pl-14">
+                  <p class="font-bold">Best contact days & times:</p>
+                  <ul class="no-prose list-none no-padding mt-4">
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Monday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Tuesday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Wednesday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Thursday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Friday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Saturday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Sunday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row-start-2 mt-4 prose">
+              <div class="bg-white rounded-lg p-2">
+                <p class="font-bold">Important links & resources</p>
+              <ul class="list-none no-prose no-padding">
+                <li class="p-2 filter drop-shadow-md rounded-lg">
+                  
+                    <a class="text-sm" href="#">
+                      <span>My pets personal FB page</span>
+                      <span class="fas fa-external-link-alt text-sm ml-2"></span>
+                    </a>
+                  
+                </li>
+                <li class="p-2 bg-white rounded-lg">
+                  
+                    <a class="text-sm" href="#">
+                      <span>Buy my first book</span>
+                      <span class="fas fa-external-link-alt text-sm ml-2"></span>
+                    </a>
+                  
+                </li>
+                <li class="p-2 bg-white rounded-lg">
+                  
+                    <a class="text-sm" href="#">
+                      <span>Buy my other book here</span>
+                      <span class="fas fa-external-link-alt text-sm ml-2"></span>
+                    </a>
+                
+                </li>
+                <li class="p-2 bg-white rounded-lg">
+                  
+                    <a class="text-sm" href="#">
+                      <span>Join my private breed FB page here</span>
+                      <span class="fas fa-external-link-alt text-sm ml-2"></span>
+                    </a>
+                
+                </li>
+                
+              </ul>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      <!-- Get in touch -->
+      <!-- <section id="intouchSection" class="py-4 realtive bg-pp-gray-100">
+        <a id="intouch" class="absolute -top-32">&nbsp;</a>
+        <div class="container mx-auto px-2 max-w-none md:px-6 lg:px-12 xl:max-w-7xl py-4">
+          <div class="prose">
+            <h2 class="">Get in touch</h2>
+          </div>
+          <div class="lg:grid grid-cols-4 mt-4">
+            <div class="col-span-3">
+              <div class="xl:grid grid-cols-2 gap-10 md:mr-16">
+                <div class=" bg-white p-2 rounded-lg">
+                  <div class="flex flex-row gap-4 py-2 items-center align-center ">
+                    <p class="pl-2 flex-grow"><a href="#" class="text-pp-blue hover:underline font-semibold">Willowpark Australian Cattle Dogs</a></p>
+                    <div class="flex-initial">
+                      <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
+                        <img src="../../images/welsh1.gif" alt="Gy Hull - Dog Breeder" class="object-cover h-full w-full no-prose" title="Profile Logo Image">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-row mt-4 pl-2 items-baseline">
+                    <span class="text-sm m-0 font-semibold w-20">Contact:</span>
+                    <span class="flex-grow">Kerrie</span>
+                   
+                  </div>
+                  <p class="py-4 flex flex-row gap-2 items-center">
+                    <span class="pp-tick text-pp-green font-semibold">Perfect Pets verified</span>
+                    <span class="cursor-pointer fas fa-info-circle text-lg text-gray-500" data-modal-open="petsVerified" role="button" tabindex="0" id="petsVerified__trigger-SPAN"></span>
+                  </p>
+                  <div class="py-4 bg-transparent pb-3 border-b border-gray-200">
+                    <button class="text-left text-sm font-semibold question-btn badge badge-green py-2 mb-3 mx-0 pr-10 w-3/4 md:w-1/2 ">
+                      Get in touch
+                    </button>
+                  </div>
+                  <div class="border-b border-gray-200 px-2 py-6">
+                    <div class="flex flex-row justify-between">
+                      <span class="font-bold">Phone:</span>
+                      <span class="text-right">(02) 6129 2089</span>
+                    </div>
+                  </div>
+                  <div class="border-b border-gray-200 lg:border-0">
+                  
+                    <div class="my-2 border-b-2 p-2 border-pp-gray-200 prose">
+                      <ul class="no-prose no-padding list-none">
+                        <li><a href="#" target="blank" class="text-xs"><span class="fab fa-facebook-square text-2xl mr-2"></span><span>Facebook</span></a></li>
+                        <li><a href="#" target="blank" class="text-xs"><span class="fab fa-instagram text-2xl mr-2"></span><span>Instagram</span></a></li>
+                        <li><a href="#" target="blank" class="text-xs"><span class="fas fa-globe text-2xl mr-2"></span><span class="break-all">www.akaekelpies.com.au</span></a></li>
+                      </ul>
+                    </div>
+                    <div class="p-2 py-6">
+                      <div class="flex flex-row justify-between">
+                        <span class="font-bold">Location:</span>
+                        <span class="text-right">Queanbeyan, NSW</span>
+                      </div>
+                      <div class="mt-4">
+                        <a class="text-sm text-pp-blue hover:underline" href="#map">View map</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="mt-4 lg:mt-0">
+                  <div class="p-2 bg-white rounded-lg">
+                    <p class="font-bold">Important links & resources</p>
+                    <ul class="list-none no-prose no-padding">
+                      <li class="p-2 filter drop-shadow-md rounded-lg">
+                        
+                          <a class="text-sm text-pp-blue hover:underline" href="#">
+                            <span>About the trials day</span>
+                            <span class="fas fa-external-link-alt text-sm ml-2"></span>
+                          </a>
+                        
+                      </li>
+                      <li class="p-2 rounded-lg">
+                        
+                          <a class="text-sm text-pp-blue hover:underline" href="#">
+                            <span>Trials etiquette</span>
+                            <span class="fas fa-external-link-alt text-sm ml-2"></span>
+                          </a>
+                        
+                      </li>
+                      
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="ad-container lg:-mt-4">
+                <div class="ad-right-side">
+                  <p class="ad-text no-prose">Sponsored</p>
+                  <div class="p-2">
+                    <img class="no-prose lg:object-right lg:ml-auto" src="../../images/ads/300_600.png" alt="shopify">
+                  </div>
+                  <p class="flex lg:justify-end">
+                    <a class="text-sm" href="#">Advertise here &gt;&gt;</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:grid grid-cols-3 grid-flow-row gap-4">
+            <div class="start-row-1 col-span-2 prose max-w-none">
+              <p class="font-medium pt-4">Before you make contact</p>
+              <p>Please read all the information the Breeder has provided, and the <a class="text-pp-blue hover:underline" href="#">Australian Kelpie breed information</a> so you have a good understanding 
+              of the breed and you can make sure it will suit you, your family and your lifestyle.</p>
+              <p>Please also read our <a class="text-pp-blue hover:underline" href="#" data-modal-open="petsBreederContact">Tips and advice when contacting a breeder</a></p>
+            </div>
+            <div class="row-start-2 col-span-2 bg-white p-2 rounded-lg mt-4">
+              
+              <div class="lg:grid grid-cols-3 gap-8 pb-4 border-b border-gray-200">
+                <div class="">
+                  <div class="flex flex-row gap-4 py-2 items-center align-center ">
+                    <p class="font-bold pl-2 flex-grow">AKAE Autralian kelpies</p>
+                    <div class="flex-initial">
+                      <div class="rounded-full bg-pp-gray-300 border border-pp-gray-300 content-center overflow-hidden h-20 w-20">
+                        <img src="../../images/welsh1.gif" alt="Guy Hull - Dog Breeder" class="object-cover h-full w-full no-prose" title="Profile Logo Image">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-row mt-4 pl-2 items-baseline">
+                    <span class="text-sm m-0 font-semibold w-20">Contact:</span>
+                    <span class="flex-grow"><a href="#" class="text-pp-blue hover:underline" title="link to profile if selected">Guy Hull</a></span>
+                    
+                  </div>
+                  
+                </div>
+                
+                <div class="italic font-light text-center prose col-span-2 mt-4 pl-0 lg:pl-14 lg:mt-0">
+                  <p>Special message 2</p>
+                  <p>
+                    <span class="fas fa-quote-left mr-2 italic"></span>
+                      I like to get to know our puppies homes so please only contact us if you can come and meet us in Byron Bay
+                    <span class="fas fa-quote-right ml-2 italic"></span>
+
+                  </p>
+                  <p></p> 
+                </div>
+              </div>
+              <div class="lg:grid grid-cols-3 gap-8 py-4 border-b border-gray-200">
+                <div>
+                  <div class="py-4 bg-transparent">
+                    <button class="text-left text-sm font-semibold question-btn badge badge-green py-2 mb-3 mx-0 pr-10 w-3/4 sm:w-1/2 xl:w-full ">
+                      Ask a question
+                    </button>
+                    <button class="text-left text-sm font-semibold question-btn badge badge-green py-2 mb-3 mx-0 w-3/4 sm:w-1/2 pr-10 xl:w-full">
+                      Express interest
+                    </button>
+                  </div>
+                </div>
+                <div class="text-sm prose max-w-none col-span-2 py-4  pl-0 lg:pl-14">
+                  <p>
+                    When contacting us you'll be asked some standard questions so we can best answer your enquiry.  If you've created a personal profile, you can include a link.  We can then get back to you with next steps.
+                  </p>
+                  <p class="flex flex-row items-center">
+                    <span class="mr-1">Don't have a profile?</span>  
+                    <a class="flex flex-row items-center hover:underline" href="#">
+                      <span>Create one now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="lg:grid grid-cols-3 gap-8 ">
+                <div class="border-b border-gray-200 lg:border-0">
+                  <div class="border-b border-gray-200 py-6">
+                    <div class="flex flex-row justify-between">
+                      <span class="font-bold">Phone:</span>
+                      <span class="text-right">(02) 6129 2089</span>
+                    </div>
+                  </div>
+                  <div class="my-2 border-b-2 p-2 border-pp-gray-200 prose">
+                    <ul class="no-prose no-padding list-none">
+                      <li><a href="#" target="blank" class="text-xs"><span class="fab fa-facebook-square text-2xl mr-2"></span><span>Facebook</span></a></li>
+                      <li><a href="#" target="blank" class="text-xs"><span class="fab fa-instagram text-2xl mr-2"></span><span>Instagram</span></a></li>
+                      <li><a href="#" target="blank" class="text-xs"><span class="fas fa-globe text-2xl mr-2"></span><span class="break-all">www.akaekelpies.com.au</span></a></li>
+                    </ul>
+                  </div>
+                  <div class="p-2 py-6">
+                    <div class="flex flex-row gap-2">
+                      <span class="font-bold">Location:</span>
+                      <span class="text-right">Bryon Bay, NSW</span>
+                    </div>
+                    <div class="mt-4">
+                      <a class="flex flex-row items-center text-sm font-bold text-pp-blue hover:underline" href="#map">
+                        <span>See map</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-2 py-6  pl-0 lg:pl-14">
+                  <p class="font-bold">Best contact days & times:</p>
+                  <ul class="no-prose list-none no-padding mt-4">
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Monday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Tuesday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Wednesday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Thursday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Friday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Saturday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                    <li class="flex flex-row items-center">
+                      <span class="w-1/2 lg:w-1/3">Sunday</span>
+                      <span class="w-1/2 lg:w-2/3">9.00 - 5.00pm</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row-start-2 mt-4 prose">
+              <div class="bg-white rounded-lg p-2">
+                <p class="font-bold">Important links & resources</p>
+              <ul class="list-none no-prose no-padding">
+                <li class="p-2 filter drop-shadow-md rounded-lg">
+                  
+                    <a class="text-sm" href="#">
+                      <span>Fill out our puppy buyers questionnaire here</span>
+                      <span class="fas fa-external-link-alt text-sm ml-2"></span>
+                    </a>
+                  
+                </li>
+                <li class="p-2 bg-white rounded-lg">
+                  
+                    <a class="text-sm" href="#">
+                      <span>Buy the Dogs That Made Australia here</span>
+                      <span class="fas fa-external-link-alt text-sm ml-2"></span>
+                    </a>
+                  
+                </li>
+                <li class="p-2 bg-white rounded-lg">
+                  
+                    <a class="text-sm" href="#">
+                      <span>Buy my other book here</span>
+                      <span class="fas fa-external-link-alt text-sm ml-2"></span>
+                    </a>
+                
+                </li>
+                <li class="p-2 bg-white rounded-lg">
+                  
+                    <a class="text-sm" href="#">
+                      <span>Join my private breed FB page here</span>
+                      <span class="fas fa-external-link-alt text-sm ml-2"></span>
+                    </a>
+                
+                </li>
+                
+              </ul>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section> -->
+
+
+     
+
+      <!-- map -->
+      <section id="mapSection" class="py-4 relative">
+        <a id="map" class="absolute -top-32">&nbsp;</a>
+        <div class="container mx-auto px-2 max-w-none md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
+          <h2>Location Map</h2>
+          <div class="w-full flex flex-row gap-2 pt-4">
+            <p class="no-prose text-sm font-bold">Address:</p>
+            <p class="no-prose">12 Kontakt Lane, Warramanga, ACT, Australia</p>
+          </div>
+          
+          <div class="w-full mt-6">
+            <div class="lg:grid lg:grid-cols-4">
+              <div class="lg:col-span-3 lg:mr-16 lg:pt-6">
+                <div id="locationMap" class="w-full h-40 lg:h-80 rouded-lg">
+                  <!-- map goes here -->
+                </div>
+              </div>
+              <div class="w-full">
+                <div class="ad-container lg:-mt-4">
+                  <div class="ad-right-side">
+                    <p class="ad-text no-prose">Sponsored</p>
+                    <div class="p-2">
+                      <img class="no-prose lg:object-right lg:ml-auto" src="../../images/ads/300_250.png" alt="shopify">
+                    </div>
+                    <p class="flex lg:justify-end">
+                      <a class="text-sm" href="#">Advertise here &gt;&gt;</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <section id="ProfilesListings" class="py-4 relative bg-pp-gray-100">
+        <a id="ourlistings" class="absolute -top-32">&nbsp;</a>
+        <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:px-16 py-4"> 
+          <div class="xl:grid grid-cols-2 gap-6">
+            <div class="w-full h-full">
+              <h3 class="font-semibold">Linked Profiles</h3>
+              <div class="swiper swiper6 relative w-full swiper-initialized swiper-horizontal swiper-pointer-events">
+                <div class="swiper-wrapper" id="swiper-wrapper-19d7844d78e3935d" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);">
+                  <!-- slide 1 -->
+                  <div class="swiper-slide p-2 " role="group" aria-label="1 / 6" style="width: 316px;">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../../images/big_corgy.jpg" alt="breeder corgi">
+                      </div>
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">NSW Welsh Corgi Breeder r'us</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 2 -->
+                  <div class="swiper-slide p-2" role="group" aria-label="2 / 6" style="width: 316px;">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../../images/users/groomer.png" alt="groomer">
+                      </div>
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">NSW Welsh Corgi Breeder r'us</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 3 -->
+                  <div class="swiper-slide p-2" role="group" aria-label="3 / 6" style="width: 316px;">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../../images/users/shelter.png" alt="shelter">
+                      </div>
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">NSW Welsh Corgi Breeder r'us</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 4 -->
+                  <div class="swiper-slide p-2" role="group" aria-label="4 / 6" style="width: 316px;">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../../images/big_corgy.jpg" alt="breeder corgi">
+                      </div>
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">NSW Welsh Corgi Breeder r'us</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="flex justify-center items-center flex-wrap sm:flex-nowrap">
+                  <div class="flex justify-center items-center py-2">
+                    <button type="button" class="relative inline-flex items-center button-prev p-3 shadow rounded-full hover:text-pp-blue swiper-button-disabled" role="button" disabled="" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-19d7844d78e3935d" aria-disabled="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button> 
+                    <div class="swiper-pagination pagination6 relative mx-1 sm:mx-4 swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span></div> 
+                    <button type="button" class="relative inline-flex items-center button-next p-3 shadow rounded-full hover:text-pp-blue" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-19d7844d78e3935d" aria-disabled="false">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full h-full">
+              <h3 class="font-semibold">Linked Listings</h3>
+              <div class="swiper swiper7 relative w-full swiper-initialized swiper-horizontal swiper-pointer-events">
+                <div class="swiper-wrapper" id="swiper-wrapper-19d7844d78e3935d" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);">
+                  <!-- slide 1 -->
+                  <div class="swiper-slide p-2" role="group" aria-label="1 / 6" style="width: 316px;">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../../images/big_corgy.jpg" alt="breeder corgi">
+                      </div>
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">AKAE Grooming Services</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 2 -->
+                  <div class="swiper-slide p-2" role="group" aria-label="2 / 6" style="width: 316px;">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../../images/users/groomer.png" alt="groomer">
+                      </div>
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">AKA Grooming</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 3 -->
+                  <div class="swiper-slide p-2" role="group" aria-label="3 / 6" style="width: 316px;">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover w-full rounded-t-lg h-60" src="../../images/users/shelter.png" alt="shelter">
+                      </div>
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">AKAE Dog Walking</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 4 -->
+                  <div class="swiper-slide p-2" role="group" aria-label="4 / 6" style="width: 316px;">
+                    <div class="rounded-lg shadow cursor-pointer" role="link">
+                      <div class="relative">
+                        <img class="no-prose object-cover h-60 w-full rounded-t-lg" src="../../images/big_corgy.jpg" alt="breeder corgi">
+                      </div>
+                      <div class="text-center py-2 px-4">
+                        <p class="uppercase font-bold py-2">AKAE Dog Walking</p>
+                        <p class="text-gray-500 text-sm no-prose h-30 overflow-hidden">With love and care, we raise our Corgi's in a friendly and ethically sound way, following guidelines laid out by the...</p>
+                        <div class="flex flex-row justify-center items-center font-semibold py-4">
+                          <svg data-v-465b4e84="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 text-pp-pink"><path data-v-465b4e84="" fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                          <p class="no-prose">Sydney, NSW </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="flex justify-center items-center flex-wrap sm:flex-nowrap">
+                  <div class="flex justify-center items-center py-2">
+                    <button type="button" class="relative inline-flex items-center button-prev p-3 shadow rounded-full hover:text-pp-blue swiper-button-disabled" role="button" disabled="" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-19d7844d78e3935d" aria-disabled="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button> 
+                    <div class="swiper-pagination pagination7 relative mx-1 sm:mx-4 swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span></div> 
+                    <button type="button" class="relative inline-flex items-center button-next p-3 shadow rounded-full hover:text-pp-blue" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-19d7844d78e3935d" aria-disabled="false">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Records information -->
+      <section id="recordsSection" class="py-4 relative">
+        <a id="records" class="absolute -top-32">&nbsp;</a>
+        <div class="container mx-auto px-2 max-w-none md:px-6 lg:px-12 xl:max-w-7xl py-4 prose"> 
+          <h2>Records</h2>
+          <div class="pt-4">
+            <div class="">
+              <p>The information in your records is private.  You can share parts of it, or all of it with people you trust.</p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <article id="bottomads" class="bg-pp-gray-dark">
+        <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:max-w-7xl py-12"> 
+          <p class="text-white py-2 font-light">Sponsored</p>
+          <div class="flex flex-col lg:flex-row justify-between">
+            <div class="w-full lg:w-1/2 p-4">
+              <img class="border-2 h-full w-full object-cover border-white rounded-lg max-h-60" src="../../images/big_corgy.jpg" alt="in page ad 1">
+            </div>
+            <div class="w-full lg:w-1/2 p-4">
+              <div class="flex flex-row justify-between border-2 border-white rounded-lg p-2 max-h-60 overflow-hidden">
+                <div class="w-2/3 text-white">
+                  <p class="font-bold">Advertising stuff goes here, to entice you to look more into this.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+                </div>
+                <div class="w-1/3 flex justify-center flex-start">
+                  <img class="h-full w-full object-cover" src="../../images/users/plane.png" alt="in page ad 2">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full mt-2 lg:mt-4 p-4">
+            <div class="flex flex-row border rounded-lg">
+              <div class="w-full lg:w-1/2 p-2 text-white">
+                <!-- text if needed other wise just an image -->
+                <p class="font-bold px">Advertising stuff goes here, to entice you to look more into this.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie enim lorem, sed posuere dui consectetur sollicitudin. Suspendisse auctor, ex vel tincidunt fringilla, velit turpis mattis mi, quis aliquet diam neque quis sapien. Quisque a tincidunt metus, ac feugiat tortor. Curabitur in dapibus augue. Sed lobortis maximus interdum. Donec imperdiet malesuada massa, sit amet aliquam quam. Fusce vel ante metus. Donec ac nisi non lorem faucibus vestibulum id sagittis orci.</p>
+              </div>
+              <div class="w-full lg:w-1/2 md:border lg:border-none ">
+                <a href="#">
+                  <img class="object-cover max-h-60" src="../../images/big_corgy.jpg" alt="bottom ad image"> 
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </main>
+    
+    <!-- footer area -->
+    <footer id="pp-footer" class="bg-pp-gray">
+      <div class="container mx-auto px-2 md:px-6 lg:px-12 xl:px-16 max-w-none py-12 lg:py-16">
+        <div class="flex flex-wrap w-full"> 
+          <div class="w-full md:w-1/5 py-4 md:py-0">
+            <img src="../../images/perfect_pets_WTE.png" class="h-10">
+            <p class="text-gray-400">Making adoption easy and ethical</p>
+          </div>
+          <div class="w-full md:w-4/5">
+            <div class="flex flex-wrap w-full">
+              <nav class="text-white overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base font-bold tracking-wider">Pets and adoptions</h3>
+                <ul class="space-y-4 my-4">
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Search listings</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Browse listings</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Find a breeder</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Find services</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">News, learning and articles</a></li>
+                </ul>
+              </nav>
+              <nav class="text-white overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base font-bold tracking-wider">Account and Privacy</h3>
+                <ul class="space-y-4 my-4">
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Account</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Settings</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Privacy</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Legal</a></li>
+                </ul>
+              </nav>
+              <nav class="text-white overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base font-bold tracking-wider">Support and help</h3>
+                <ul class="space-y-4 my-4">
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Search listings</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Browse listings</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Find a breeder</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">Find services</a></li>
+                  <li><a class="hover:border-white border-b-2 border-solid border-transparent" href="./">News, learning and articles</a></li>
+                </ul>
+              </nav>
+              <nav class=" overflow-hidden sm:w-1/2 md:w-1/4 w-full pl-0 sm:pl-2 pt-4 md:pt-0">
+                <h3 class="uppercase text-base text-white font-bold tracking-wider">get social</h3>
+                <ul class="mt-4 space-y-4">
+                  <li>
+                    <a href="https://www.facebook.com/perfectpetsau" target="_blank" class="text-base text-gray-400 hover:text-white flex flex-row">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white w-6 h-6 mr-2"><title>Perfect Pets Facebook</title> <path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg> 
+                      <span> Facebook </span>
+                    </a>
+                  </li> 
+                  <li>
+                    <a href="https://www.instagram.com/perfectpetsau" target="_blank" class="text-base text-gray-400 hover:text-white flex flex-row">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white w-6 h-6 mr-2"><title>Perfect Pets Instagram</title> <path fill="currentColor" d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"></path></svg> 
+                      <span> Instagram </span>
+                    </a>
+                  </li> 
+                  <li>
+                    <a href="https://www.pinterest.com.au/yourperfectpet" target="_blank" class="text-base text-gray-400 hover:text-white flex flex-row">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="pinterest-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white w-6 h-6 mr-2"><title>Perfect Pets Pinterest</title> <path fill="currentColor" d="M448 80v352c0 26.5-21.5 48-48 48H154.4c9.8-16.4 22.4-40 27.4-59.3 3-11.5 15.3-58.4 15.3-58.4 8 15.3 31.4 28.2 56.3 28.2 74.1 0 127.4-68.1 127.4-152.7 0-81.1-66.2-141.8-151.4-141.8-106 0-162.2 71.1-162.2 148.6 0 36 19.2 80.8 49.8 95.1 4.7 2.2 7.1 1.2 8.2-3.3.8-3.4 5-20.1 6.8-27.8.6-2.5.3-4.6-1.7-7-10.1-12.3-18.3-34.9-18.3-56 0-54.2 41-106.6 110.9-106.6 60.3 0 102.6 41.1 102.6 99.9 0 66.4-33.5 112.4-77.2 112.4-24.1 0-42.1-19.9-36.4-44.4 6.9-29.2 20.3-60.7 20.3-81.8 0-53-75.5-45.7-75.5 25 0 21.7 7.3 36.5 7.3 36.5-31.4 132.8-36.1 134.5-29.6 192.6l2.2.8H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"></path></svg> 
+                      <span> Pinterest </span>
+                    </a>
+                  </li>
+                </ul>
+                      
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="pt-16 text-white font-bold text-center">
+          &copy; 2021 Perfect Pets. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Basic dialog container for demo only -->
+
+    <div id="petsBreederContact" data-modal data-modal-manual-close  class="w-full h-full bg-pp-gray bg-opacity-90 fixed top-0 z-40" role="dialog" aria-modal="true" aria-live="assertive" aria-labelledby="petsBreederContactLabel"
+		>
+    
+      <div class="modal rounded-lg bg-white max-w-6xl h-95-vh py-2 px-12 m-auto align-middle">
+        <h2 id="petsBreederContactLabel" class="sr-only">Pets Verification</h2>
+        <div class="w-full flex items-center justify-end">
+          <button data-modal-close-btn id="closePetsVerified" class="close-modal" aria-label="close Burmese Cat Gallery">
+            <span class="text-2xl">X</span>
+          </button>
+        </div>
+        <div>
+          <p class="font-bold">Perfect Pets Breeder information</p>
+          <p class="mt-4">
+            <p>[content here should come from contentful based on existing site]</p>
+          </div>
+        </div>
+      </div>
+
+
+    <div id="petsVerified" data-modal data-modal-manual-close  class="w-full h-full bg-pp-gray bg-opacity-90 fixed top-0 z-40" role="dialog" aria-modal="true" aria-live="assertive" aria-labelledby="petsVerifiedLabel"
+		>
+    
+      <div class="modal rounded-lg bg-white max-w-6xl h-95-vh py-2 px-12 m-auto align-middle">
+        <h2 id="petsVerifiedLabel" class="sr-only">Pets Verification</h2>
+        <div class="w-full flex items-center justify-end">
+          <button data-modal-close-btn id="closePetsVerified" class="close-modal" aria-label="close Burmese Cat Gallery">
+            <span class="text-2xl">X</span>
+          </button>
+        </div>
+        <div>
+          <p class="font-bold">Perfect Pets Verified</p>
+          <p class="mt-4">
+            <p>[content below should come from contentful]</p>
+            <p>This breeder has been verified by Perfect Pets, and complies with all registration requirements.</p>
+            <p><a class="flex flex-row items-center text-pp-blue hover:underline" href="#">
+              <span>Learn more about our verification process and breeder standards</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a></p>
+              
+          </div>
+        </div>
+      </div>
+    
+
+    <div id="petsBreedNote" data-modal data-modal-manual-close  class="w-full h-full bg-pp-gray bg-opacity-90 fixed top-0 z-40" role="dialog" aria-modal="true" aria-live="assertive" aria-labelledby="petsBreedNoteLabel"
+		>
+    
+      <div class="modal rounded-lg bg-white max-w-6xl h-95-vh py-2 px-12 m-auto align-middle">
+        <h2 id="petsBreedNoteLabel" class="sr-only">Pets Verification</h2>
+        <div class="w-full flex items-center justify-end">
+          <button data-modal-close-btn id="closePetsVerified" class="close-modal" aria-label="close Burmese Cat Gallery">
+            <span class="text-2xl">X</span>
+          </button>
+        </div>
+        <div>
+          <p class="font-bold">Breed Note</p>
+          <div class="mt-4">
+            <p>[content below should come from contentful]</p>
+            <p>To protect you, and our companion animals, Perfect Pets ensures that Breeders & Rescue Groups comply with all guidelines & laws relating to the transfer/adoption of pets.</p>  
+            <p>These requirements vary for different pets and from region to region and may include one or more : Breeder Identification Number (BIN), Breeder Exemption Number (BEN), Pet Exchange Register Number (PER), Domestic Animal Business Number (DAB), Rehoming Body Number (RBN).</p>
+          </div>
+        </div>
+      </div>
+    
+
+    <div id="profileGallery" data-modal data-modal-manual-close  class="w-full h-full bg-pp-gray bg-opacity-90 fixed top-0 z-40" role="dialog" aria-modal="true" aria-live="assertive" aria-labelledby="profileGalleryLabel"
+		>
+    
+      <div class="modal rounded-lg bg-white max-w-6xl h-95-vh py-2 px-12 m-auto align-middle">
+        <h2 id="profileGalleryLabel" class="sr-only">Burmese Cat Gallery</h2>
+        <div class="w-full flex items-center justify-end">
+          <button data-modal-close-btn id="closeProfileGallery" class="close-modal" aria-label="close Burmese Cat Gallery">
+            <span class="text-2xl">X</span>
+          </button>
+        </div>
+        <!-- the gallery using swiper again -->
+        <div class="flex justify-center items-center m-auto h-full">
+          <div class="swiper swiperg relative w-full h-full relative">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="mx-auto h-5/6 object-contain" src="../../images/dogs/kelpie1.jpg" alt="burmese 1">
+                <p class="text-center">image title will go here</p>
+              </div>
+              <div class="swiper-slide">
+                <img class="mx-auto h-5/6 object-contain" src="../../images/dogs/kelpie2.jpg" alt="burmese 1">
+                <p class="text-center">image title will go here</p>
+              </div>
+              <div class="swiper-slide">
+                <img class="mx-auto h-5/6 object-contain" src="../../images/dogs/kelpie3.jpg" alt="burmese 1">
+                <p class="text-center">image title will go here</p>
+              </div>
+              <div class="swiper-slide">
+                <img class="mx-auto h-5/6 object-contain" src="../../images/dogs/kelpie4.jpg" alt="burmese 1">
+                <p class="text-center">image title will go here</p>
+              </div>
+              <div class="swiper-slide">
+                <img class="mx-auto h-5/6 object-contain" src="../../images/dogs/kelpie5.jpg" alt="burmese 1">
+                <p class="text-center">image title will go here</p>
+              </div>
+              <div class="swiper-slide">
+                <img class="mx-auto h-5/6 object-contain" src="../../images/dogs/kelpie6.jpg" alt="burmese 1">
+                <p class="text-center">image title will go here</p>
+              </div>
+            </div>
+            <div>
+              <p class="absolute top-4" style="writing-mode: tb;">share icons here</p>
+              <button type="button" class="absolute top-1/2 z-10 inline-flex items-center button-prev p-3 shadow rounded-full text-pp-blue hover:text-pp-navy" role="button" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-e5f539231b102a49a" aria-disabled="true" disabled="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <button type="button" class="absolute top-1/2 right-0 z-10 inline-flex items-center button-next p-3 shadow rounded-full text-pp-blue hover:text-pp-navy" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-8fef6d32642c56cb" aria-disabled="false">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </div>
+          
+        </div>	
+      </div>
+    </div>
+
+    <!-- end dialog -->
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="../../js/swiper.js"></script>
+    <script src="../../js/dialog.js"></script>
+    <script type="module" src="../../js/pets2.js"></script>
+
+    <!-- Maps from MapBox -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+    <script>
+      // public token
+      
+      
+      window.addEventListener('DOMContentLoaded', function(){
+
+        const imgs = document.querySelectorAll('.desktopHeroImages img');
+        // just a quick muck around example
+        if(imgs.length <= 3){
+          document.querySelector('.desktopHeroImages').classList.add('md:justify-center');
+        }
+
+        // document.querySelector('#my-awesome-el').innerHTML = new Date
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZnVsbHlzdG9rZWQiLCJhIjoiY2s5bnQyOHBhMDV3ajNqbmFxaHNvcTYwNSJ9.EeFiXNhDiv-CpoSryyJdGA';
+        const map = new mapboxgl.Map({
+        container: 'locationMap', // container ID
+        style: 'mapbox://styles/mapbox/light-v10', // streets-v11,   style URL
+        center: [149.0566482, -35.3524563], // starting position [lng, lat]
+        zoom: 13 // starting zoom
+        });
+        // full screen
+        map.addControl(new mapboxgl.FullscreenControl());
+     });
+    
+    </script>
+  </body>
+</html>
